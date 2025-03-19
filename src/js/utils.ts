@@ -1,4 +1,3 @@
-
 /**
  * Sorts a given array of objects by key.
  * @param array the array of objects to be sorted.
