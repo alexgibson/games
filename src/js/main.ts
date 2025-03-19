@@ -1,22 +1,22 @@
-import data from "./data.ts";
+import Games from "./games.ts";
 import { sortByKey, filterByKey } from "./utils.ts";
 import { Game } from "./types.ts";
 
-function renderRow(data: Game): string {
+function renderRow(game: Game): string {
   return `
     <tr>
-      <th scope="row">${data.title}</th>
-      <td>${data.platform}</td>
-      <td>${data.developer}</td>
-      <td>${data.releaseDate}</td>
-      <td>${data.status}</td>
-      <td>${data.score}</td>
+      <th scope="row">${game.title}</th>
+      <td>${game.platform}</td>
+      <td>${game.developer}</td>
+      <td>${game.releaseDate}</td>
+      <td>${game.status}</td>
+      <td>${game.score}</td>
     </tr>
   `;
 }
 
-function render(data: Game[]): string {
-  const rows = data.map((game) => renderRow(game)).join("");
+function render(games: typeof Games): string {
+  const rows = games.map((game) => renderRow(game)).join("");
 
   return `
     <div class="c-table-container">
@@ -41,7 +41,7 @@ function render(data: Game[]): string {
 
 function init(): void {
   //const filteredData = filterByKey(data, "title", "Zelda");
-  const sortedData = sortByKey(data, "title");
+  const sortedData = sortByKey(Games, "title");
   const root = document.getElementById("root") as HTMLElement;
 
   root.insertAdjacentHTML("beforeend", render(sortedData));

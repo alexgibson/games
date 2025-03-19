@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Super Mario Odyssey",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "2017-10-27",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "2017-03-03",
+    "status": "Beat",
+    "score": 10
+  }
+]
