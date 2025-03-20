@@ -162,6 +162,87 @@
     "score": 9
   },
   {
+    "title": "Ni no Kuni: Wrath of the White Witch",
+    "platform": "Nintendo Switch",
+    "developer": "Level-5",
+    "releaseDate": "January 22 2013",
+    "status": "Beat",
+    "medium": "Physical",
+    "score": 9
+  },
+  {
+    "title": "Octopath Traveler",
+    "platform": "Nintendo Switch",
+    "developer": "Square Enix",
+    "releaseDate": "July 13 2018",
+    "status": "Beat",
+    "medium": "Physical",
+    "score": 9
+  },
+  {
+    "title": "Octopath Traveler II",
+    "platform": "Nintendo Switch",
+    "developer": "Square Enix",
+    "releaseDate": "February 02 2023",
+    "status": "Beat",
+    "medium": "Physical",
+    "score": 9
+  },
+  {
+    "title": "Ori and The Blind Forest",
+    "platform": "Nintendo Switch",
+    "developer": "Moon Studios",
+    "releaseDate": "March 11 2015",
+    "status": "Beat",
+    "medium": "Digital",
+    "score": 9
+  },
+  {
+    "title": "Ori and The Will of the Wisps",
+    "platform": "Nintendo Switch",
+    "developer": "Moon Studios",
+    "releaseDate": "March 11 2020",
+    "status": "Beat",
+    "medium": "Digital",
+    "score": 9
+  },
+  {
+    "title": "Persona 5 Royal",
+    "platform": "Nintendo Switch",
+    "developer": "Atlus",
+    "releaseDate": "March 31 2020",
+    "status": "Beat",
+    "medium": "Physical",
+    "score": 9
+  },
+  {
+    "title": "Spiritfarer",
+    "platform": "Nintendo Switch",
+    "developer": "Thunder Lotus Games",
+    "releaseDate": "August 18 2020",
+    "status": "Beat",
+    "medium": "Digital",
+    "score": 9
+  },
+  {
+    "title": "Stray",
+    "platform": "Nintendo Switch",
+    "developer": "BlueTwelve Studio",
+    "releaseDate": "July 19 2022",
+    "status": "Beat",
+    "medium": "Digital",
+    "score": 9
+  },
+  {
+    "title": "Super Mario 3D All-Stars",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "July 18 2020",
+    "status": "Beat",
+    "medium": "Physical",
+    "score": 9
+  },
+  {
     "title": "Super Mario Odyssey",
     "platform": "Nintendo Switch",
     "developer": "Nintendo",
@@ -169,5 +250,41 @@
     "medium": "Physical",
     "status": "Beat",
     "score": 9
+  },
+  {
+    "title": "Super Mario RPG",
+    "platform": "Nintendo Switch",
+    "developer": "ArtePiazza",
+    "releaseDate": "October 17 2023",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Triangle Strategy",
+    "platform": "Nintendo Switch",
+    "developer": "ArteDink",
+    "releaseDate": "March 04 2022",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Unicorn Overlord",
+    "platform": "Nintendo Switch",
+    "developer": "Vanillaware",
+    "releaseDate": "March 08 2024",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "13 Sentinels: Aegis Rim",
+    "platform": "Nintendo Switch",
+    "developer": "Vanillaware",
+    "releaseDate": "October 28 2019",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
   }
 ]
