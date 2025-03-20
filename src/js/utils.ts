@@ -47,3 +47,17 @@ export function filterByKey<T, K extends keyof T>(
     }
   });
 }
+
+/**
+ * Takes a Date object type and returns a shortened date string.
+ * @param date the Date() object to format.
+ * @param locale string to format the short date (defaults to en-GB).
+ * @returns string using format DD/MM/YYY.
+ */
+export function formatShortDate(date: Date, locale: string = "en-GB"): string {
+  return new Intl.DateTimeFormat(locale, {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(date);
+}

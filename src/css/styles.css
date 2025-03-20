@@ -33,6 +33,10 @@ tbody tr {
   border: 1px solid #ddd;
 }
 
+tbody th {
+  padding: 10px;
+}
+
 td {
   padding: 10px;
   border: 1px solid #ddd;

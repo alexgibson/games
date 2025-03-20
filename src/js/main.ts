@@ -1,5 +1,5 @@
 import Games from "./games.ts";
-import { sortByKey, filterByKey } from "./utils.ts";
+import { sortByKey, filterByKey, formatShortDate } from "./utils.ts";
 import { Game } from "./types.ts";
 
 function renderRow(game: Game): string {
@@ -8,7 +8,7 @@ function renderRow(game: Game): string {
       <th scope="row">${game.title}</th>
       <td>${game.platform}</td>
       <td>${game.developer}</td>
-      <td>${game.releaseDate}</td>
+      <td>${formatShortDate(game.releaseDate)}</td>
       <td>${game.status}</td>
       <td>${game.score}</td>
     </tr>
