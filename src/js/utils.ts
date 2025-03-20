@@ -38,10 +38,10 @@ export function sortByKey<T, K extends keyof T>(
 export function filterByKey<T, K extends keyof T>(
   array: T[],
   key: K,
-  value: string,
+  value: string | number,
 ): T[] {
   return array.filter((item) => {
-    const val = value.toLocaleLowerCase();
+    const val = value.toString().toLocaleLowerCase();
     if (String(item[key]).toLowerCase().includes(val)) {
       return item;
     }
