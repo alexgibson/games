@@ -8,6 +8,7 @@ export type Status =
   | "Wishlist"
   | "Paused"
   | "Quit";
+export type Medium = "Physical | Digital";
 
 export interface Game {
   title: string;
@@ -16,4 +17,5 @@ export interface Game {
   releaseDate: Date;
   status: Status;
   score: OneToTen;
+  medium: Medium;
 }

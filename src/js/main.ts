@@ -3,14 +3,18 @@ import { sortByKey, filterByKey, formatShortDate } from "./utils.ts";
 import { Game } from "./types.ts";
 
 function renderRow(game: Game): string {
+  const releaseDate = formatShortDate(game.releaseDate);
+  const score = game.score ? game.score : "";
+
   return `
     <tr>
       <th scope="row">${game.title}</th>
       <td>${game.platform}</td>
       <td>${game.developer}</td>
-      <td>${formatShortDate(game.releaseDate)}</td>
+      <td>${releaseDate}</td>
+      <td>${game.medium}</td>
       <td>${game.status}</td>
-      <td>${game.score}</td>
+      <td>${score}</td>
     </tr>
   `;
 }
@@ -27,6 +31,7 @@ function render(games: typeof Games): string {
             <th scope="col">Platform</th>
             <th scope="col">Developer</th>
             <th scope="col">Release Date</th>
+            <th scope="col">Medium</th>
             <th scope="col">Status</th>
             <th scope="col">Score</th>
           </tr>

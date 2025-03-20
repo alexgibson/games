@@ -1,6 +1,6 @@
 import { Game } from "./types.ts";
 import gameData from "./data/games.json";
-import { Platform, Status, OneToTen } from "./types.ts";
+import { Platform, Status, OneToTen, Medium } from "./types.ts";
 
 const Games: Game[] = gameData.map((game) => ({
   ...game,
@@ -8,6 +8,7 @@ const Games: Game[] = gameData.map((game) => ({
   releaseDate: new Date(game.releaseDate),
   status: game.status as Status,
   score: game.score as OneToTen,
+  medium: game.medium as Medium,
 }));
 
 export default Games;

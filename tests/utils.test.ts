@@ -42,8 +42,8 @@ describe("filterByKey()", () => {
 
 describe("formatShortDate()", () => {
   test("return a short date string", () => {
-    const date = new Date("03 March 2017");
-    expect(formatShortDate(date)).toEqual("03/03/2017");
-    expect(formatShortDate(date, "de")).toEqual("03.03.2017");
+    const date = new Date("March 3 2017");
+    expect(formatShortDate(date)).toEqual("03 March 2017");
+    expect(formatShortDate(date, "de")).toEqual("03. März 2017");
   });
 });

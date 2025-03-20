@@ -1,18 +1,173 @@
 [
   {
-    "title": "Super Mario Odyssey",
+    "title": "Metroid Prime: Remastered",
     "platform": "Nintendo Switch",
-    "developer": "Nintendo",
-    "releaseDate": "2017-10-27",
+    "developer": "Retro Studios",
+    "releaseDate": "February 8 2023",
+    "medium": "Physical",
     "status": "Beat",
-    "score": 9
+    "score": 10
+  },
+  {
+    "title": "NieR Automata",
+    "platform": "Nintendo Switch",
+    "developer": "Platinum Games",
+    "releaseDate": "February 23 2017",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 10
   },
   {
     "title": "The Legend of Zelda: Breath of the Wild",
     "platform": "Nintendo Switch",
     "developer": "Nintendo",
-    "releaseDate": "2017-03-03",
+    "releaseDate": "March 3 2017",
+    "medium": "Physical",
     "status": "Beat",
     "score": 10
+  },
+  {
+    "title": "The Legend of Zelda: Tears of the Kingdom",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "May 12 2023",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 10
+  },
+  {
+    "title": "Animal Crossing: New Horizons",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "March 20 2020",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Animal Well",
+    "platform": "Nintendo Switch",
+    "developer": "Shared Memory",
+    "releaseDate": "May 9 2024",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Astral Chain",
+    "platform": "Nintendo Switch",
+    "developer": "Platinum Games",
+    "releaseDate": "August 30 2019",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Celeste",
+    "platform": "Nintendo Switch",
+    "developer": "Matt Makes Games Inc",
+    "releaseDate": "January 25 2018",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Cuphead",
+    "platform": "Nintendo Switch",
+    "developer": "StudioMDHR",
+    "releaseDate": "September 29 2017",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Final Fantasy VI: Pixel Remaster",
+    "platform": "Nintendo Switch",
+    "developer": "Square Enix",
+    "releaseDate": "February 23 2022",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Ghost of Tsushima: Director's Cut",
+    "platform": "Steam",
+    "developer": "Sucker Punch Productions",
+    "releaseDate": "August 20 2021",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Hollow Knight",
+    "platform": "Nintendo Switch",
+    "developer": "Team Cherry",
+    "releaseDate": "February 24 2017",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "It Takes Two",
+    "platform": "Nintendo Switch",
+    "developer": "Hazelight Studios",
+    "releaseDate": "March 26 2021",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Luigi's Mansion 3",
+    "platform": "Nintendo Switch",
+    "developer": "Next Level Games",
+    "releaseDate": "October 31 2019",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Metroid Dread",
+    "platform": "Nintendo Switch",
+    "developer": "MercurySteam",
+    "releaseDate": "October 7 2021",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Monster Hunter Rise",
+    "platform": "Nintendo Switch",
+    "developer": "Capcom",
+    "releaseDate": "March 25 2021",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Monster Hunter Rise: Sunbreak",
+    "platform": "Nintendo Switch",
+    "developer": "Capcom",
+    "releaseDate": "June 30 2022",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Neva",
+    "platform": "Nintendo Switch",
+    "developer": "Nomada Studio",
+    "releaseDate": "October 15 2024",
+    "status": "Beat",
+    "medium": "Digital",
+    "score": 9
+  },
+  {
+    "title": "Super Mario Odyssey",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "October 27 2017",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 9
   }
 ]
