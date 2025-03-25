@@ -2,7 +2,7 @@
   {
     "title": "Metroid Prime: Remastered",
     "platform": "Nintendo Switch",
-    "developer": "Retro Studios",
+    "developer": "Nintendo / Retro Studios",
     "releaseDate": "February 8 2023",
     "medium": "Physical",
     "status": "Beat",
@@ -119,7 +119,7 @@
   {
     "title": "Luigi's Mansion 3",
     "platform": "Nintendo Switch",
-    "developer": "Next Level Games",
+    "developer": "Nintendo / Next Level Games",
     "releaseDate": "October 31 2019",
     "medium": "Physical",
     "status": "Beat",
@@ -128,7 +128,7 @@
   {
     "title": "Metroid Dread",
     "platform": "Nintendo Switch",
-    "developer": "MercurySteam",
+    "developer": "Nintendo / MercurySteam",
     "releaseDate": "October 7 2021",
     "medium": "Physical",
     "status": "Beat",
@@ -254,7 +254,7 @@
   {
     "title": "Super Mario RPG",
     "platform": "Nintendo Switch",
-    "developer": "ArtePiazza",
+    "developer": "Nintendo",
     "releaseDate": "October 17 2023",
     "medium": "Physical",
     "status": "Beat",
@@ -263,7 +263,7 @@
   {
     "title": "Triangle Strategy",
     "platform": "Nintendo Switch",
-    "developer": "ArteDink",
+    "developer": "Square Enix",
     "releaseDate": "March 04 2022",
     "medium": "Physical",
     "status": "Beat",
@@ -272,7 +272,7 @@
   {
     "title": "Unicorn Overlord",
     "platform": "Nintendo Switch",
-    "developer": "Vanillaware",
+    "developer": "Atlus / Vanillaware",
     "releaseDate": "March 08 2024",
     "medium": "Physical",
     "status": "Beat",
@@ -281,9 +281,234 @@
   {
     "title": "13 Sentinels: Aegis Rim",
     "platform": "Nintendo Switch",
-    "developer": "Vanillaware",
+    "developer": "Atlus / Vanillaware",
     "releaseDate": "October 28 2019",
     "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Ace Combat 7: Skies Unknown Deluxe Edition",
+    "platform": "Nintendo Switch",
+    "developer": "Project Aces",
+    "releaseDate": "July 11 2024",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "A Short Hike",
+    "platform": "Nintendo Switch",
+    "developer": "Adamgryu",
+    "releaseDate": "July 30 2019",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Bravely Default II",
+    "platform": "Nintendo Switch",
+    "developer": "Square Enix",
+    "releaseDate": "February 26 2021",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Cadence of Hyrule",
+    "platform": "Nintendo Switch",
+    "developer": "Brace Yourself Games",
+    "releaseDate": "June 13 2019",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Castlevania Anniversary Collection",
+    "platform": "Nintendo Switch",
+    "developer": "Konami",
+    "releaseDate": "May 16 2019",
+    "medium": "Digital",
+    "status": "Paused",
+    "score": 8
+  },
+  {
+    "title": "Emio - The Smiling Man: Famicom Detective Club",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "August 29 2024",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Far: Lone Sails",
+    "platform": "Nintendo Switch",
+    "developer": "Okomotive",
+    "releaseDate": "May 17 2018",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "F-Zero 99",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "September 14 2023",
+    "medium": "Digital",
+    "status": "Paused",
+    "score": 8
+  },
+  {
+    "title": "Hades",
+    "platform": "Nintendo Switch",
+    "developer": "Supergiant Games",
+    "releaseDate": "December 06 2018",
+    "medium": "Digital",
+    "status": "Paused",
+    "score": 8
+  },
+  {
+    "title": "Hellblade: Senua's Sacrifice",
+    "platform": "Nintendo Switch",
+    "developer": "Ninja Theory",
+    "releaseDate": "August 08 2017",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Hyrule Warriors: Age of Calamity",
+    "platform": "Nintendo Switch",
+    "developer": "Koei Tecmo",
+    "releaseDate": "November 20 2020",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Inside",
+    "platform": "Nintendo Switch",
+    "developer": "Playdead",
+    "releaseDate": "June 29 2016",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Kirby and the Forgotten Land",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo / HAL Laboratory",
+    "releaseDate": "March 25 2022",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Little Nightmares II",
+    "platform": "Nintendo Switch",
+    "developer": "Tarsier Studios",
+    "releaseDate": "February 11 2021",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Live A Live",
+    "platform": "Nintendo Switch",
+    "developer": "Square Enix",
+    "releaseDate": "July 22 2022",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Ni No Kuni II: Revenant Kingdom",
+    "platform": "Nintendo Switch",
+    "developer": "Level-5",
+    "releaseDate": "March 23 2018",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Nintendo World Championships: NES Edition",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "July 18 2024",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Persona 5 Strikers",
+    "platform": "Nintendo Switch",
+    "developer": "Atlus / Omega Force",
+    "releaseDate": "February 23 2021",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Prince of Persia: The Lost Crown",
+    "platform": "Nintendo Switch",
+    "developer": "Ubisoft",
+    "releaseDate": "January 18 2024",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Red Dead Redemption",
+    "platform": "Nintendo Switch",
+    "developer": "Rockstar / Double Eleven Studios",
+    "releaseDate": "January 18 2024",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Super Mario 3D World + Bowser's Fury",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "February 12 2021",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Super Mario Bros. Wonder",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "October 20 2023",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Super Mario Maker 2",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "June 28 2019",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Tetris Effect",
+    "platform": "Nintendo Switch",
+    "developer": "Monstars",
+    "releaseDate": "November 09 2018",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "The Last of Us Part 1",
+    "platform": "Steam",
+    "developer": "Naughty Dog Studios",
+    "releaseDate": "September 02 2022",
+    "medium": "Digital",
     "status": "Beat",
     "score": 8
   }

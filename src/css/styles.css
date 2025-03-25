@@ -17,19 +17,28 @@ h1 {
   text-align: center;
 }
 
+.section-table {
+  overflow-x: auto;
+  margin: 0 auto 60px;
+  max-width: 1400px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
 table {
   background-color: #1e1e1e;
   border-collapse: collapse;
   color: #e0e0e0;
   font-size: 16px;
-  margin: 0 auto 60px;
-  max-width: 1400px;
+  margin: 0 auto;
   width: 100%;
 }
 
 thead th {
   background-color: #0056b3;
-  border: 1px solid #444;
+  border: 1px solid #0056b3;
   color: #fff;
   padding: 12px;
   text-align: left;

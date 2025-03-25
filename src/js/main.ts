@@ -45,11 +45,23 @@ function render(games: typeof Games): string {
 }
 
 function init(): void {
-  //const filteredData = filterByKey(data, "title", "Zelda");
-  const sortedData = sortByKey(Games, "title");
-  const root = document.getElementById("root") as HTMLElement;
+  const allGames = sortByKey(Games, "title");
 
-  root.insertAdjacentHTML("beforeend", render(sortedData));
+  const playing = filterByKey(allGames, "status", "playing");
+  const playingElem = document.getElementById("playing") as HTMLElement;
+  playingElem.insertAdjacentHTML("beforeend", render(playing));
+
+  const backlog = filterByKey(allGames, "status", "backlog");
+  const backlogElem = document.getElementById("backlog") as HTMLElement;
+  backlogElem.insertAdjacentHTML("beforeend", render(backlog));
+
+  const beat = filterByKey(allGames, "status", "beat");
+  const beatElem = document.getElementById("beat") as HTMLElement;
+  beatElem.insertAdjacentHTML("beforeend", render(beat));
+
+  const paused = filterByKey(allGames, "status", "paused");
+  const pausedElem = document.getElementById("paused") as HTMLElement;
+  pausedElem.insertAdjacentHTML("beforeend", render(paused));
 }
 
 init();
