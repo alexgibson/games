@@ -1,3 +1,13 @@
-# games
+# What’s in the backlog?
 
-Video games I own, have beaten, or are in my backlog.
+## Install
+
+`npm install`
+
+## Serve
+
+`npm start`
+
+## Test
+
+`npm test`
