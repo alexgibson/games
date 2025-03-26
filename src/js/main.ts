@@ -55,6 +55,10 @@ function init(): void {
   const backlogElem = document.getElementById("backlog") as HTMLElement;
   backlogElem.insertAdjacentHTML("beforeend", render(backlog));
 
+  const wishlist = filterByKey(allGames, "status", "wishlist");
+  const wishlistElem = document.getElementById("wishlist") as HTMLElement;
+  wishlistElem.insertAdjacentHTML("beforeend", render(wishlist));
+
   const beat = filterByKey(allGames, "status", "beat");
   const beatElem = document.getElementById("beat") as HTMLElement;
   beatElem.insertAdjacentHTML("beforeend", render(beat));

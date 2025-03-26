@@ -52,6 +52,11 @@ thead th {
   border: 1px solid #626262;
 }
 
+#wishlist thead th {
+  background-color: #915b16;
+  border: 1px solid #915b16;
+}
+
 #beat thead th {
   background-color: #29751b;
   border: 1px solid #29751b;
