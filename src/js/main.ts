@@ -13,7 +13,6 @@ function renderRow(game: Game): string {
       <td class="col-developer">${game.developer}</td>
       <td class="col-release-date">${releaseDate}</td>
       <td class="col-medium">${game.medium}</td>
-      <td class="col-status">${game.status}</td>
       <td class="col-score">${score}</td>
     </tr>
   `;
@@ -32,7 +31,6 @@ function render(games: typeof Games): string {
             <th scope="col" class="col-developer">Developer</th>
             <th scope="col" class="col-release-date">Release Date</th>
             <th scope="col" class="col-medium">Medium</th>
-            <th scope="col" class="col-status">Status</th>
             <th scope="col" class="col-score">Score</th>
           </tr>
         </thead>
