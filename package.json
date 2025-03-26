@@ -1,7 +1,7 @@
 {
   "name": "games",
   "version": "1.0.0",
-  "description": "Video games I own, have beaten, or are in the backlog.",
+  "description": "What’s in the backlog?",
   "source": "src/index.html",
   "private": true,
   "scripts": {
