@@ -1,7 +1,7 @@
 {
   "name": "games",
   "version": "1.0.0",
-  "description": "Video games I own, have beaten, or are in my backlog.",
+  "description": "Video games I own, have beaten, or are in the backlog.",
   "source": "src/index.html",
   "private": true,
   "scripts": {
@@ -16,7 +16,19 @@
     "build": "parcel build --no-cache"
   },
   "author": "Alex Gibson",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexgibson/games.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/alexgibson/games/main/LICENSE.md"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/alexgibson/games/issues/issues"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "del-cli": "^6.0.0",
