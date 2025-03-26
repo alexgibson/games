@@ -74,7 +74,7 @@
   {
     "title": "Cuphead",
     "platform": "Nintendo Switch",
-    "developer": "StudioMDHR",
+    "developer": "Studio MDHR",
     "releaseDate": "September 29 2017",
     "medium": "Digital",
     "status": "Beat",
@@ -92,7 +92,7 @@
   {
     "title": "Ghost of Tsushima: Director's Cut",
     "platform": "Steam",
-    "developer": "Sucker Punch Productions",
+    "developer": "Sony / Sucker Punch Productions",
     "releaseDate": "August 20 2021",
     "medium": "Digital",
     "status": "Beat",
@@ -456,7 +456,7 @@
     "releaseDate": "January 18 2024",
     "medium": "Physical",
     "status": "Beat",
-    "score": 8
+    "score": 9
   },
   {
     "title": "Red Dead Redemption",
@@ -506,10 +506,370 @@
   {
     "title": "The Last of Us Part 1",
     "platform": "Steam",
-    "developer": "Naughty Dog Studios",
+    "developer": "Sony / Naughty Dog Studios",
     "releaseDate": "September 02 2022",
     "medium": "Digital",
     "status": "Beat",
     "score": 8
+  },
+  {
+    "title": "The Legend of Zelda: Echoes of Wisdom",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo / Grezo",
+    "releaseDate": "September 26 2024",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "The Legend of Zelda: Link's Awakening",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo / Grezo",
+    "releaseDate": "September 19 2019",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "The Legend of Zelda: Skyward Sword HD",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo / Grezo",
+    "releaseDate": "June 16 2021",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "The Touryst",
+    "platform": "Nintendo Switch",
+    "developer": "Shin'en",
+    "releaseDate": "November 21 2019",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Untitled Goose Game",
+    "platform": "Nintendo Switch",
+    "developer": "House House",
+    "releaseDate": "September 20 2019",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Arise: A Simple Story",
+    "platform": "Nintendo Switch",
+    "developer": "Piccolo Studio",
+    "releaseDate": "December 03 2019",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Bayonetta 3",
+    "platform": "Nintendo Switch",
+    "developer": "Platinum Games",
+    "releaseDate": "October 28 2022",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Captain Toad: Treasure Tracker",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "December 05 2014",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Chicory: A Colorful Tale",
+    "platform": "Nintendo Switch",
+    "developer": "Finji Games",
+    "releaseDate": "June 09 2021",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Cocoon",
+    "platform": "Nintendo Switch",
+    "developer": "Geometric Interactive",
+    "releaseDate": "September 29 2023",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Crisis Core: Final Fantasy VII Reunion",
+    "platform": "Nintendo Switch",
+    "developer": "Square Enix",
+    "releaseDate": "December 13 2022",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Cruis'in Blast",
+    "platform": "Nintendo Switch",
+    "developer": "Raw Thrills",
+    "releaseDate": "September 14 2021",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Dragon Quest III HD-2D Remake",
+    "platform": "Nintendo Switch",
+    "developer": "Square Enix",
+    "releaseDate": "November 14 2024",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Dragon Quest XI: Echoes of an Elusive Age",
+    "platform": "Nintendo Switch",
+    "developer": "Square Enix",
+    "releaseDate": "June 29 2017",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Eastward",
+    "platform": "Nintendo Switch",
+    "developer": "Pixpill",
+    "releaseDate": "September 16 2021",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Far: Changing Tides",
+    "platform": "Nintendo Switch",
+    "developer": "Okomotive",
+    "releaseDate": "March 01 2022",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Gris",
+    "platform": "Nintendo Switch",
+    "developer": "Nomada Studio",
+    "releaseDate": "December 13 2018",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Kirby's Dream Buffet",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo / HAL Laboratory",
+    "releaseDate": "August 18 2022",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Mario & Luigi: Brothership",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo",
+    "releaseDate": "November 07 2024",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Paper Mario: The Thousand-Year Door Remake",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo / Intelligent Systems",
+    "releaseDate": "May 23 2024",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Pocky & Rocky Reshrined",
+    "platform": "Nintendo Switch",
+    "developer": "NatsumeAtari",
+    "releaseDate": "April 21 2022",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Pokemon Legends: Arceus",
+    "platform": "Nintendo Switch",
+    "developer": "Game Freak",
+    "releaseDate": "January 28 2022",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Raji: An Ancient Epic",
+    "platform": "Nintendo Switch",
+    "developer": "Nodding Heads Games",
+    "releaseDate": "August 19 2020",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Streets of Rage 4",
+    "platform": "Nintendo Switch",
+    "developer": "Lizardcube",
+    "releaseDate": "April 30 2020",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Teenage Mutant Ninja Turtles: Shredder's Revenge",
+    "platform": "Nintendo Switch",
+    "developer": "Tribute Games",
+    "releaseDate": "June 16 2022",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Thank Goodness You're Here!",
+    "platform": "Nintendo Switch",
+    "developer": "Coal Supper",
+    "releaseDate": "August 01 2024",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "What Remains of Edith Finch",
+    "platform": "Nintendo Switch",
+    "developer": "SIE San Diego Studio",
+    "releaseDate": "April 25 2017",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Xenoblade Chronicles 3",
+    "platform": "Nintendo Switch",
+    "developer": "Nintondo / Monolith Software",
+    "releaseDate": "July 29 2022",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Death Stranding: Director's Cut",
+    "platform": "Steam",
+    "developer": "Kojima Productions",
+    "releaseDate": "September 23 2021",
+    "medium": "Digital",
+    "status": "Playing",
+    "score": null
+  },
+  {
+    "title": "Fantasian Neo Dimension",
+    "platform": "Nintendo Switch",
+    "developer": "Mistwalker",
+    "releaseDate": "December 05 2024",
+    "medium": "Physical",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Split Fiction",
+    "platform": "Steam",
+    "developer": "Hazelight Studios",
+    "releaseDate": "March 06 2025",
+    "medium": "Digital",
+    "status": "Playing",
+    "score": null
+  },
+  {
+    "title": "Tactics Ogre: Reborn",
+    "platform": "Nintendo Switch",
+    "developer": "Square Enix",
+    "releaseDate": "November 11 2022",
+    "medium": "Physical",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Xenoblade Chronicles X: Definitive Edition",
+    "platform": "Nintendo Switch",
+    "developer": "Nintendo / Monolith Software",
+    "releaseDate": "March 30 2025",
+    "medium": "Physical",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Elden Ring",
+    "platform": "Steam",
+    "developer": "FromSoftware",
+    "releaseDate": "February 25 2022",
+    "medium": "Digital",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Baldur's Gate 3",
+    "platform": "Steam",
+    "developer": "Larian Studios",
+    "releaseDate": "August 03 2022",
+    "medium": "Digital",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Cyberpunk",
+    "platform": "Steam",
+    "developer": "CD Projekt Red",
+    "releaseDate": "December 10 2020",
+    "medium": "Digital",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "God of War",
+    "platform": "Steam",
+    "developer": "Sony / Santa Monica Studio",
+    "releaseDate": "January 14 2022",
+    "medium": "Digital",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Marvel's Spider-Man: Miles Morales",
+    "platform": "Steam",
+    "developer": "Sony / Insomniac Games",
+    "releaseDate": "November 18 2022",
+    "medium": "Digital",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "The Witcher 3: Wild Hunt",
+    "platform": "Steam",
+    "developer": "CD Projekt Red",
+    "releaseDate": "May 18 2015",
+    "medium": "Digital",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Red Dead Redemption II",
+    "platform": "Steam",
+    "developer": "Rockstar",
+    "releaseDate": "December 05 2019",
+    "medium": "Digital",
+    "status": "Backlog",
+    "score": null
   }
 ]

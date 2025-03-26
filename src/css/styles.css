@@ -24,7 +24,7 @@ h1 {
 }
 
 .section-heading {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 table {
@@ -37,11 +37,29 @@ table {
 }
 
 thead th {
-  background-color: #0056b3;
-  border: 1px solid #0056b3;
   color: #fff;
   padding: 12px;
   text-align: left;
+}
+
+#playing thead th {
+  background-color: #0056b3;
+  border: 1px solid #0056b3;
+}
+
+#backlog thead th {
+  background-color: #626262;
+  border: 1px solid #626262;
+}
+
+#beat thead th {
+  background-color: #29751b;
+  border: 1px solid #29751b;
+}
+
+#paused thead th {
+  background-color: #b94415;
+  border: 1px solid #b94415;
 }
 
 tbody tr {
