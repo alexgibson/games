@@ -330,7 +330,16 @@
     "releaseDate": "May 16 2019",
     "medium": "Digital",
     "status": "Paused",
-    "score": 8
+    "score": null
+  },
+  {
+    "title": "Castlevania Advance Collection",
+    "platform": "Nintendo Switch",
+    "developer": "Konami",
+    "releaseDate": "September 23 2021",
+    "medium": "Digital",
+    "status": "Paused",
+    "score": null
   },
   {
     "title": "Emio - The Smiling Man: Famicom Detective Club",
@@ -357,7 +366,7 @@
     "releaseDate": "September 14 2023",
     "medium": "Digital",
     "status": "Paused",
-    "score": 8
+    "score": null
   },
   {
     "title": "Hades",
@@ -366,7 +375,7 @@
     "releaseDate": "December 06 2018",
     "medium": "Digital",
     "status": "Paused",
-    "score": 8
+    "score": null
   },
   {
     "title": "Hellblade: Senua's Sacrifice",
@@ -763,6 +772,15 @@
     "medium": "Physical",
     "status": "Beat",
     "score": 7
+  },
+  {
+    "title": "Sakuna: Of Rice and Ruin",
+    "platform": "Nintendo Switch",
+    "developer": "Edelweiss",
+    "releaseDate": "November 10 2020",
+    "medium": "Physical",
+    "status": "Paused",
+    "score": null
   },
   {
     "title": "Death Stranding: Director's Cut",

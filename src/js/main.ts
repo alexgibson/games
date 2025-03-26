@@ -22,23 +22,21 @@ function render(games: typeof Games): string {
   const rows = games.map((game) => renderRow(game)).join("");
 
   return `
-    <div class="c-table-container">
-      <table class="mzp-u-data-table">
-        <thead>
-          <tr>
-            <th scope="col" class="col-title">Title</th>
-            <th scope="col" class="col-platform">Platform</th>
-            <th scope="col" class="col-developer">Developer</th>
-            <th scope="col" class="col-release-date">Release Date</th>
-            <th scope="col" class="col-medium">Medium</th>
-            <th scope="col" class="col-score">Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${rows}
-        </tbody>
-      </table>
-    </div>
+    <table class="mzp-u-data-table">
+      <thead>
+        <tr>
+          <th scope="col" class="col-title">Title</th>
+          <th scope="col" class="col-platform">Platform</th>
+          <th scope="col" class="col-developer">Developer</th>
+          <th scope="col" class="col-release-date">Release Date</th>
+          <th scope="col" class="col-medium">Medium</th>
+          <th scope="col" class="col-score">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows}
+      </tbody>
+    </table>
   `;
 }
 
