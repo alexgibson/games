@@ -8,13 +8,13 @@ function renderRow(game: Game): string {
 
   return `
     <tr>
-      <th scope="row">${game.title}</th>
-      <td>${game.platform}</td>
-      <td>${game.developer}</td>
-      <td>${releaseDate}</td>
-      <td>${game.medium}</td>
-      <td>${game.status}</td>
-      <td>${score}</td>
+      <th scope="row" class="col-title">${game.title}</th>
+      <td class="col-platform">${game.platform}</td>
+      <td class="col-developer">${game.developer}</td>
+      <td class="col-release-date">${releaseDate}</td>
+      <td class="col-medium">${game.medium}</td>
+      <td class="col-status">${game.status}</td>
+      <td class="col-score">${score}</td>
     </tr>
   `;
 }
@@ -27,13 +27,13 @@ function render(games: typeof Games): string {
       <table class="mzp-u-data-table">
         <thead>
           <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Platform</th>
-            <th scope="col">Developer</th>
-            <th scope="col">Release Date</th>
-            <th scope="col">Medium</th>
-            <th scope="col">Status</th>
-            <th scope="col">Score</th>
+            <th scope="col" class="col-title">Title</th>
+            <th scope="col" class="col-platform">Platform</th>
+            <th scope="col" class="col-developer">Developer</th>
+            <th scope="col" class="col-release-date">Release Date</th>
+            <th scope="col" class="col-medium">Medium</th>
+            <th scope="col" class="col-status">Status</th>
+            <th scope="col" class="col-score">Score</th>
           </tr>
         </thead>
         <tbody>
