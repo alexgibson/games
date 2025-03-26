@@ -11,3 +11,7 @@
 ## Test
 
 `npm test`
+
+## Build
+
+`npm run build`
