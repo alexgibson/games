@@ -6,8 +6,7 @@ export type Status =
   | "Paused"
   | "Backlog"
   | "Wishlist"
-  | "Paused"
-  | "Quit";
+  | "Paused";
 export type Medium = "Physical | Digital";
 
 export interface Game {
