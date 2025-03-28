@@ -1,15 +1,15 @@
-import Games from "../games.ts";
 import React from "react";
 import TableRow from "./TableRow";
 import { sortByKey, filterByKey } from "../utils.ts";
 import { Game } from "../types.ts";
 
 type TableProps = React.HTMLAttributes<HTMLTableElement> & {
+  games: Game[];
   status: string;
 };
 
-const Table: React.FC<TableProps> = ({ status }) => {
-  const allGames: Game[] = sortByKey(Games, "title");
+const Table: React.FC<TableProps> = ({ games, status }) => {
+  const allGames: Game[] = sortByKey(games, "title");
   const data: Game[] = filterByKey(allGames, "status", status);
 
   return (
