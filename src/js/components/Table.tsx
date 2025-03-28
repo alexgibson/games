@@ -1,7 +1,6 @@
 import React from "react";
 import TableRow from "./TableRow";
 import { sortByKey, filterByKey } from "../utils.ts";
-import { Game } from "../types.ts";
 
 type TableProps = React.HTMLAttributes<HTMLTableElement> & {
   games: Game[];

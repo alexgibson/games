@@ -2,7 +2,6 @@ import Details from "./Details";
 import Games from "../games.ts";
 import React from "react";
 import Table from "./Table";
-import { Status } from "../types.ts";
 
 const App: React.FC = () => {
   const allStatus: Status[] = [

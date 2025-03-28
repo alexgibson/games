@@ -8,11 +8,13 @@ describe("Details component", () => {
   it("renders a <details> component that can be toggled", async () => {
     const user = userEvent.setup();
 
-    render(
+    const component: React.ReactElement = (
       <Details title="Playing" open={true}>
         Hello World
-      </Details>,
+      </Details>
     );
+
+    render(component);
     const details = screen.getByText("Playing").closest("details");
 
     expect(details).toHaveAttribute("open");
