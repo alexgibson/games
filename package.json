@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
     "del-cli": "^6.0.0",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
@@ -44,5 +46,9 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.28.0"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
