@@ -1,5 +1,4 @@
 import gameData from "./data/games.json";
-import { Game, Platform, Status, OneToTen, Medium } from "./types.ts";
 
 const Games: Game[] = gameData.map((game) => ({
   ...game,

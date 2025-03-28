@@ -1,5 +1,5 @@
 import { sortByKey, filterByKey, formatShortDate } from "../src/js/utils.ts";
-import { data } from "./data.ts";
+import { data } from "./data/data.ts";
 
 describe("sortByKey()", () => {
   test("sort an array of objects by key", () => {

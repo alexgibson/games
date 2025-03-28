@@ -10,5 +10,10 @@
     "resolveJsonModule": true,
     "types": ["jest", "node"]
   },
-  "include": ["src/js/*.ts", "src/js/main.tsx"]
+  "include": [
+    "src/js/**/*.ts",
+    "src/js/**/*.tsx",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ]
 }
