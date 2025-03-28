@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 type DetailsProps = React.HTMLAttributes<HTMLDetailsElement> & {
   title: string;
@@ -7,10 +7,16 @@ type DetailsProps = React.HTMLAttributes<HTMLDetailsElement> & {
 };
 
 const Details: React.FC<DetailsProps> = ({ title, children, ...props }) => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggle = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
-    <details {...props}>
+    <details open={isOpen} {...props}>
       <summary>
-        <h2>{title}</h2>
+        <h2 onClick={toggle}>{title}</h2>
       </summary>
       {children}
     </details>
