@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "jsx": "react",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
     "noEmit": true,
-    "allowImportingTsExtensions": true
+    "resolveJsonModule": true
   },
-  "include": ["src/js/*.ts"]
+  "include": ["src/js/*.ts", "src/js/main.tsx"]
 }

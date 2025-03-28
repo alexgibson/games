@@ -103,27 +103,27 @@ thead th {
   text-align: left;
 }
 
-#playing thead th {
+#Playing thead th {
   background-color: var(--color-highlight-blue);
   border: var(--table-border-width) solid var(--color-highlight-blue);
 }
 
-#backlog thead th {
+#Backlog thead th {
   background-color: var(--color-highlight-gray);
   border: var(--table-border-width) solid var(--color-highlight-gray);
 }
 
-#wishlist thead th {
+#Wishlist thead th {
   background-color: var(--color-highlight-purple);
   border: var(--table-border-width) solid var(--color-highlight-purple);
 }
 
-#beat thead th {
+#Beat thead th {
   background-color: var(--color-highlight-green);
   border: var(--table-border-width) solid var(--color-highlight-green);
 }
 
-#paused thead th {
+#Paused thead th {
   background-color: var(--color-highlight-orange);
   border: var(--table-border-width) solid var(--color-highlight-orange);
 }
