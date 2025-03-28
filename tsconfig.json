@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowImportingTsExtensions": true,
     "esModuleInterop": true,
+    "isolatedModules": true,
     "jsx": "react",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",

@@ -2,7 +2,8 @@ import React from "react";
 import { formatShortDate } from "../utils.ts";
 import { Game } from "../types.ts";
 
-type TableRowProps = React.HTMLAttributes<HTMLTableElement> & Game;
+type TableRowProps = React.HTMLAttributes<HTMLTableRowElement> &
+  Omit<Game, "status">;
 
 const TableRow: React.FC<TableRowProps> = ({
   title,
