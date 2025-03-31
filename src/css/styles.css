@@ -1,5 +1,5 @@
 :root {
-  --color-body-background: #121212;
+  --color-body-background: #1c1b22;
   --color-body: #e0e0e0;
   --color-highlight-blue: #0056b3;
   --color-highlight-gray: #4a4a4a;
@@ -10,6 +10,7 @@
   --color-table-cell-alt: #2c2c2c;
   --color-table-cell-border: #444;
   --color-table-cell-highlight: #3a3a3a;
+  --color-search-bar: #999;
   --content-max-width: 1400px;
   --font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-size-main-heading: 1.6rem;
@@ -68,9 +69,11 @@ a:focus {
   text-decoration: none;
 }
 
+/** <menu> **/
+
 menu {
   font-size: var(--font-size-menu);
-  margin: 0 auto var(--margin-sm);
+  margin: 0 auto 20px;
   max-width: var(--content-max-width);
   padding: 0;
   text-align: center;
@@ -94,6 +97,10 @@ menu button {
   margin: 0 calc(var(--margin-sm) / 2);
   padding: 0.5rem;
   transition: all 0.1s ease-in-out;
+}
+
+menu button.active {
+  cursor: default;
 }
 
 #Playing-TabButton:hover,
@@ -127,9 +134,9 @@ menu button {
 }
 
 #tab-content {
-  overflow-x: auto;
   margin: 0 auto var(--margin-lg);
   max-width: var(--content-max-width);
+  overflow-x: auto;
 }
 
 /** <table> **/
@@ -188,8 +195,8 @@ tbody tr {
 
 tbody th {
   color: var(--color-body);
-  padding: var(--padding-sm);
   font-weight: normal;
+  padding: var(--padding-sm);
 }
 
 td {
@@ -219,6 +226,61 @@ tr:hover {
   .col-developer {
     display: table-cell;
   }
+}
+
+/** <form> **/
+
+form {
+  margin: 0 auto;
+  max-width: var(--content-max-width);
+  padding: var(--margin-xs) 0;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  form {
+    text-align: right;
+  }
+}
+
+form label {
+  visibility: hidden;
+}
+
+form input[type="search"] {
+  background: transparent;
+  border-radius: 6px;
+  border: 1px solid var(--color-search-bar);
+  color: var(--color-body);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  margin: 0 calc(var(--margin-xs) / 2);
+  padding: 6px 12px;
+}
+
+form input[type="search"]::placeholder {
+  color: var(--color-search-bar);
+  opacity: 1;
+}
+
+form button[type="submit"] {
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: var(--color-body);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  margin: 0;
+  padding: 6px 12px;
+  transition: all 0.1s ease-in-out;
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:active,
+form button[type="submit"]:focus {
+  background: var(--color-highlight-gray);
+  border: 1px solid var(--color-highlight-gray);
+  cursor: pointer;
 }
 
 /** <footer> **/

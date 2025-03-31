@@ -20,7 +20,7 @@ const TabButton: React.FC<TabButtonProps> = ({
         id={id}
         className={isSelected ? "active" : undefined}
         onClick={onSelect}
-        aria-controls="tabpanel"
+        aria-controls="tab-content"
       >
         {children}
       </button>

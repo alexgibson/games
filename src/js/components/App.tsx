@@ -1,16 +1,17 @@
 import Games from "../games.ts";
 import React from "react";
+import SearchBar from "./SearchBar.tsx";
 import TabButton from "./TabButton";
 import Table from "./Table";
+import { sortByKey, filterByKey } from "../utils.ts";
 import { useState } from "react";
 
 const App: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState("Playing");
-
-  function handleTabSelect(selectedTab) {
-    setSelectedTab(selectedTab);
-  }
-
+  const [selectedTab, setSelectedTab] = useState<string>("Playing");
+  const [searchValue, setSearchValue] = useState<string | null>();
+  const allGames: Game[] = sortByKey(Games, "title");
+  const data: Game[] = filterByKey(allGames, "status", selectedTab);
+  const filteredData = filterByKey(data, "title", searchValue);
   const allStatus: Status[] = [
     "Playing",
     "Backlog",
@@ -19,7 +20,17 @@ const App: React.FC = () => {
     "Paused",
   ];
 
-  const tabContent = <Table games={Games} status={selectedTab}></Table>;
+  const handleSearch: React.FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+    const target = e.target as HTMLFormElement;
+    const formData = new FormData(target);
+    const searchValue = formData.get("search") as string;
+    setSearchValue(searchValue);
+  };
+
+  function handleTabSelect(selectedTab: string) {
+    setSelectedTab(selectedTab);
+  }
 
   return (
     <>
@@ -35,12 +46,18 @@ const App: React.FC = () => {
           </TabButton>
         ))}
       </menu>
+      <SearchBar
+        placeholder="Filter title"
+        value={searchValue}
+        onSearch={handleSearch}
+        ariaControls={`${selectedTab}-Table`}
+      />
       <div
         role="tabpanel"
         id="tab-content"
         aria-labelledby={`${selectedTab}-TabButton`}
       >
-        {tabContent}
+        <Table games={filteredData} status={selectedTab}></Table>
       </div>
     </>
   );

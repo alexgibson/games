@@ -17,7 +17,8 @@ describe("TableRow component", () => {
     const component: React.ReactElement = <Table games={Games} status="Beat" />;
 
     render(component);
-    expect(screen.getByText("Title A")).toBeInTheDocument();
-    expect(screen.getByText("Title B")).toBeInTheDocument();
+    expect(screen.queryByText("Title A")).toBeInTheDocument();
+    expect(screen.queryByText("Title B")).toBeInTheDocument();
+    expect(screen.queryByText("Title C")).toBeInTheDocument();
   });
 });
