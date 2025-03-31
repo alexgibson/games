@@ -13,7 +13,8 @@ const Table: React.FC<TableProps> = ({ games, status }) => {
 
   return (
     <>
-      <table id={status}>
+      <table id={`${status}-Table`}>
+        <caption>{status}</caption>
         <thead>
           <tr>
             <th scope="col" className="col-title">

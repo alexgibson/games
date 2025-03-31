@@ -13,7 +13,7 @@ const Games: Game[] = data.map((game) => ({
 }));
 
 describe("TableRow component", () => {
-  it("renders a table of game data", () => {
+  it("renders a <table> of game data", () => {
     const component: React.ReactElement = <Table games={Games} status="Beat" />;
 
     render(component);
