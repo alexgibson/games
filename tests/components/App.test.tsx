@@ -5,7 +5,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 describe("App component", () => {
-  it("renders the app correctly", async () => {
+  it("renders the app data correctly", async () => {
     const user = userEvent.setup();
     const AppComponent: React.ReactElement = <App />;
 
@@ -15,11 +15,29 @@ describe("App component", () => {
     expect(playingButton).toHaveClass("active");
     expect(screen.getByRole("table", { name: /playing/i })).toBeInTheDocument();
 
-    const backlogButton = screen.getByRole("button", { name: /backlog/i });
-    await user.click(backlogButton);
+    // switch tabs
+    const beatButton = screen.getByRole("button", { name: /beat/i });
+    await user.click(beatButton);
 
     expect(playingButton).not.toHaveClass("active");
-    expect(backlogButton).toHaveClass("active");
-    expect(screen.getByRole("table", { name: /backlog/i })).toBeInTheDocument();
+    expect(beatButton).toHaveClass("active");
+    expect(screen.getByRole("table", { name: /beat/i })).toBeInTheDocument();
+    expect(
+      screen.queryByText("The Legend of Zelda: Breath of the Wild"),
+    ).toBeInTheDocument();
+    expect(screen.queryByText("Super Mario Odyssey")).toBeInTheDocument();
+
+    // search for title
+    const searchInput = screen.getByRole("searchbox", {
+      name: /search/i,
+    });
+    const searchButton = screen.getByRole("button", { name: /go/i });
+    await user.type(searchInput, "Zelda");
+    await user.click(searchButton);
+
+    expect(
+      screen.queryByText("The Legend of Zelda: Breath of the Wild"),
+    ).toBeInTheDocument();
+    expect(screen.queryByText("Super Mario Odyssey")).not.toBeInTheDocument();
   });
 });

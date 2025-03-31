@@ -40,6 +40,11 @@ export function filterByKey<T, K extends keyof T>(
   key: K,
   value: string | number,
 ): T[] {
+  if (!value) {
+    console.log("returning");
+    return array;
+  }
+
   return array.filter((item) => {
     const val = value.toString().toLocaleLowerCase();
     if (String(item[key]).toLowerCase().includes(val)) {

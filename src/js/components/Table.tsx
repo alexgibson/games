@@ -1,6 +1,5 @@
 import React from "react";
 import TableRow from "./TableRow";
-import { sortByKey, filterByKey } from "../utils.ts";
 
 type TableProps = React.HTMLAttributes<HTMLTableElement> & {
   games: Game[];
@@ -8,12 +7,9 @@ type TableProps = React.HTMLAttributes<HTMLTableElement> & {
 };
 
 const Table: React.FC<TableProps> = ({ games, status }) => {
-  const allGames: Game[] = sortByKey(games, "title");
-  const data: Game[] = filterByKey(allGames, "status", status);
-
   return (
     <>
-      <table id={`${status}-Table`}>
+      <table id={`${status}-Table`} aria-live="polite">
         <caption>{status}</caption>
         <thead>
           <tr>
@@ -38,7 +34,7 @@ const Table: React.FC<TableProps> = ({ games, status }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((props) => (
+          {games.map((props) => (
             <TableRow key={props.title} {...props} />
           ))}
         </tbody>
