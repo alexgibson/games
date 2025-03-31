@@ -11,21 +11,26 @@
   --color-table-cell-border: #444;
   --color-table-cell-highlight: #3a3a3a;
   --content-max-width: 1400px;
+  --font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-size-main-heading: 1.6rem;
-  --font-size-summary-heading: 1.2rem;
+  --font-size-menu: 0.9rem;
+  --font-size-sub-heading: 1.2rem;
   --font-size-table: 0.9rem;
   --margin-lg: 48px;
   --margin-sm: 10px;
+  --margin-xs: 4px;
   --padding-md: 10px;
   --padding-sm: 8px;
   --table-border-width: 1px;
 
   @media (min-width: 769px) {
     --font-size-main-heading: 2rem;
-    --font-size-summary-heading: 1.4rem;
+    --font-size-menu: 1rem;
+    --font-size-sub-heading: 1.4rem;
     --font-size-table: 1rem;
     --margin-lg: 60px;
     --margin-sm: 12px;
+    --margin-xs: 8px;
     --padding-md: 12px;
     --padding-sm: 10px;
   }
@@ -34,7 +39,7 @@
 body {
   background-color: var(--color-body-background);
   color: var(--color-body);
-  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
 }
@@ -63,27 +68,68 @@ a:focus {
   text-decoration: none;
 }
 
-/** <details> and <summary> **/
+menu {
+  font-size: var(--font-size-menu);
+  margin: 0 auto var(--margin-sm);
+  max-width: var(--content-max-width);
+  padding: 0;
+  text-align: center;
+}
 
-details {
+menu li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+menu button {
+  background-color: transparent;
+  border-radius: 6px;
+  border: none;
+  color: var(--color-body);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: inherit;
+  margin: 0 calc(var(--margin-sm) / 2);
+  padding: 0.5rem;
+  transition: all 0.1s ease-in-out;
+}
+
+#Playing-TabButton:hover,
+#Playing-TabButton:focus,
+#Playing-TabButton.active {
+  background-color: var(--color-highlight-blue);
+}
+
+#Backlog-TabButton:hover,
+#Backlog-TabButton:focus,
+#Backlog-TabButton.active {
+  background-color: var(--color-highlight-gray);
+}
+
+#Wishlist-TabButton:hover,
+#Wishlist-TabButton:focus,
+#Wishlist-TabButton.active {
+  background-color: var(--color-highlight-purple);
+}
+
+#Beat-TabButton:hover,
+#Beat-TabButton:focus,
+#Beat-TabButton.active {
+  background-color: var(--color-highlight-green);
+}
+
+#Paused-TabButton:hover,
+#Paused-TabButton:focus,
+#Paused-TabButton.active {
+  background-color: var(--color-highlight-orange);
+}
+
+#tab-content {
   overflow-x: auto;
   margin: 0 auto var(--margin-lg);
   max-width: var(--content-max-width);
-}
-
-details summary:hover {
-  cursor: pointer;
-}
-
-details summary {
-  display: list-item;
-  font-size: var(--font-size-summary-heading);
-  margin-bottom: var(--margin-sm);
-}
-
-details summary h2 {
-  display: inline;
-  font-size: inherit;
 }
 
 /** <table> **/
@@ -97,33 +143,40 @@ table {
   width: 100%;
 }
 
+table caption {
+  color: var(--color-body);
+  font-size: var(--font-size-sub-heading);
+  margin: var(--margin-sm) 0;
+  text-align: left;
+}
+
 thead th {
   color: var(--color-body);
   padding: var(--padding-sm);
   text-align: left;
 }
 
-#Playing thead th {
+#Playing-Table thead th {
   background-color: var(--color-highlight-blue);
   border: var(--table-border-width) solid var(--color-highlight-blue);
 }
 
-#Backlog thead th {
+#Backlog-Table thead th {
   background-color: var(--color-highlight-gray);
   border: var(--table-border-width) solid var(--color-highlight-gray);
 }
 
-#Wishlist thead th {
+#Wishlist-Table thead th {
   background-color: var(--color-highlight-purple);
   border: var(--table-border-width) solid var(--color-highlight-purple);
 }
 
-#Beat thead th {
+#Beat-Table thead th {
   background-color: var(--color-highlight-green);
   border: var(--table-border-width) solid var(--color-highlight-green);
 }
 
-#Paused thead th {
+#Paused-Table thead th {
   background-color: var(--color-highlight-orange);
   border: var(--table-border-width) solid var(--color-highlight-orange);
 }
@@ -136,6 +189,7 @@ tbody tr {
 tbody th {
   color: var(--color-body);
   padding: var(--padding-sm);
+  font-weight: normal;
 }
 
 td {

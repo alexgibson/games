@@ -1,9 +1,16 @@
-import Details from "./Details";
 import Games from "../games.ts";
 import React from "react";
+import TabButton from "./TabButton";
 import Table from "./Table";
+import { useState } from "react";
 
 const App: React.FC = () => {
+  const [selectedTab, setSelectedTab] = useState("Playing");
+
+  function handleTabSelect(selectedTab) {
+    setSelectedTab(selectedTab);
+  }
+
   const allStatus: Status[] = [
     "Playing",
     "Backlog",
@@ -12,13 +19,29 @@ const App: React.FC = () => {
     "Paused",
   ];
 
+  const tabContent = <Table games={Games} status={selectedTab}></Table>;
+
   return (
     <>
-      {allStatus.map((status: string) => (
-        <Details key={status} title={status} open={true}>
-          <Table games={Games} status={status}></Table>
-        </Details>
-      ))}
+      <menu role="tablist" aria-label="Game Status">
+        {allStatus.map((status: string) => (
+          <TabButton
+            key={status}
+            id={`${status}-TabButton`}
+            isSelected={selectedTab === status}
+            onSelect={() => handleTabSelect(status)}
+          >
+            {status}
+          </TabButton>
+        ))}
+      </menu>
+      <div
+        role="tabpanel"
+        id="tab-content"
+        aria-labelledby={`${selectedTab}-TabButton`}
+      >
+        {tabContent}
+      </div>
     </>
   );
 };
