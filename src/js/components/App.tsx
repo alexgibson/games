@@ -20,7 +20,12 @@ const App: React.FC = () => {
     "Paused",
   ];
 
-  const handleSearch: React.FormEventHandler<HTMLFormElement> = (e) => {
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const searchValue = e.target.value;
+    setSearchValue(searchValue);
+  };
+
+  const handleSearchSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     const target = e.target as HTMLFormElement;
     const formData = new FormData(target);
@@ -45,7 +50,8 @@ const App: React.FC = () => {
       <SearchBar
         placeholder="Search by game title"
         value={searchValue}
-        onSearch={handleSearch}
+        onSubmit={handleSearchSubmit}
+        onChange={handleSearchChange}
         onClear={() => setSearchValue("")}
         ariaControls={`${selectedTab}-Table`}
       />
