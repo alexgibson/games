@@ -28,10 +28,6 @@ const App: React.FC = () => {
     setSearchValue(searchValue);
   };
 
-  function handleTabSelect(selectedTab: string) {
-    setSelectedTab(selectedTab);
-  }
-
   return (
     <>
       <menu role="tablist" aria-label="Game Status">
@@ -40,7 +36,7 @@ const App: React.FC = () => {
             key={status}
             id={`${status}-TabButton`}
             isSelected={selectedTab === status}
-            onSelect={() => handleTabSelect(status)}
+            onSelect={() => setSelectedTab(status)}
           >
             {status}
           </TabButton>
