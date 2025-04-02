@@ -41,7 +41,6 @@ export function filterByKey<T, K extends keyof T>(
   value: string | number,
 ): T[] {
   if (!value) {
-    console.log("returning");
     return array;
   }
 

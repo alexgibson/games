@@ -8,10 +8,10 @@ import { useState } from "react";
 
 const App: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<string>("Playing");
-  const [searchValue, setSearchValue] = useState<string | null>();
+  const [searchValue, setSearchValue] = useState<string>("");
   const allGames: Game[] = sortByKey(Games, "title");
   const data: Game[] = filterByKey(allGames, "status", selectedTab);
-  const filteredData = filterByKey(data, "title", searchValue);
+  const filteredData: Game[] = filterByKey(data, "title", searchValue);
   const allStatus: Status[] = [
     "Playing",
     "Backlog",
@@ -47,9 +47,10 @@ const App: React.FC = () => {
         ))}
       </menu>
       <SearchBar
-        placeholder="Filter title"
+        placeholder="Search by game title"
         value={searchValue}
         onSearch={handleSearch}
+        onClear={() => setSearchValue("")}
         ariaControls={`${selectedTab}-Table`}
       />
       <div

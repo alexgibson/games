@@ -31,13 +31,20 @@ describe("App component", () => {
     const searchInput = screen.getByRole("searchbox", {
       name: /search/i,
     });
-    const searchButton = screen.getByRole("button", { name: /go/i });
-    await user.type(searchInput, "Zelda");
-    await user.click(searchButton);
+    await user.type(searchInput, "Zelda{enter}");
 
     expect(
       screen.queryByText("The Legend of Zelda: Breath of the Wild"),
     ).toBeInTheDocument();
     expect(screen.queryByText("Super Mario Odyssey")).not.toBeInTheDocument();
+
+    // clear search filter
+    const clearButton = screen.getByRole("button", { name: /clear/i });
+    await user.click(clearButton);
+
+    expect(
+      screen.queryByText("The Legend of Zelda: Breath of the Wild"),
+    ).toBeInTheDocument();
+    expect(screen.queryByText("Super Mario Odyssey")).toBeInTheDocument();
   });
 });
