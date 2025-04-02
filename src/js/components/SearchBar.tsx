@@ -1,9 +1,13 @@
 import React from "react";
 
-type SearchBarProps = React.HTMLAttributes<HTMLFormElement> & {
+type SearchBarProps = Omit<
+  React.HTMLAttributes<HTMLFormElement>,
+  "onChange"
+> & {
   placeholder: string;
   value: string;
-  onSearch: React.FormEventHandler<HTMLFormElement>;
+  onSubmit: React.FormEventHandler<HTMLFormElement>;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onClear: () => void;
   ariaControls: string;
 };
@@ -11,19 +15,20 @@ type SearchBarProps = React.HTMLAttributes<HTMLFormElement> & {
 const SearchBar: React.FC<SearchBarProps> = ({
   placeholder,
   value,
-  onSearch,
+  onSubmit,
+  onChange,
   onClear,
   ariaControls,
 }) => {
   return (
-    <form onSubmit={onSearch}>
+    <form onSubmit={onSubmit}>
       <label htmlFor="search">Search</label>
       <input
-        key={value}
         id="search"
         type="search"
         name="search"
-        defaultValue={value}
+        value={value}
+        onChange={onChange}
         placeholder={placeholder}
         aria-controls={ariaControls}
       />
