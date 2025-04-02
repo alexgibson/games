@@ -5,29 +5,45 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 describe("App component", () => {
-  it("renders the app data correctly", async () => {
-    const user = userEvent.setup();
+  const user = userEvent.setup();
+
+  beforeEach(() => {
     const AppComponent: React.ReactElement = <App />;
-
     render(AppComponent);
+  });
 
+  it("displays active tab content as expected", async () => {
+    // "Playing" tab displayed by default.
     const playingButton = screen.getByRole("button", { name: /playing/i });
     expect(playingButton).toHaveClass("active");
-    expect(screen.getByRole("table", { name: /playing/i })).toBeInTheDocument();
+    expect(
+      screen.queryByRole("table", { name: /playing/i }),
+    ).toBeInTheDocument();
 
-    // switch tabs
+    // Switch to "Beat" tab.
     const beatButton = screen.getByRole("button", { name: /beat/i });
     await user.click(beatButton);
 
     expect(playingButton).not.toHaveClass("active");
+    expect(
+      screen.queryByRole("table", { name: /playing/i }),
+    ).not.toBeInTheDocument();
+
     expect(beatButton).toHaveClass("active");
-    expect(screen.getByRole("table", { name: /beat/i })).toBeInTheDocument();
+    expect(screen.queryByRole("table", { name: /beat/i })).toBeInTheDocument();
+  });
+
+  it("should filter games by title as expected", async () => {
+    // Switch to "Beat" tab.
+    const beatButton = screen.getByRole("button", { name: /beat/i });
+    await user.click(beatButton);
+
     expect(
       screen.queryByText("The Legend of Zelda: Breath of the Wild"),
     ).toBeInTheDocument();
     expect(screen.queryByText("Super Mario Odyssey")).toBeInTheDocument();
 
-    // search for title
+    // Search for "Zelda".
     const searchInput = screen.getByRole("searchbox", {
       name: /search/i,
     });
@@ -38,7 +54,7 @@ describe("App component", () => {
     ).toBeInTheDocument();
     expect(screen.queryByText("Super Mario Odyssey")).not.toBeInTheDocument();
 
-    // clear search filter
+    // Click "Clear" button.
     const clearButton = screen.getByRole("button", { name: /clear/i });
     await user.click(clearButton);
 
