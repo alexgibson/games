@@ -57,6 +57,10 @@ h1 {
   text-align: center;
 }
 
+h1:before {
+  content: "🎮 ";
+}
+
 a:link,
 a:visited {
   color: var(--color-body);
@@ -245,6 +249,8 @@ form {
 
 form label {
   visibility: hidden;
+  display: inline-block;
+  width: 0;
 }
 
 form input[type="search"] {
@@ -254,7 +260,7 @@ form input[type="search"] {
   color: var(--color-body);
   font-family: var(--font-family);
   font-size: 1rem;
-  margin: 0 calc(var(--margin-xs) / 2);
+  margin-right: var(--margin-xs);
   padding: 6px 12px;
 }
 
@@ -263,21 +269,26 @@ form input[type="search"]::placeholder {
   opacity: 1;
 }
 
-form button[type="submit"] {
+form button {
   background: transparent;
   border-radius: 10px;
   border: 1px solid transparent;
   color: var(--color-body);
   font-family: var(--font-family);
   font-size: 1rem;
+  font-weight: normal;
   margin: 0;
-  padding: 6px 12px;
+  padding: 0.5rem;
   transition: all 0.1s ease-in-out;
 }
 
-form button[type="submit"]:hover,
-form button[type="submit"]:active,
-form button[type="submit"]:focus {
+form button:disabled {
+  cursor: default;
+}
+
+form button:not(:disabled):hover,
+form button:not(:disabled):active,
+form button:not(:disabled):focus {
   background: var(--color-highlight-gray);
   border: 1px solid var(--color-highlight-gray);
   cursor: pointer;
