@@ -15,8 +15,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
   onClear,
   ariaControls,
 }) => {
-  const isDisabled = value ? false : true;
-
   return (
     <form onSubmit={onSearch}>
       <label htmlFor="search">Search</label>
@@ -32,7 +30,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
       <button
         name="clear"
         type="button"
-        disabled={isDisabled}
+        disabled={value ? false : true}
         onClick={onClear}
       >
         Clear

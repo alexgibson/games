@@ -1,8 +1,8 @@
 /**
  * Sorts a given array of objects by key.
- * @param array the array of objects to be sorted.
- * @param key the object key to sort by.
- * @param ascending defaults to true.
+ * @param array of objects to be sorted.
+ * @param key to sort by.
+ * @param ascending (defaults to true).
  * @returns sorted array.
  */
 export function sortByKey<T, K extends keyof T>(
@@ -30,9 +30,9 @@ export function sortByKey<T, K extends keyof T>(
 
 /**
  * Filters a given array of objects by key / value.
- * @param array the array of objects to be sorted.
- * @param key the object key to filter by.
- * @param value the value to filter by.
+ * @param array of objects to be sorted.
+ * @param key to filter by.
+ * @param value to filter by.
  * @returns filtered array of objects.
  */
 export function filterByKey<T, K extends keyof T>(
@@ -54,9 +54,9 @@ export function filterByKey<T, K extends keyof T>(
 
 /**
  * Returns a shortened date string.
- * @param date the Date() object to format.
- * @param locale string to format the short date (defaults to en-GB).
- * @returns string using format DD/MM/YYY.
+ * @param date object to format.
+ * @param locale string (defaults to en-GB).
+ * @returns string format DD/MM/YYY.
  */
 export function formatShortDate(date: Date, locale: string = "en-GB"): string {
   return new Intl.DateTimeFormat(locale, {
