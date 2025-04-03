@@ -964,9 +964,9 @@
   },
   {
     "title": "Street Fighter 6",
-    "platform": "Steam",
+    "platform": "Nintendo Swtich 2",
     "developer": "Capcom",
-    "releaseDate": "June 02 2023",
+    "releaseDate": "June 05 2025",
     "medium": "Digital",
     "status": "Wishlist",
     "score": null
@@ -1026,12 +1026,86 @@
     "score": null
   },
   {
-    "title": "Metroid Prime 4: Beyond",
-    "platform": "Nintendo Switch",
+    "title": "Metroid Prime 4: Beyond - Nintendo Switch 2 Edition",
+    "platform": "Nintendo Switch 2",
     "developer": "Nintendo / Retro Studios",
     "releaseDate": "2025",
     "medium": "Physical",
     "status": "Wishlist",
     "score": null
+  },
+  {
+    "title": "Mario Kart World",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "June 05 2025",
+    "medium": "Digital",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Donkey Kong Bananza",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "July 17 2025",
+    "medium": "Physical",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Hyrule Warriors: Age of Imprisonment",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "2025",
+    "medium": "Physical",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Kirby Air Riders",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "2025",
+    "medium": "Physical",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "The Legend of Zelda: Breath of the Wild - Nintendo Switch 2 Edition",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "June 05 2025",
+    "medium": "Digital",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "The Legend of Zelda: Tears of the Kingdom - Nintendo Switch 2 Edition",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "June 05 2025",
+    "medium": "Digital",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Kirby and the Forgotten Land - Nintendo Switch 2 Edition + Star-Crossed World",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "August 28 2025",
+    "medium": "Digital",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "The Duskbloods",
+    "platform": "Nintendo Switch 2",
+    "developer": "FromSoftware",
+    "releaseDate": "2026",
+    "medium": "Physical",
+    "status": "Wishlist",
+    "score": null
   }
+
+
 ]
