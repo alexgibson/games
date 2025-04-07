@@ -57,10 +57,6 @@ h1 {
   text-align: center;
 }
 
-h1:before {
-  content: "🎮 ";
-}
-
 a:link,
 a:visited {
   color: var(--color-body);
@@ -110,13 +106,13 @@ menu button.active {
 #Playing-TabButton:hover,
 #Playing-TabButton:focus,
 #Playing-TabButton.active {
-  background-color: var(--color-highlight-blue);
+  background-color: var(--color-highlight-green);
 }
 
 #Backlog-TabButton:hover,
 #Backlog-TabButton:focus,
 #Backlog-TabButton.active {
-  background-color: var(--color-highlight-gray);
+  background-color: var(--color-highlight-orange);
 }
 
 #Wishlist-TabButton:hover,
@@ -128,13 +124,13 @@ menu button.active {
 #Beat-TabButton:hover,
 #Beat-TabButton:focus,
 #Beat-TabButton.active {
-  background-color: var(--color-highlight-green);
+  background-color: var(--color-highlight-blue);
 }
 
 #Paused-TabButton:hover,
 #Paused-TabButton:focus,
 #Paused-TabButton.active {
-  background-color: var(--color-highlight-orange);
+  background-color: var(--color-highlight-gray);
 }
 
 #tab-content {
@@ -168,13 +164,13 @@ thead th {
 }
 
 #Playing-Table thead th {
-  background-color: var(--color-highlight-blue);
-  border: var(--table-border-width) solid var(--color-highlight-blue);
+  background-color: var(--color-highlight-green);
+  border: var(--table-border-width) solid var(--color-highlight-green);
 }
 
 #Backlog-Table thead th {
-  background-color: var(--color-highlight-gray);
-  border: var(--table-border-width) solid var(--color-highlight-gray);
+  background-color: var(--color-highlight-orange);
+  border: var(--table-border-width) solid var(--color-highlight-orange);
 }
 
 #Wishlist-Table thead th {
@@ -183,13 +179,13 @@ thead th {
 }
 
 #Beat-Table thead th {
-  background-color: var(--color-highlight-green);
-  border: var(--table-border-width) solid var(--color-highlight-green);
+  background-color: var(--color-highlight-blue);
+  border: var(--table-border-width) solid var(--color-highlight-blue);
 }
 
 #Paused-Table thead th {
-  background-color: var(--color-highlight-orange);
-  border: var(--table-border-width) solid var(--color-highlight-orange);
+  background-color: var(--color-highlight-gray);
+  border: var(--table-border-width) solid var(--color-highlight-gray);
 }
 
 tbody tr {
