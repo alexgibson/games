@@ -6,8 +6,9 @@
   "private": true,
   "scripts": {
     "clean": "del dist/*",
-    "check": "tsc --project tsconfig.json",
-    "lint": "prettier --check . && npx eslint && npm run check",
+    "ts-check": "tsc --project tsconfig.json",
+    "eslint": "npx eslint --config eslint.config.mjs",
+    "lint": "prettier --check . && npm run eslint && npm run ts-check",
     "test": "npm run lint && jest",
     "format": "prettier --write .",
     "prestart": "npm run clean && npm run lint",

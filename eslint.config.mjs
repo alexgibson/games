@@ -3,6 +3,7 @@ import globals from "globals";
 import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
+import prettierConfig from "eslint-config-prettier";
 
 export default defineConfig([
   { ignores: ["dist/**/*.js"] },
@@ -19,6 +20,7 @@ export default defineConfig([
   },
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  prettierConfig,
   {
     rules: {
       "react/prop-types": "off",
