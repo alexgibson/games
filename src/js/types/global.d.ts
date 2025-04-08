@@ -19,6 +19,7 @@ declare global {
     score: OneToTen;
     medium: Medium;
   }
+  type GameKey = keyof Game;
 }
 
 export {};
