@@ -19,7 +19,7 @@ declare global {
     score: OneToTen;
     medium: Medium;
   }
-  type GameKey = keyof Game;
+  type GameField = keyof Game;
 }
 
 export {};

@@ -67,9 +67,9 @@ export function formatShortDate(date: Date, locale: string = "en-GB"): string {
 }
 
 /**
- * Array of valid status keys.
+ * Array of valid game status values.
  */
-export const validStatusKeys: Status[] = [
+export const gameStatus: Status[] = [
   "Playing",
   "Backlog",
   "Wishlist",
@@ -78,9 +78,18 @@ export const validStatusKeys: Status[] = [
 ];
 
 /**
- * Object of valid game keys/values for search fields.
+ * Returns true if given game status is valid.
+ * @param status string to validate.
+ * @returns boolean.
  */
-export const validGameKeys = {
+export const isValidGameStatus = (status: string): status is Status => {
+  return gameStatus.includes(status as Status);
+};
+
+/**
+ * Object of valid game field key/value pairs.
+ */
+export const gameFields = {
   Title: "title",
   Platform: "platform",
   Developer: "developer",
@@ -90,10 +99,10 @@ export const validGameKeys = {
 };
 
 /**
- * Returns true if given key is a valid Game object key.
+ * Returns true if given key is a valid Game field.
  * @param key to validate.
  * @returns boolean.
  */
-export const isGameKey = (key: string): key is GameKey => {
-  return Object.values(validGameKeys).includes(key as GameKey);
+export const isValidGameField = (key: string): key is GameField => {
+  return Object.values(gameFields).includes(key as GameField);
 };
