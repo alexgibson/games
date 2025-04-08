@@ -1,4 +1,5 @@
 import React from "react";
+import { validGameKeys } from "../utils.ts";
 
 type SearchBarProps = Omit<
   React.HTMLAttributes<HTMLFormElement>,
@@ -7,7 +8,8 @@ type SearchBarProps = Omit<
   placeholder: string;
   value: string;
   onSubmit: React.FormEventHandler<HTMLFormElement>;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onValueChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onFieldChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   onClear: () => void;
   ariaControls: string;
 };
@@ -16,19 +18,28 @@ const SearchBar: React.FC<SearchBarProps> = ({
   placeholder,
   value,
   onSubmit,
-  onChange,
+  onValueChange,
+  onFieldChange,
   onClear,
   ariaControls,
 }) => {
   return (
     <form onSubmit={onSubmit}>
+      <label htmlFor="field">Field</label>
+      <select id="field" onChange={onFieldChange} aria-controls="search">
+        {Object.entries(validGameKeys).map(([key, value]) => (
+          <option key={key} value={value}>
+            {key}
+          </option>
+        ))}
+      </select>
       <label htmlFor="search">Search</label>
       <input
         id="search"
         type="search"
         name="search"
         value={value}
-        onChange={onChange}
+        onChange={onValueChange}
         placeholder={placeholder}
         aria-controls={ariaControls}
       />

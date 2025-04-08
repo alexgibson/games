@@ -63,4 +63,34 @@ describe("App component", () => {
     ).toBeInTheDocument();
     expect(screen.queryByText("Super Mario Odyssey")).toBeInTheDocument();
   });
+
+  it("should filter games by medium as expected", async () => {
+    // Switch to "Beat" tab.
+    const beatButton = screen.getByRole("button", { name: /beat/i });
+    await user.click(beatButton);
+
+    let digital = screen.queryAllByText(/Digital/i);
+    expect(digital.length).toBeGreaterThan(0);
+
+    let physical = screen.queryAllByText(/Physical/i);
+    expect(physical.length).toBeGreaterThan(0);
+
+    // Select field "Medium"
+    const selectInput = screen.getByRole("combobox", {
+      name: /field/i,
+    });
+    await userEvent.selectOptions(selectInput, "medium");
+
+    // Search for "Digital".
+    const searchInput = screen.getByRole("searchbox", {
+      name: /search/i,
+    });
+    await user.type(searchInput, "Digital{enter}");
+
+    digital = screen.queryAllByText(/Digital/i);
+    expect(digital.length).toBeGreaterThan(0);
+
+    physical = screen.queryAllByText(/Physical/i);
+    expect(physical.length).toBe(0);
+  });
 });

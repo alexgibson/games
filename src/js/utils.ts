@@ -65,3 +65,35 @@ export function formatShortDate(date: Date, locale: string = "en-GB"): string {
     day: "2-digit",
   }).format(date);
 }
+
+/**
+ * Array of valid status keys.
+ */
+export const validStatusKeys: Status[] = [
+  "Playing",
+  "Backlog",
+  "Wishlist",
+  "Beat",
+  "Paused",
+];
+
+/**
+ * Object of valid game keys/values for search fields.
+ */
+export const validGameKeys = {
+  Title: "title",
+  Platform: "platform",
+  Developer: "developer",
+  "Release Date": "releaseDate",
+  Score: "score",
+  Medium: "medium",
+};
+
+/**
+ * Returns true if given key is a valid Game object key.
+ * @param key to validate.
+ * @returns boolean.
+ */
+export const isGameKey = (key: string): key is GameKey => {
+  return Object.values(validGameKeys).includes(key as GameKey);
+};

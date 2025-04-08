@@ -3,32 +3,38 @@ import React from "react";
 import SearchBar from "./SearchBar.tsx";
 import TabButton from "./TabButton";
 import Table from "./Table";
-import { sortByKey, filterByKey } from "../utils.ts";
+import {
+  sortByKey,
+  filterByKey,
+  validStatusKeys,
+  isGameKey,
+} from "../utils.ts";
 import { useState } from "react";
 
 const App: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<string>("Playing");
+  const [searchField, setSearchField] = useState<GameKey>("title");
   const [searchValue, setSearchValue] = useState<string>("");
   const allGames: Game[] = sortByKey(Games, "title");
   const data: Game[] = filterByKey(allGames, "status", selectedTab);
-  const filteredData: Game[] = filterByKey(data, "title", searchValue);
-  const allStatus: Status[] = [
-    "Playing",
-    "Backlog",
-    "Wishlist",
-    "Beat",
-    "Paused",
-  ];
+  const filteredData: Game[] = filterByKey(data, searchField, searchValue);
 
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchValue = e.target.value;
-    setSearchValue(searchValue);
+  const handleFieldChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = e.target.value;
+
+    if (isGameKey(value)) {
+      setSearchField(value);
+    }
+  };
+
+  const handleValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(e.target.value);
   };
 
   return (
     <>
       <menu role="tablist" aria-label="Game Status">
-        {allStatus.map((status: string) => (
+        {validStatusKeys.map((status: string) => (
           <TabButton
             key={status}
             id={`${status}-TabButton`}
@@ -40,10 +46,11 @@ const App: React.FC = () => {
         ))}
       </menu>
       <SearchBar
-        placeholder="Search by game title"
+        placeholder="Search by field"
         value={searchValue}
         onSubmit={(e) => e.preventDefault()}
-        onChange={handleSearchChange}
+        onValueChange={handleValueChange}
+        onFieldChange={handleFieldChange}
         onClear={() => setSearchValue("")}
         ariaControls={`${selectedTab}-Table`}
       />
