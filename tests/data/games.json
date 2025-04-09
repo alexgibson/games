@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Title A",
+    "platform": "Nintendo Switch",
+    "developer": "Developer A",
+    "releaseDate": "February 8 2023",
+    "medium": "Physical",
+    "status": "Playing",
+    "score": 10
+  },
+  {
+    "title": "Title B",
+    "platform": "Nintendo Switch",
+    "developer": "Developer A",
+    "releaseDate": "February 23 2017",
+    "medium": "Digital",
+    "status": "Playing",
+    "score": 9
+  },
+  {
+    "title": "Title C",
+    "platform": "Steam",
+    "developer": "Developer B",
+    "releaseDate": "March 3 2017",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 8
+  },
+  {
+    "title": "Title D",
+    "platform": "Nintendo Switch",
+    "developer": "Developer C",
+    "releaseDate": "May 12 2023",
+    "medium": "Physical",
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Title E",
+    "platform": "Steam",
+    "developer": "Developer B",
+    "releaseDate": "March 20 2020",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 6
+  }
+]
