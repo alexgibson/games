@@ -216,18 +216,6 @@ tr:hover {
   text-align: center;
 }
 
-.col-release-date,
-.col-developer {
-  display: none;
-}
-
-@media (min-width: 769px) {
-  .col-release-date,
-  .col-developer {
-    display: table-cell;
-  }
-}
-
 /** <form> **/
 
 form {
