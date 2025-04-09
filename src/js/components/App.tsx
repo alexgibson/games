@@ -1,4 +1,3 @@
-import Games from "../games.ts";
 import React from "react";
 import SearchBar from "./SearchBar.tsx";
 import TabButton from "./TabButton";
@@ -12,11 +11,15 @@ import {
 } from "../utils.ts";
 import { useState } from "react";
 
-const App: React.FC = () => {
+type AppProps = {
+  games: Game[];
+};
+
+const App: React.FC<AppProps> = ({ games }) => {
   const [selectedTab, setSelectedTab] = useState<Status>("Playing");
   const [searchField, setSearchField] = useState<GameField>("title");
   const [searchValue, setSearchValue] = useState<string>("");
-  const allGames: Game[] = sortByKey(Games, "title");
+  const allGames: Game[] = sortByKey(games, "title");
   const statusGames: Game[] = filterByKey(allGames, "status", selectedTab);
   const filteredGames: Game[] = filterByKey(
     statusGames,
