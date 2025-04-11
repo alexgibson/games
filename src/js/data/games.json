@@ -846,7 +846,7 @@
     "score": null
   },
   {
-    "title": "Cyberpunk",
+    "title": "Cyberpunk 2077",
     "platform": "Steam",
     "developer": "CD Projekt Red",
     "releaseDate": "December 10 2020",
@@ -1029,7 +1029,7 @@
     "title": "Metroid Prime 4: Beyond - Nintendo Switch 2 Edition",
     "platform": "Nintendo Switch 2",
     "developer": "Nintendo / Retro Studios",
-    "releaseDate": "2025",
+    "releaseDate": "December 31 2025",
     "medium": "Physical",
     "status": "Wishlist",
     "score": null
@@ -1056,7 +1056,7 @@
     "title": "Hyrule Warriors: Age of Imprisonment",
     "platform": "Nintendo Switch 2",
     "developer": "Nintendo",
-    "releaseDate": "2025",
+    "releaseDate": "December 31 2025",
     "medium": "Physical",
     "status": "Wishlist",
     "score": null
@@ -1065,7 +1065,7 @@
     "title": "Kirby Air Riders",
     "platform": "Nintendo Switch 2",
     "developer": "Nintendo",
-    "releaseDate": "2025",
+    "releaseDate": "December 31 2025",
     "medium": "Physical",
     "status": "Wishlist",
     "score": null
@@ -1101,8 +1101,17 @@
     "title": "The Duskbloods",
     "platform": "Nintendo Switch 2",
     "developer": "FromSoftware",
-    "releaseDate": "2026",
+    "releaseDate": "December 31 2026",
     "medium": "Physical",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Blue Prince",
+    "platform": "Steam",
+    "developer": "Dogubomb",
+    "releaseDate": "April 10 2025",
+    "medium": "Digital",
     "status": "Wishlist",
     "score": null
   }
