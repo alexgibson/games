@@ -3,7 +3,7 @@ import Games from "./games.ts";
 
 describe("sortByKey()", () => {
   test("sort an array of objects by key", () => {
-    const resultTitleAsc = sortByKey(Games, "title");
+    const resultTitleAsc = sortByKey(Games, "title", true);
     expect(resultTitleAsc[0].title).toEqual("Title A");
     expect(resultTitleAsc[1].title).toEqual("Title B");
     expect(resultTitleAsc[2].title).toEqual("Title C");
@@ -17,7 +17,7 @@ describe("sortByKey()", () => {
     expect(resultTitleDesc[3].title).toEqual("Title B");
     expect(resultTitleDesc[4].title).toEqual("Title A");
 
-    const resultScoreAsc = sortByKey(Games, "score");
+    const resultScoreAsc = sortByKey(Games, "score", true);
     expect(resultScoreAsc[0].score).toEqual(6);
     expect(resultScoreAsc[1].score).toEqual(7);
     expect(resultScoreAsc[2].score).toEqual(8);
@@ -30,6 +30,40 @@ describe("sortByKey()", () => {
     expect(resultScoreDesc[2].score).toEqual(8);
     expect(resultScoreDesc[3].score).toEqual(7);
     expect(resultScoreDesc[4].score).toEqual(6);
+
+    const resultReleaseDateAsc = sortByKey(Games, "releaseDate", true);
+    expect(formatShortDate(resultReleaseDateAsc[0].releaseDate)).toEqual(
+      "23 February 2017",
+    );
+    expect(formatShortDate(resultReleaseDateAsc[1].releaseDate)).toEqual(
+      "03 March 2017",
+    );
+    expect(formatShortDate(resultReleaseDateAsc[2].releaseDate)).toEqual(
+      "20 March 2020",
+    );
+    expect(formatShortDate(resultReleaseDateAsc[3].releaseDate)).toEqual(
+      "08 February 2023",
+    );
+    expect(formatShortDate(resultReleaseDateAsc[4].releaseDate)).toEqual(
+      "12 May 2023",
+    );
+
+    const resultReleaseDateDesc = sortByKey(Games, "releaseDate", false);
+    expect(formatShortDate(resultReleaseDateDesc[0].releaseDate)).toEqual(
+      "12 May 2023",
+    );
+    expect(formatShortDate(resultReleaseDateDesc[1].releaseDate)).toEqual(
+      "08 February 2023",
+    );
+    expect(formatShortDate(resultReleaseDateDesc[2].releaseDate)).toEqual(
+      "20 March 2020",
+    );
+    expect(formatShortDate(resultReleaseDateDesc[3].releaseDate)).toEqual(
+      "03 March 2017",
+    );
+    expect(formatShortDate(resultReleaseDateDesc[4].releaseDate)).toEqual(
+      "23 February 2017",
+    );
   });
 });
 

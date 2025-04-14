@@ -1,4 +1,13 @@
 /**
+ * Returns true if given value is a valid Date() object.
+ * @param value
+ * @returns boolean
+ */
+export function isDate(value: unknown): value is Date {
+  return value instanceof Date && !isNaN(value.getTime());
+}
+
+/**
  * Takes an array of objects and returns a new copy
  * of the array, sorted ascending or descending by key.
  * @param array of objects to be sorted.
@@ -24,6 +33,12 @@ export function sortByKey<T, K extends keyof T>(
 
       if (typeof valueA === "number" && typeof valueB === "number") {
         return ascending ? valueA - valueB : valueB - valueA;
+      }
+
+      if (isDate(valueA) && isDate(valueB)) {
+        return ascending
+          ? valueA.getTime() - valueB.getTime()
+          : valueB.getTime() - valueA.getTime();
       }
 
       return 0;
