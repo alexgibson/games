@@ -1,36 +1,39 @@
 import React from "react";
 import TableRow from "./TableRow";
+import TableHeading from "./TableHeading";
+import { gameFieldNames } from "../utils";
 
 type TableProps = React.HTMLAttributes<HTMLTableElement> & {
   games: Game[];
   status: string;
+  onSortTable: (field: FieldName) => void;
+  sortField: FieldName;
+  sortAscending: boolean;
 };
 
-const Table: React.FC<TableProps> = ({ games, status }) => {
+const Table: React.FC<TableProps> = ({
+  games,
+  status,
+  onSortTable,
+  sortField,
+  sortAscending,
+}) => {
+  const order = sortAscending ? "ascending" : "descending";
   return (
     <>
       <table id={`${status}-Table`} aria-live="polite">
         <caption>{status}</caption>
         <thead>
           <tr>
-            <th scope="col" className="col-title">
-              Title
-            </th>
-            <th scope="col" className="col-platform">
-              Platform
-            </th>
-            <th scope="col" className="col-developer">
-              Developer
-            </th>
-            <th scope="col" className="col-release-date">
-              Release Date
-            </th>
-            <th scope="col" className="col-medium">
-              Medium
-            </th>
-            <th scope="col" className="col-score">
-              Score
-            </th>
+            {gameFieldNames.map((field) => (
+              <TableHeading
+                key={field}
+                id={field}
+                handleButtonClick={onSortTable}
+                className={sortField === field ? `active-${order}` : undefined}
+                aria-sort={sortField === field ? order : undefined}
+              />
+            ))}
           </tr>
         </thead>
         <tbody>

@@ -9,6 +9,13 @@ declare global {
     | "Wishlist"
     | "Paused";
   type Medium = "Physical | Digital";
+  type FieldName =
+    | "Title"
+    | "Platform"
+    | "Developer"
+    | "Release Date"
+    | "Medium"
+    | "Score";
 
   interface Game {
     title: string;
@@ -19,7 +26,7 @@ declare global {
     score: OneToTen;
     medium: Medium;
   }
-  type GameField = keyof Game;
+  type FieldKey = keyof Game;
 }
 
 export {};

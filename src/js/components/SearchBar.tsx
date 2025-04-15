@@ -1,5 +1,5 @@
 import React from "react";
-import { gameFields } from "../utils.ts";
+import { gameFieldNames } from "../utils";
 
 type SearchBarProps = Omit<
   React.HTMLAttributes<HTMLFormElement>,
@@ -27,9 +27,9 @@ const SearchBar: React.FC<SearchBarProps> = ({
     <form onSubmit={onSubmit}>
       <label htmlFor="field">Field</label>
       <select id="field" onChange={onFieldChange} aria-controls="search">
-        {Object.entries(gameFields).map(([key, value]) => (
-          <option key={key} value={value}>
-            {key}
+        {gameFieldNames.map((field) => (
+          <option key={field} value={field}>
+            {field}
           </option>
         ))}
       </select>
