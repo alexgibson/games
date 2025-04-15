@@ -1,4 +1,4 @@
-import App from "./components/App.js";
+import App from "./App.js";
 import Games from "./games.ts";
 import React from "react";
 import { createRoot } from "react-dom/client";

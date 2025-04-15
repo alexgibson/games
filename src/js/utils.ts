@@ -109,22 +109,52 @@ export const isValidGameStatus = (status: string): status is Status => {
 };
 
 /**
- * Object of valid game field key/value pairs.
+ * Array of valid game field names.
  */
-export const gameFields = {
+export const gameFieldNames: FieldName[] = [
+  "Title",
+  "Platform",
+  "Developer",
+  "Release Date",
+  "Medium",
+  "Score",
+];
+
+/**
+ * Returns true if given game field is valid.
+ * @param field string to validate.
+ * @returns boolean.
+ */
+export const isValidGameField = (field: string): field is FieldName => {
+  return gameFieldNames.includes(field as FieldName);
+};
+
+/**
+ * Object of valid game field names mapped to
+ * their corresponding JSON keys.
+ */
+type GameFieldMap = {
+  [key in FieldName]: FieldKey;
+};
+
+export const gameFieldKeys: GameFieldMap = {
   Title: "title",
   Platform: "platform",
   Developer: "developer",
   "Release Date": "releaseDate",
-  Score: "score",
   Medium: "medium",
+  Score: "score",
 };
 
 /**
- * Returns true if given key is a valid Game field.
- * @param key to validate.
- * @returns boolean.
+ * Helper function that returns a field name's
+ * corresponding JSON key.
+ * @param id valid field name.
+ * @returns valid JSON field key.
  */
-export const isValidGameField = (key: string): key is GameField => {
-  return Object.values(gameFields).includes(key as GameField);
+export const getGameFieldKey = (id: FieldName): FieldKey | null => {
+  if (Object.prototype.hasOwnProperty.call(gameFieldKeys, id)) {
+    return gameFieldKeys[id];
+  }
+  return null;
 };

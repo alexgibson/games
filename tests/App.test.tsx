@@ -1,9 +1,9 @@
 import "@testing-library/jest-dom";
-import App from "../../src/js/components/App";
-import Games from "../games.ts";
+import App from "../src/js/App";
+import Games from "./games.ts";
 import React from "react";
 import userEvent from "@testing-library/user-event";
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 
 describe("App component", () => {
   const user = userEvent.setup();
@@ -77,7 +77,7 @@ describe("App component", () => {
     const selectInput = screen.getByRole("combobox", {
       name: /field/i,
     });
-    await userEvent.selectOptions(selectInput, "medium");
+    await userEvent.selectOptions(selectInput, "Medium");
 
     // Search for "Digital".
     const searchInput = screen.getByRole("searchbox", {
@@ -90,5 +90,55 @@ describe("App component", () => {
 
     physical = screen.queryAllByText(/Physical/i);
     expect(physical.length).toBe(0);
+  });
+
+  it("should sort by table column (ascending)", async () => {
+    // Switch to "Beat" tab.
+    const beatButton = screen.getByRole("button", { name: /beat/i });
+    await user.click(beatButton);
+
+    // Get all table rows, skipping header
+    const rows = screen.getAllByRole("row").slice(1);
+
+    // Get all "Title" cells.
+    const titleCells = rows.map((row) => {
+      return within(row).getByRole("rowheader");
+    });
+
+    // Get cell text content.
+    const titles = titleCells.map((cell) => cell.textContent?.trim() || "");
+
+    // Create a duplicate, ascending array.
+    const sorted = [...titles].sort((a, b) => a.localeCompare(b));
+
+    // Compare the two arrays.
+    expect(titles).toEqual(sorted);
+  });
+
+  it("should sort by table column (descending)", async () => {
+    // Switch to "Beat" tab.
+    const beatButton = screen.getByRole("button", { name: /beat/i });
+    await user.click(beatButton);
+
+    // Click "Title" column button, to switch to descending order.
+    const titleButton = screen.getByRole("button", { name: /title/i });
+    await user.click(titleButton);
+
+    // Get all table rows, skipping header,
+    const rows = screen.getAllByRole("row").slice(1);
+
+    // Get all "Title" cells.
+    const titleCells = rows.map((row) => {
+      return within(row).getByRole("rowheader");
+    });
+
+    // Get cell text content.
+    const titles = titleCells.map((cell) => cell.textContent?.trim() || "");
+
+    // Create a duplicate, descending array.
+    const sorted = [...titles].sort((a, b) => b.localeCompare(a));
+
+    // Compare the two arrays.
+    expect(titles).toEqual(sorted);
   });
 });

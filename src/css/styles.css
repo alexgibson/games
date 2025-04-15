@@ -163,6 +163,39 @@ thead th {
   text-align: left;
 }
 
+thead th button {
+  appearance: none;
+  background: none;
+  border: none;
+  color: var(--color-body);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0 20px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+
+thead th button:hover,
+thead th button:active thead th button:focus {
+  text-decoration: underline;
+}
+
+thead th button:after {
+  padding-left: 0.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+thead th.active-ascending button:after {
+  content: "▲";
+}
+
+thead th.active-descending button:after {
+  content: "▼";
+}
+
 #Playing-Table thead th {
   background-color: var(--color-highlight-green);
   border: var(--table-border-width) solid var(--color-highlight-green);
@@ -210,10 +243,6 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: var(--color-table-cell-highlight);
-}
-
-.col-score {
-  text-align: center;
 }
 
 /** <form> **/
