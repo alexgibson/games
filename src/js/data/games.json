@@ -788,8 +788,8 @@
     "developer": "Kojima Productions",
     "releaseDate": "September 23 2021",
     "medium": "Digital",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 7
   },
   {
     "title": "Fantasian Neo Dimension",
@@ -806,8 +806,8 @@
     "developer": "Hazelight Studios",
     "releaseDate": "March 06 2025",
     "medium": "Digital",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "Tactics Ogre: Reborn",
@@ -833,7 +833,7 @@
     "developer": "FromSoftware",
     "releaseDate": "February 25 2022",
     "medium": "Digital",
-    "status": "Backlog",
+    "status": "Playing",
     "score": null
   },
   {
