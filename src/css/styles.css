@@ -245,6 +245,16 @@ tr:hover {
   background-color: var(--color-table-cell-highlight);
 }
 
+tfoot,
+tfoot tr {
+  background-color: var(--color-body-background);
+}
+
+tfoot td {
+  border: none;
+  text-align: right;
+}
+
 /** <form> **/
 
 form {

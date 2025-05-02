@@ -41,6 +41,11 @@ const Table: React.FC<TableProps> = ({
             <TableRow key={props.title} {...props} />
           ))}
         </tbody>
+        <tfoot>
+          <tr>
+            <td colSpan={6}>Total games: {games.length}</td>
+          </tr>
+        </tfoot>
       </table>
     </>
   );

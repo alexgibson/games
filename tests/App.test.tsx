@@ -21,6 +21,10 @@ describe("App component", () => {
       screen.queryByRole("table", { name: /playing/i }),
     ).toBeInTheDocument();
 
+    expect(
+      screen.queryByRole("cell", { name: /Total games: 2/i }),
+    ).toBeInTheDocument();
+
     // Switch to "Beat" tab.
     const beatButton = screen.getByRole("button", { name: /beat/i });
     await user.click(beatButton);
@@ -30,8 +34,15 @@ describe("App component", () => {
       screen.queryByRole("table", { name: /playing/i }),
     ).not.toBeInTheDocument();
 
+    expect(
+      screen.queryByRole("cell", { name: /Total games: 3/i }),
+    ).toBeInTheDocument();
+
     expect(beatButton).toHaveClass("active");
     expect(screen.queryByRole("table", { name: /beat/i })).toBeInTheDocument();
+
+    // Total games in library displayed in footer.
+    expect(screen.queryByText("Games in library: 5")).toBeInTheDocument();
   });
 
   it("should filter games by title as expected", async () => {
@@ -43,6 +54,10 @@ describe("App component", () => {
     expect(screen.queryByText("Title D")).toBeInTheDocument();
     expect(screen.queryByText("Title E")).toBeInTheDocument();
 
+    expect(
+      screen.queryByRole("cell", { name: /Total games: 3/i }),
+    ).toBeInTheDocument();
+
     // Search for "Title D".
     const searchInput = screen.getByRole("searchbox", {
       name: /search/i,
@@ -53,6 +68,10 @@ describe("App component", () => {
     expect(screen.queryByText("Title D")).toBeInTheDocument();
     expect(screen.queryByText("Title E")).not.toBeInTheDocument();
 
+    expect(
+      screen.queryByRole("cell", { name: /Total games: 1/i }),
+    ).toBeInTheDocument();
+
     // Click "Clear" button.
     const clearButton = screen.getByRole("button", { name: /clear/i });
     await user.click(clearButton);
@@ -60,6 +79,10 @@ describe("App component", () => {
     expect(screen.queryByText("Title C")).toBeInTheDocument();
     expect(screen.queryByText("Title D")).toBeInTheDocument();
     expect(screen.queryByText("Title E")).toBeInTheDocument();
+
+    expect(
+      screen.queryByRole("cell", { name: /Total games: 3/i }),
+    ).toBeInTheDocument();
   });
 
   it("should filter games by medium as expected", async () => {
@@ -72,6 +95,10 @@ describe("App component", () => {
 
     let physical = screen.queryAllByText(/Physical/i);
     expect(physical.length).toBe(2);
+
+    expect(
+      screen.queryByRole("cell", { name: /Total games: 3/i }),
+    ).toBeInTheDocument();
 
     // Select field "Medium"
     const selectInput = screen.getByRole("combobox", {
@@ -90,6 +117,10 @@ describe("App component", () => {
 
     physical = screen.queryAllByText(/Physical/i);
     expect(physical.length).toBe(0);
+
+    expect(
+      screen.queryByRole("cell", { name: /Total games: 1/i }),
+    ).toBeInTheDocument();
   });
 
   it("should sort by table column (ascending)", async () => {
@@ -97,8 +128,8 @@ describe("App component", () => {
     const beatButton = screen.getByRole("button", { name: /beat/i });
     await user.click(beatButton);
 
-    // Get all table rows, skipping header
-    const rows = screen.getAllByRole("row").slice(1);
+    // Get all table rows, skipping header and footer.
+    const rows = screen.getAllByRole("row").slice(1, -1);
 
     // Get all "Title" cells.
     const titleCells = rows.map((row) => {
@@ -124,8 +155,8 @@ describe("App component", () => {
     const titleButton = screen.getByRole("button", { name: /title/i });
     await user.click(titleButton);
 
-    // Get all table rows, skipping header,
-    const rows = screen.getAllByRole("row").slice(1);
+    // Get all table rows, skipping header and footer.
+    const rows = screen.getAllByRole("row").slice(1, -1);
 
     // Get all "Title" cells.
     const titleCells = rows.map((row) => {
