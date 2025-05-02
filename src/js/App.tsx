@@ -31,6 +31,7 @@ const App: React.FC<AppProps> = ({ games }) => {
     searchKey,
     searchValue,
   );
+  const wishlistGames: Game[] = filterByKey(games, "status", "Wishlist");
 
   const handleTabSelect = (status: string) => {
     if (isValidGameStatus(status)) {
@@ -93,6 +94,7 @@ const App: React.FC<AppProps> = ({ games }) => {
           sortAscending={sortAscending}
         ></Table>
       </div>
+      <footer>Games in library: {games.length - wishlistGames.length}</footer>
     </>
   );
 };
