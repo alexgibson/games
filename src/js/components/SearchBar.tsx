@@ -24,7 +24,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
   ariaControls,
 }) => {
   return (
-    <form onSubmit={onSubmit}>
+    <form className="search-form" onSubmit={onSubmit}>
       <label htmlFor="field">Field</label>
       <select id="field" onChange={onFieldChange} aria-controls="search">
         {gameFieldNames.map((field) => (
@@ -44,6 +44,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
         aria-controls={ariaControls}
       />
       <button
+        className="button-default"
         name="clear"
         type="button"
         disabled={value ? false : true}

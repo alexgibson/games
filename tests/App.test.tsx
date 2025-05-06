@@ -8,9 +8,30 @@ import { render, screen, within } from "@testing-library/react";
 describe("App component", () => {
   const user = userEvent.setup();
 
+  beforeAll(() => {
+    /**
+     * Polyfill for showModal() since <dialog> is not yet
+     * natively supported by JSDOM.
+     */
+    HTMLDialogElement.prototype.showModal = function () {
+      this.setAttribute("open", "true");
+    };
+  });
+
   beforeEach(() => {
+    const modalRoot = document.createElement("div");
+    modalRoot.setAttribute("id", "modal");
+    document.body.appendChild(modalRoot);
+
     const AppComponent: React.ReactElement = <App games={Games} />;
     render(AppComponent);
+  });
+
+  afterEach(() => {
+    const modalRoot = document.getElementById("modal");
+    if (modalRoot) {
+      document.body.removeChild(modalRoot);
+    }
   });
 
   it("displays active tab content as expected", async () => {
@@ -40,9 +61,6 @@ describe("App component", () => {
 
     expect(beatButton).toHaveClass("active");
     expect(screen.queryByRole("table", { name: /beat/i })).toBeInTheDocument();
-
-    // Total games in library displayed in footer.
-    expect(screen.queryByText("Games in library: 5")).toBeInTheDocument();
   });
 
   it("should filter games by title as expected", async () => {
@@ -171,5 +189,19 @@ describe("App component", () => {
 
     // Compare the two arrays.
     expect(titles).toEqual(sorted);
+  });
+
+  it("should show modal dialog when about button is clicked", async () => {
+    const aboutButton = screen.getByRole("button", {
+      name: /About this page/i,
+    });
+    const dialog = screen.getByTestId("modal");
+
+    expect(within(dialog).getByText(/Games in library: 5/i)).not.toBeVisible();
+
+    // Open about modal
+    await user.click(aboutButton);
+
+    expect(within(dialog).getByText(/Games in library: 5/i)).toBeVisible();
   });
 });

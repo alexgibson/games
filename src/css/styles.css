@@ -10,7 +10,7 @@
   --color-table-cell-alt: #2c2c2c;
   --color-table-cell-border: #444;
   --color-table-cell-highlight: #3a3a3a;
-  --color-search-bar: #999;
+  --color-form-border: #999;
   --content-max-width: 1400px;
   --font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-size-main-heading: 1.6rem;
@@ -18,6 +18,7 @@
   --font-size-sub-heading: 1.2rem;
   --font-size-table: 0.9rem;
   --margin-lg: 48px;
+  --margin-md: 30px;
   --margin-sm: 10px;
   --margin-xs: 4px;
   --padding-md: 10px;
@@ -57,6 +58,17 @@ h1 {
   text-align: center;
 }
 
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1.2em;
+}
+
 a:link,
 a:visited {
   color: var(--color-body);
@@ -67,6 +79,30 @@ a:hover,
 a:active,
 a:focus {
   text-decoration: none;
+}
+
+.button-default {
+  background: transparent;
+  border-radius: 10px;
+  border: none;
+  color: var(--color-body);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.5rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.button-default:disabled {
+  cursor: default;
+}
+
+.button-default:not(:disabled):hover,
+.button-default:not(:disabled):active,
+.button-default:not(:disabled):focus {
+  background: var(--color-highlight-gray);
+  cursor: pointer;
 }
 
 /** <menu> **/
@@ -86,20 +122,11 @@ menu li {
   padding: 0;
 }
 
-menu button {
-  background-color: transparent;
-  border-radius: 6px;
-  border: none;
-  color: var(--color-body);
-  cursor: pointer;
-  font-family: var(--font-family);
-  font-size: inherit;
+menu .button-default {
   margin: 0 calc(var(--margin-sm) / 2);
-  padding: 0.5rem;
-  transition: all 0.1s ease-in-out;
 }
 
-menu button.active {
+menu .button-default.active {
   cursor: default;
 }
 
@@ -163,7 +190,7 @@ thead th {
   text-align: left;
 }
 
-thead th button {
+.button-table-column {
   appearance: none;
   background: none;
   border: none;
@@ -176,23 +203,24 @@ thead th button {
   cursor: pointer;
 }
 
-thead th button:hover,
-thead th button:active thead th button:focus {
+.button-table-column:hover,
+.button-table-column:active,
+.button-table-column:focus {
   text-decoration: underline;
 }
 
-thead th button:after {
+.button-table-column:after {
   padding-left: 0.5em;
   position: absolute;
   top: 0;
   right: 0;
 }
 
-thead th.active-ascending button:after {
+thead th.active-ascending .button-table-column:after {
   content: "▲";
 }
 
-thead th.active-descending button:after {
+thead th.active-descending .button-table-column:after {
   content: "▼";
 }
 
@@ -241,7 +269,7 @@ tr:nth-child(even) {
   background-color: var(--color-table-cell-alt);
 }
 
-tr:hover {
+tr:hover:not(tfoot tr) {
   background-color: var(--color-table-cell-highlight);
 }
 
@@ -257,7 +285,7 @@ tfoot td {
 
 /** <form> **/
 
-form {
+.search-form {
   margin: 0 auto;
   max-width: var(--content-max-width);
   padding: var(--margin-xs) 0;
@@ -265,23 +293,23 @@ form {
 }
 
 @media (min-width: 769px) {
-  form {
+  .search-form {
     text-align: right;
   }
 }
 
-form label {
+.search-form label {
   visibility: hidden;
   display: inline-block;
   width: 0;
 }
 
-form input[type="search"],
-form select {
+.search-form input[type="search"],
+.search-form select {
   appearance: none;
   background: transparent;
   border-radius: 6px;
-  border: 1px solid var(--color-search-bar);
+  border: 1px solid var(--color-form-border);
   color: var(--color-body);
   font-family: var(--font-family);
   font-size: 1rem;
@@ -290,40 +318,15 @@ form select {
   padding: 6px 12px;
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+.search-form input[type="search"]::-webkit-search-cancel-button,
+.search-form input[type="search"]::-webkit-search-decoration {
   appearance: none;
   display: none;
 }
 
-form input[type="search"]::placeholder {
-  color: var(--color-search-bar);
+.search-form input[type="search"]::placeholder {
+  color: var(--color-form-border);
   opacity: 1;
-}
-
-form button {
-  background: transparent;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  color: var(--color-body);
-  font-family: var(--font-family);
-  font-size: 1rem;
-  font-weight: normal;
-  margin: 0;
-  padding: 0.5rem;
-  transition: all 0.1s ease-in-out;
-}
-
-form button:disabled {
-  cursor: default;
-}
-
-form button:not(:disabled):hover,
-form button:not(:disabled):active,
-form button:not(:disabled):focus {
-  background: var(--color-highlight-gray);
-  border: 1px solid var(--color-highlight-gray);
-  cursor: pointer;
 }
 
 /** <footer> **/
@@ -331,4 +334,36 @@ form button:not(:disabled):focus {
 footer {
   margin: var(--margin-lg) auto;
   text-align: center;
+}
+
+/** <dialog> **/
+
+dialog {
+  background-color: var(--color-body-background);
+  border-radius: 10px;
+  border: 1px solid var(--color-form-border);
+  color: var(--color-body);
+  line-height: 1.5;
+  max-width: 300px;
+  padding: var(--padding-md);
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+dialog ul li {
+  margin: 0;
+  padding: 0;
+}
+
+dialog form {
+  text-align: right;
 }
