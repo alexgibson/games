@@ -1,4 +1,5 @@
 import React from "react";
+import Modal, { ModalHandle } from "./components/Modal.tsx";
 import SearchBar from "./components/SearchBar.tsx";
 import TabButton from "./components/TabButton";
 import Table from "./components/Table";
@@ -10,7 +11,7 @@ import {
   isValidGameField,
   getGameFieldKey,
 } from "./utils.ts";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 type AppProps = {
   games: Game[];
@@ -32,6 +33,7 @@ const App: React.FC<AppProps> = ({ games }) => {
     searchValue,
   );
   const wishlistGames: Game[] = filterByKey(games, "status", "Wishlist");
+  const dialog = useRef<ModalHandle>(null);
 
   const handleTabSelect = (status: string) => {
     if (isValidGameStatus(status)) {
@@ -58,6 +60,10 @@ const App: React.FC<AppProps> = ({ games }) => {
     }
   };
 
+  const handleOpenModal = () => {
+    dialog.current.open();
+  };
+
   return (
     <>
       <menu role="tablist" aria-label="Game Status">
@@ -72,6 +78,7 @@ const App: React.FC<AppProps> = ({ games }) => {
           </TabButton>
         ))}
       </menu>
+
       <SearchBar
         placeholder="Search by field"
         value={searchValue}
@@ -81,6 +88,7 @@ const App: React.FC<AppProps> = ({ games }) => {
         onClear={() => setSearchValue("")}
         ariaControls={`${selectedTab}-Table`}
       />
+
       <div
         role="tabpanel"
         id="tab-content"
@@ -94,7 +102,33 @@ const App: React.FC<AppProps> = ({ games }) => {
           sortAscending={sortAscending}
         ></Table>
       </div>
-      <footer>Games in library: {games.length - wishlistGames.length}</footer>
+
+      <footer>
+        <button
+          className="button-default"
+          onClick={handleOpenModal}
+          aria-controls="modal"
+        >
+          About this page
+        </button>
+      </footer>
+
+      <Modal id="modal" ref={dialog}>
+        <h2 tabIndex={0}>About</h2>
+        <p>
+          Video games I’m playing, soon to play, wish to play, or have beaten.
+          Current games in library: {games.length - wishlistGames.length}.
+        </p>
+        <ul>
+          <li>
+            Author: <a href="https://alxgbsn.co.uk">Alex Gibson</a>
+          </li>
+          <li>
+            Source code:{" "}
+            <a href="https://github.com/alexgibson/games">GitHub</a>
+          </li>
+        </ul>
+      </Modal>
     </>
   );
 };

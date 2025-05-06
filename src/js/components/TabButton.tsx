@@ -18,7 +18,7 @@ const TabButton: React.FC<TabButtonProps> = ({
       <button
         type="button"
         id={id}
-        className={isSelected ? "active" : undefined}
+        className={isSelected ? "button-default active" : "button-default"}
         onClick={onSelect}
         aria-controls="tab-content"
       >
