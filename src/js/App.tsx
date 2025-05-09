@@ -3,71 +3,13 @@ import Modal, { ModalHandle } from "./components/Modal.tsx";
 import SearchBar from "./components/SearchBar.tsx";
 import TabButton from "./components/TabButton";
 import Table from "./components/Table";
-import {
-  sortByKey,
-  filterByKey,
-  gameStatus,
-  isValidGameStatus,
-  isValidGameField,
-  getGameFieldKey,
-} from "./utils.ts";
-import { useState, useRef } from "react";
+import { gameStatus } from "./utils.ts";
+import { useRef, useContext } from "react";
+import { GamesContext } from "./store/GamesContextProvider";
 
-type AppProps = {
-  games: Game[];
-};
-
-const App: React.FC<AppProps> = ({ games }) => {
-  const [selectedTab, setSelectedTab] = useState<Status>("Playing");
-  const [searchField, setSearchField] = useState<FieldName>("Title");
-  const [searchValue, setSearchValue] = useState<string>("");
-  const [sortField, setSortField] = useState<FieldName>("Title");
-  const [sortAscending, setSortAscending] = useState<boolean>(true);
+const App: React.FC = () => {
+  const gamesCtx = useContext(GamesContext);
   const dialog = useRef<ModalHandle>(null);
-
-  const searchKey = getGameFieldKey(searchField);
-  const sortKey = getGameFieldKey(sortField);
-
-  // all games with wishlist status.
-  const wishlistGames: Game[] = filterByKey(games, "status", "Wishlist");
-
-  // all games for currently selected status.
-  const statusGames: Game[] = filterByKey(games, "status", selectedTab);
-
-  // all games for currently selected status, sorted by selected field.
-  const sortedGames: Game[] = sortByKey(statusGames, sortKey, sortAscending);
-
-  // all games for current status, sorted, and then filtered by search value.
-  const filteredGames: Game[] = filterByKey(
-    sortedGames,
-    searchKey,
-    searchValue,
-  );
-
-  const handleTabSelect = (status: string) => {
-    if (isValidGameStatus(status)) {
-      setSelectedTab(status);
-    }
-  };
-
-  const handleSearchFieldChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const field = e.target.value;
-
-    if (isValidGameField(field)) {
-      setSearchField(field);
-    }
-  };
-
-  const handleSearchValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(e.target.value);
-  };
-
-  const handleSortTable = (id: FieldName) => {
-    if (isValidGameField(id)) {
-      setSortField(id);
-      setSortAscending((prevValue) => !prevValue);
-    }
-  };
 
   const handleOpenModal = () => {
     dialog.current.open();
@@ -80,8 +22,8 @@ const App: React.FC<AppProps> = ({ games }) => {
           <TabButton
             key={status}
             id={`${status}-TabButton`}
-            isSelected={selectedTab === status}
-            onSelect={() => handleTabSelect(status)}
+            isSelected={gamesCtx.activeStatus === status}
+            onSelect={() => gamesCtx.updateStatus(status)}
           >
             {status}
           </TabButton>
@@ -90,26 +32,20 @@ const App: React.FC<AppProps> = ({ games }) => {
 
       <SearchBar
         placeholder="Search by field"
-        value={searchValue}
+        value={gamesCtx.searchQuery}
         onSearchSubmit={(e) => e.preventDefault()}
-        onSearchValueChange={handleSearchValueChange}
-        onSearchFieldChange={handleSearchFieldChange}
-        onSearchClear={() => setSearchValue("")}
-        ariaControls={`${selectedTab}-Table`}
+        onSearchValueChange={(e) => gamesCtx.updateSearchQuery(e.target.value)}
+        onSearchFieldChange={(e) => gamesCtx.updateSearchField(e.target.value)}
+        onSearchClear={() => gamesCtx.updateSearchQuery("")}
+        ariaControls={`${gamesCtx.activeStatus}-Table`}
       />
 
       <div
         role="tabpanel"
         id="tab-content"
-        aria-labelledby={`${selectedTab}-TabButton`}
+        aria-labelledby={`${gamesCtx.activeStatus}-TabButton`}
       >
-        <Table
-          games={filteredGames}
-          status={selectedTab}
-          onSortTable={handleSortTable}
-          sortField={sortField}
-          sortAscending={sortAscending}
-        ></Table>
+        <Table />
       </div>
 
       <footer>
@@ -126,7 +62,7 @@ const App: React.FC<AppProps> = ({ games }) => {
         <h2 tabIndex={0}>About</h2>
         <p>
           Video games I’m playing, soon to play, wish to play, or have beaten.
-          Current games in library: {games.length - wishlistGames.length}.
+          Current games in library: {gamesCtx.gamesInLibrary}.
         </p>
         <ul>
           <li>

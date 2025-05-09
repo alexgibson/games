@@ -2,49 +2,42 @@ import React from "react";
 import TableRow from "./TableRow";
 import TableHeading from "./TableHeading";
 import { gameFieldNames } from "../utils";
+import { useContext } from "react";
+import { GamesContext } from "../store/GamesContextProvider";
 
-type TableProps = React.HTMLAttributes<HTMLTableElement> & {
-  games: Game[];
-  status: string;
-  onSortTable: (field: FieldName) => void;
-  sortField: FieldName;
-  sortAscending: boolean;
-};
+type TableProps = React.HTMLAttributes<HTMLTableElement>;
 
-const Table: React.FC<TableProps> = ({
-  games,
-  status,
-  onSortTable,
-  sortField,
-  sortAscending,
-}) => {
-  const order = sortAscending ? "ascending" : "descending";
+const Table: React.FC<TableProps> = () => {
+  const gamesCtx = useContext(GamesContext);
+  const order = gamesCtx.sortAscending ? "ascending" : "descending";
 
   return (
     <>
-      <table id={`${status}-Table`} aria-live="polite">
-        <caption>{status}</caption>
+      <table id={`${gamesCtx.activeStatus}-Table`} aria-live="polite">
+        <caption>{gamesCtx.activeStatus}</caption>
         <thead>
           <tr>
             {gameFieldNames.map((field) => (
               <TableHeading
                 key={field}
                 id={field}
-                handleButtonClick={onSortTable}
-                className={sortField === field ? `active-${order}` : undefined}
-                aria-sort={sortField === field ? order : undefined}
+                handleButtonClick={gamesCtx.sortGames}
+                className={
+                  gamesCtx.sortField === field ? `active-${order}` : undefined
+                }
+                aria-sort={gamesCtx.sortField === field ? order : undefined}
               />
             ))}
           </tr>
         </thead>
         <tbody>
-          {games.map((props) => (
+          {gamesCtx.games.map((props) => (
             <TableRow key={props.title} {...props} />
           ))}
         </tbody>
         <tfoot>
           <tr>
-            <td colSpan={6}>Total games: {games.length}</td>
+            <td colSpan={6}>Total games: {gamesCtx.games.length}</td>
           </tr>
         </tfoot>
       </table>
