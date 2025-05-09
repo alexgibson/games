@@ -19,6 +19,7 @@ const Table: React.FC<TableProps> = ({
   sortAscending,
 }) => {
   const order = sortAscending ? "ascending" : "descending";
+
   return (
     <>
       <table id={`${status}-Table`} aria-live="polite">

@@ -20,20 +20,29 @@ type AppProps = {
 const App: React.FC<AppProps> = ({ games }) => {
   const [selectedTab, setSelectedTab] = useState<Status>("Playing");
   const [searchField, setSearchField] = useState<FieldName>("Title");
+  const [searchValue, setSearchValue] = useState<string>("");
   const [sortField, setSortField] = useState<FieldName>("Title");
   const [sortAscending, setSortAscending] = useState<boolean>(true);
-  const [searchValue, setSearchValue] = useState<string>("");
-  const statusGames: Game[] = filterByKey(games, "status", selectedTab);
-  const sortKey = getGameFieldKey(sortField);
-  const sortedGames: Game[] = sortByKey(statusGames, sortKey, sortAscending);
+  const dialog = useRef<ModalHandle>(null);
+
   const searchKey = getGameFieldKey(searchField);
+  const sortKey = getGameFieldKey(sortField);
+
+  // all games with wishlist status.
+  const wishlistGames: Game[] = filterByKey(games, "status", "Wishlist");
+
+  // all games for currently selected status.
+  const statusGames: Game[] = filterByKey(games, "status", selectedTab);
+
+  // all games for currently selected status, sorted by selected field.
+  const sortedGames: Game[] = sortByKey(statusGames, sortKey, sortAscending);
+
+  // all games for current status, sorted, and then filtered by search value.
   const filteredGames: Game[] = filterByKey(
     sortedGames,
     searchKey,
     searchValue,
   );
-  const wishlistGames: Game[] = filterByKey(games, "status", "Wishlist");
-  const dialog = useRef<ModalHandle>(null);
 
   const handleTabSelect = (status: string) => {
     if (isValidGameStatus(status)) {
@@ -41,7 +50,7 @@ const App: React.FC<AppProps> = ({ games }) => {
     }
   };
 
-  const handleFieldChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleSearchFieldChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const field = e.target.value;
 
     if (isValidGameField(field)) {
@@ -49,7 +58,7 @@ const App: React.FC<AppProps> = ({ games }) => {
     }
   };
 
-  const handleValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearchValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
   };
 
@@ -82,10 +91,10 @@ const App: React.FC<AppProps> = ({ games }) => {
       <SearchBar
         placeholder="Search by field"
         value={searchValue}
-        onSubmit={(e) => e.preventDefault()}
-        onValueChange={handleValueChange}
-        onFieldChange={handleFieldChange}
-        onClear={() => setSearchValue("")}
+        onSearchSubmit={(e) => e.preventDefault()}
+        onSearchValueChange={handleSearchValueChange}
+        onSearchFieldChange={handleSearchFieldChange}
+        onSearchClear={() => setSearchValue("")}
         ariaControls={`${selectedTab}-Table`}
       />
 

@@ -7,26 +7,26 @@ type SearchBarProps = Omit<
 > & {
   placeholder: string;
   value: string;
-  onSubmit: React.FormEventHandler<HTMLFormElement>;
-  onValueChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onFieldChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  onClear: () => void;
+  onSearchSubmit: React.FormEventHandler<HTMLFormElement>;
+  onSearchValueChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onSearchFieldChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  onSearchClear: () => void;
   ariaControls: string;
 };
 
 const SearchBar: React.FC<SearchBarProps> = ({
   placeholder,
   value,
-  onSubmit,
-  onValueChange,
-  onFieldChange,
-  onClear,
+  onSearchSubmit,
+  onSearchValueChange,
+  onSearchFieldChange,
+  onSearchClear,
   ariaControls,
 }) => {
   return (
-    <form className="search-form" onSubmit={onSubmit}>
+    <form className="search-form" onSubmit={onSearchSubmit}>
       <label htmlFor="field">Field</label>
-      <select id="field" onChange={onFieldChange} aria-controls="search">
+      <select id="field" onChange={onSearchFieldChange} aria-controls="search">
         {gameFieldNames.map((field) => (
           <option key={field} value={field}>
             {field}
@@ -39,7 +39,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
         type="search"
         name="search"
         value={value}
-        onChange={onValueChange}
+        onChange={onSearchValueChange}
         placeholder={placeholder}
         aria-controls={ariaControls}
       />
@@ -48,7 +48,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
         name="clear"
         type="button"
         disabled={value ? false : true}
-        onClick={onClear}
+        onClick={onSearchClear}
       >
         Clear
       </button>
