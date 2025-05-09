@@ -4,6 +4,7 @@ import Games from "./games.ts";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { render, screen, within } from "@testing-library/react";
+import GamesContextProvider from "../src/js/store/GamesContextProvider";
 
 describe("App component", () => {
   const user = userEvent.setup();
@@ -23,8 +24,12 @@ describe("App component", () => {
     modalRoot.setAttribute("id", "modal");
     document.body.appendChild(modalRoot);
 
-    const AppComponent: React.ReactElement = <App games={Games} />;
-    render(AppComponent);
+    const AppComponent: React.ReactElement = <App />;
+    render(
+      <GamesContextProvider gamesOverride={Games}>
+        {AppComponent}
+      </GamesContextProvider>,
+    );
   });
 
   afterEach(() => {
