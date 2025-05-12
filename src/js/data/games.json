@@ -12,7 +12,7 @@
     "title": "NieR Automata",
     "platform": "Nintendo Switch",
     "developer": "Platinum Games",
-    "releaseDate": "February 23 2017",
+    "releaseDate": "October 06 2022",
     "medium": "Physical",
     "status": "Beat",
     "score": 10
@@ -102,7 +102,7 @@
     "title": "Hollow Knight",
     "platform": "Nintendo Switch",
     "developer": "Team Cherry",
-    "releaseDate": "February 24 2017",
+    "releaseDate": "June 20 2018",
     "medium": "Digital",
     "status": "Beat",
     "score": 9
@@ -165,7 +165,7 @@
     "title": "Ni no Kuni: Wrath of the White Witch",
     "platform": "Nintendo Switch",
     "developer": "Level-5",
-    "releaseDate": "January 22 2013",
+    "releaseDate": "September 20 2019",
     "status": "Beat",
     "medium": "Physical",
     "score": 9
@@ -192,7 +192,7 @@
     "title": "Ori and The Blind Forest",
     "platform": "Nintendo Switch",
     "developer": "Moon Studios",
-    "releaseDate": "March 11 2015",
+    "releaseDate": "September 27 2019",
     "status": "Beat",
     "medium": "Digital",
     "score": 9
@@ -201,7 +201,7 @@
     "title": "Ori and The Will of the Wisps",
     "platform": "Nintendo Switch",
     "developer": "Moon Studios",
-    "releaseDate": "March 11 2020",
+    "releaseDate": "September 17 2020",
     "status": "Beat",
     "medium": "Digital",
     "score": 9
@@ -381,7 +381,7 @@
     "title": "Hellblade: Senua's Sacrifice",
     "platform": "Nintendo Switch",
     "developer": "Ninja Theory",
-    "releaseDate": "August 08 2017",
+    "releaseDate": "April 11 2019",
     "medium": "Digital",
     "status": "Beat",
     "score": 8
@@ -399,7 +399,7 @@
     "title": "Inside",
     "platform": "Nintendo Switch",
     "developer": "Playdead",
-    "releaseDate": "June 29 2016",
+    "releaseDate": "June 28 2018",
     "medium": "Digital",
     "status": "Beat",
     "score": 8
@@ -435,7 +435,7 @@
     "title": "Ni No Kuni II: Revenant Kingdom",
     "platform": "Nintendo Switch",
     "developer": "Level-5",
-    "releaseDate": "March 23 2018",
+    "releaseDate": "September 17 2021",
     "medium": "Physical",
     "status": "Beat",
     "score": 8
@@ -588,7 +588,7 @@
     "title": "Captain Toad: Treasure Tracker",
     "platform": "Nintendo Switch",
     "developer": "Nintendo",
-    "releaseDate": "December 05 2014",
+    "releaseDate": "July 13 2018",
     "medium": "Physical",
     "status": "Beat",
     "score": 7
@@ -759,7 +759,7 @@
     "title": "What Remains of Edith Finch",
     "platform": "Nintendo Switch",
     "developer": "SIE San Diego Studio",
-    "releaseDate": "April 25 2017",
+    "releaseDate": "July 04 2019",
     "medium": "Digital",
     "status": "Beat",
     "score": 7
@@ -834,6 +834,15 @@
     "releaseDate": "February 25 2022",
     "medium": "Digital",
     "status": "Playing",
+    "score": null
+  },
+  {
+    "title": "Elden Ring: Shadow of the Erdtree",
+    "platform": "Steam",
+    "developer": "FromSoftware",
+    "releaseDate": "June 20 2024",
+    "medium": "Digital",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -1111,6 +1120,15 @@
     "platform": "Steam",
     "developer": "Dogubomb",
     "releaseDate": "April 10 2025",
+    "medium": "Digital",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Clair Obscur: Expedition 33",
+    "platform": "Steam",
+    "developer": "Sandfall Interactive",
+    "releaseDate": "April 25 2025",
     "medium": "Digital",
     "status": "Wishlist",
     "score": null
