@@ -31,7 +31,6 @@ const App: React.FC = () => {
       </menu>
 
       <SearchBar
-        placeholder="Search by field"
         value={gamesCtx.searchQuery}
         onSearchSubmit={(e) => e.preventDefault()}
         onSearchValueChange={(e) =>

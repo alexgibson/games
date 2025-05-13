@@ -123,9 +123,9 @@ describe("App component", () => {
       screen.queryByRole("cell", { name: /Total games: 3/i }),
     ).toBeInTheDocument();
 
-    // Select field "Medium"
+    // Select table column "Medium"
     const selectInput = screen.getByRole("combobox", {
-      name: /field/i,
+      name: /table column/i,
     });
     await userEvent.selectOptions(selectInput, "Medium");
 
