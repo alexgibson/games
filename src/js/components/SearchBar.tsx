@@ -5,7 +5,6 @@ type SearchBarProps = Omit<
   React.HTMLAttributes<HTMLFormElement>,
   "onChange"
 > & {
-  placeholder: string;
   value: string;
   onSearchSubmit: React.FormEventHandler<HTMLFormElement>;
   onSearchValueChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -15,7 +14,6 @@ type SearchBarProps = Omit<
 };
 
 const SearchBar: React.FC<SearchBarProps> = ({
-  placeholder,
   value,
   onSearchSubmit,
   onSearchValueChange,
@@ -25,7 +23,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 }) => {
   return (
     <form className="search-form" onSubmit={onSearchSubmit}>
-      <label htmlFor="field">Field</label>
+      <label htmlFor="field">Table Column</label>
       <select id="field" onChange={onSearchFieldChange} aria-controls="search">
         {gameFieldNames.map((field) => (
           <option key={field} value={field}>
@@ -40,7 +38,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
         name="search"
         value={value}
         onChange={onSearchValueChange}
-        placeholder={placeholder}
+        placeholder="Search term"
         aria-controls={ariaControls}
       />
       <button
