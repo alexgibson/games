@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useReducer } from "react";
 import Games from "../games.ts";
 import {
   sortByKey,
@@ -9,104 +9,188 @@ import {
   getGameFieldKey,
 } from "../utils.ts";
 
-interface GamesContextType {
+// Initial state for when the app loads.
+const INITIAL_STATE = {
+  activeTabButton: "Playing" as Status,
+  searchQuery: "",
+  searchField: "Title" as FieldName,
+  sortField: "Title" as FieldName,
+  sortAscending: true,
+};
+
+type GamesAction =
+  | { type: "UPDATE_ACTIVE_TAB_BUTTON"; payload: Status }
+  | { type: "UPDATE_SEARCH_FIELD_OPTION"; payload: FieldName }
+  | { type: "UPDATE_SEARCH_QUERY"; payload: string }
+  | { type: "SORT_TABLE"; payload: { field: FieldName } };
+
+type GamesState = {
   games: Game[];
-  gamesInLibrary: number;
-  activeStatus: Status;
+  activeTabButton: Status;
   searchQuery: string;
   searchField: FieldName;
   sortField: FieldName;
   sortAscending: boolean;
-  sortGames: (value: FieldName) => void;
-  updateSearchQuery: (value: string) => void;
-  updateSearchField: (value: string) => void;
-  updateStatus: (value: string) => void;
+};
+
+interface GamesContextType {
+  games: Game[];
+  gamesInLibrary: number;
+  activeTabButton: Status;
+  searchQuery: string;
+  searchField: FieldName;
+  sortField: FieldName;
+  sortAscending: boolean;
+  handleSortGames: (value: FieldName) => void;
+  handleUpdateSearchQuery: (value: string) => void;
+  handleUpdateSearchFieldOption: (value: string) => void;
+  handleUpdateActiveTabButton: (value: string) => void;
 }
 
 export const GamesContext = React.createContext<GamesContextType>({
   games: [],
   gamesInLibrary: 0,
-  activeStatus: "Playing",
-  searchQuery: "",
-  searchField: "Title",
-  sortField: "Title",
-  sortAscending: true,
-  sortGames: () => {},
-  updateSearchQuery: () => {},
-  updateSearchField: () => {},
-  updateStatus: () => {},
+  ...INITIAL_STATE,
+  handleSortGames: () => {},
+  handleUpdateSearchQuery: () => {},
+  handleUpdateSearchFieldOption: () => {},
+  handleUpdateActiveTabButton: () => {},
 });
 
 type GamesContextProviderProps = {
   children: React.ReactNode;
-  gamesOverride?: Game[];
+  initialGames?: Game[];
 };
 
 export default function GamesContextProvider({
   children,
-  gamesOverride,
+  initialGames = Games,
 }: GamesContextProviderProps) {
-  const [activeStatus, setActiveStatus] = useState<Status>("Playing");
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [searchField, setSearchField] = useState<FieldName>("Title");
-  const [sortField, setSortField] = useState<FieldName>("Title");
-  const [sortAscending, setSortAscending] = useState<boolean>(true);
+  const ALL_GAMES = initialGames;
+  const wishlistGames: Game[] = filterByKey(ALL_GAMES, "status", "Wishlist");
+  const gamesInLibrary = ALL_GAMES.length - wishlistGames.length;
 
-  const allGames = gamesOverride ?? Games;
+  /**
+   * Returns an array of Games[] derived from current state.
+   * @param state object
+   * @returns games array.
+   */
+  function deriveGamesFromState(state: Omit<GamesState, "games">) {
+    const searchKey = getGameFieldKey(state.searchField);
+    const sortKey = getGameFieldKey(state.sortField);
+    const statusGames = filterByKey(ALL_GAMES, "status", state.activeTabButton);
+    const sortedGames = sortByKey(statusGames, sortKey, state.sortAscending);
+    return filterByKey(sortedGames, searchKey, state.searchQuery);
+  }
 
-  const searchKey = getGameFieldKey(searchField);
-  const sortKey = getGameFieldKey(sortField);
+  function handleTableStateAction(
+    state: GamesState,
+    action: GamesAction,
+  ): GamesState {
+    switch (action.type) {
+      // Update <table> based on the active menu button.
+      case "UPDATE_ACTIVE_TAB_BUTTON":
+        return {
+          ...state,
+          activeTabButton: action.payload,
+          games: deriveGamesFromState({
+            ...state,
+            activeTabButton: action.payload,
+          }),
+        };
+      // Update <table> column for search query to apply to.
+      case "UPDATE_SEARCH_FIELD_OPTION":
+        return {
+          ...state,
+          searchField: action.payload,
+          games: deriveGamesFromState({
+            ...state,
+            searchField: action.payload,
+          }),
+        };
+      // Update <table> based on search input query string.
+      case "UPDATE_SEARCH_QUERY":
+        return {
+          ...state,
+          searchQuery: action.payload,
+          games: deriveGamesFromState({
+            ...state,
+            searchQuery: action.payload,
+          }),
+        };
+      // Sort <table> by selected column.
+      // Ascending or descending derived from previous state.
+      case "SORT_TABLE": {
+        const isSameField = state.sortField === action.payload.field;
+        const newAscending = isSameField ? !state.sortAscending : true;
+        const newState = {
+          ...state,
+          sortField: action.payload.field,
+          sortAscending: newAscending,
+        };
+        return {
+          ...newState,
+          games: deriveGamesFromState(newState),
+        };
+      }
+      default:
+        return state;
+    }
+  }
 
-  // all games with wishlist status.
-  const wishlistGames: Game[] = filterByKey(allGames, "status", "Wishlist");
-  const gamesInLibrary = allGames.length - wishlistGames.length;
+  const [tableState, dispatchTableStateAction] = useReducer(
+    handleTableStateAction,
+    {
+      games: deriveGamesFromState({ ...INITIAL_STATE }),
+      ...INITIAL_STATE,
+    },
+  );
 
-  // all games for currently selected status.
-  const statusGames: Game[] = filterByKey(allGames, "status", activeStatus);
-
-  // all games for currently selected status, sorted by selected field.
-  const sortedGames: Game[] = sortByKey(statusGames, sortKey, sortAscending);
-
-  // all games for current status, sorted, and then filtered by search value.
-  const games: Game[] = filterByKey(sortedGames, searchKey, searchQuery);
-
-  const updateStatus = (status: string) => {
-    if (isValidGameStatus(status)) {
-      setActiveStatus(status);
+  const handleUpdateActiveTabButton = (value: Status) => {
+    if (isValidGameStatus(value)) {
+      dispatchTableStateAction({
+        type: "UPDATE_ACTIVE_TAB_BUTTON",
+        payload: value,
+      });
     }
   };
 
-  const updateSearchField = (value: string) => {
+  const handleUpdateSearchFieldOption = (value: FieldName) => {
     if (isValidGameField(value)) {
-      setSearchField(value);
+      dispatchTableStateAction({
+        type: "UPDATE_SEARCH_FIELD_OPTION",
+        payload: value,
+      });
     }
   };
 
-  const updateSearchQuery = (value: string) => {
-    setSearchQuery(value);
+  const handleUpdateSearchQuery = (value: string) => {
+    dispatchTableStateAction({
+      type: "UPDATE_SEARCH_QUERY",
+      payload: value,
+    });
   };
 
-  const sortGames = (value: FieldName) => {
+  const handleSortGames = (value: FieldName) => {
     if (isValidGameField(value)) {
-      setSortField(value);
-      setSortAscending((prevValue) => !prevValue);
+      dispatchTableStateAction({
+        type: "SORT_TABLE",
+        payload: {
+          field: value,
+        },
+      });
     }
   };
 
   return (
     <GamesContext.Provider
       value={{
-        games,
+        ...tableState,
         gamesInLibrary,
-        activeStatus,
-        searchQuery,
-        searchField,
-        sortField,
-        sortAscending,
-        sortGames,
-        updateSearchQuery,
-        updateSearchField,
-        updateStatus,
+        handleSortGames,
+        handleUpdateSearchQuery,
+        handleUpdateSearchFieldOption,
+        handleUpdateActiveTabButton,
       }}
     >
       {children}

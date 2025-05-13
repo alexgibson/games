@@ -22,8 +22,8 @@ const App: React.FC = () => {
           <TabButton
             key={status}
             id={`${status}-TabButton`}
-            isSelected={gamesCtx.activeStatus === status}
-            onSelect={() => gamesCtx.updateStatus(status)}
+            isSelected={gamesCtx.activeTabButton === status}
+            onSelect={() => gamesCtx.handleUpdateActiveTabButton(status)}
           >
             {status}
           </TabButton>
@@ -34,16 +34,20 @@ const App: React.FC = () => {
         placeholder="Search by field"
         value={gamesCtx.searchQuery}
         onSearchSubmit={(e) => e.preventDefault()}
-        onSearchValueChange={(e) => gamesCtx.updateSearchQuery(e.target.value)}
-        onSearchFieldChange={(e) => gamesCtx.updateSearchField(e.target.value)}
-        onSearchClear={() => gamesCtx.updateSearchQuery("")}
-        ariaControls={`${gamesCtx.activeStatus}-Table`}
+        onSearchValueChange={(e) =>
+          gamesCtx.handleUpdateSearchQuery(e.target.value)
+        }
+        onSearchFieldChange={(e) =>
+          gamesCtx.handleUpdateSearchFieldOption(e.target.value)
+        }
+        onSearchClear={() => gamesCtx.handleUpdateSearchQuery("")}
+        ariaControls={`${gamesCtx.activeTabButton}-Table`}
       />
 
       <div
         role="tabpanel"
         id="tab-content"
-        aria-labelledby={`${gamesCtx.activeStatus}-TabButton`}
+        aria-labelledby={`${gamesCtx.activeTabButton}-TabButton`}
       >
         <Table />
       </div>

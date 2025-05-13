@@ -13,15 +13,15 @@ const Table: React.FC<TableProps> = () => {
 
   return (
     <>
-      <table id={`${gamesCtx.activeStatus}-Table`} aria-live="polite">
-        <caption>{gamesCtx.activeStatus}</caption>
+      <table id={`${gamesCtx.activeTabButton}-Table`} aria-live="polite">
+        <caption>{gamesCtx.activeTabButton}</caption>
         <thead>
           <tr>
             {gameFieldNames.map((field) => (
               <TableHeading
                 key={field}
                 id={field}
-                handleButtonClick={gamesCtx.sortGames}
+                handleButtonClick={gamesCtx.handleSortGames}
                 className={
                   gamesCtx.sortField === field ? `active-${order}` : undefined
                 }
