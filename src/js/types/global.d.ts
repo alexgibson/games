@@ -16,7 +16,6 @@ declare global {
     | "Release Date"
     | "Medium"
     | "Score";
-
   interface Game {
     title: string;
     platform: Platform;
@@ -26,7 +25,6 @@ declare global {
     score: OneToTen;
     medium: Medium;
   }
-  type FieldKey = keyof Game;
 }
 
 export {};

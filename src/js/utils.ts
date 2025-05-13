@@ -133,6 +133,8 @@ export const isValidGameField = (field: string): field is FieldName => {
  * Object of valid game field names mapped to
  * their corresponding JSON keys.
  */
+type FieldKey = keyof Game;
+
 type GameFieldMap = {
   [key in FieldName]: FieldKey;
 };

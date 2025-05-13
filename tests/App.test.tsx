@@ -26,7 +26,7 @@ describe("App component", () => {
 
     const AppComponent: React.ReactElement = <App />;
     render(
-      <GamesContextProvider gamesOverride={Games}>
+      <GamesContextProvider initialGames={Games}>
         {AppComponent}
       </GamesContextProvider>,
     );
