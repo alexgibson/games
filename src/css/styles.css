@@ -126,7 +126,7 @@ menu .button-default {
   margin: 0 calc(var(--margin-sm) / 2);
 }
 
-menu .button-default.active {
+menu .button-default.active:hover {
   cursor: default;
 }
 
