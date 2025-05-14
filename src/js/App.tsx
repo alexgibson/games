@@ -42,7 +42,7 @@ const App: React.FC = () => {
           onClick={() => dialog.current.open()}
           aria-controls="modal"
         >
-          About this page
+          About this app
         </button>
       </footer>
 
@@ -50,8 +50,8 @@ const App: React.FC = () => {
         <h2 tabIndex={0}>About</h2>
         <p>
           Video games I’m playing, soon to play, wish to play, or have beaten.
-          Current games in library: {gamesCtx.gamesInLibrary}.
         </p>
+        <p>Total games in library: {gamesCtx.gamesInLibrary}.</p>
         <ul>
           <li>
             Author: <a href="https://alxgbsn.co.uk">Alex Gibson</a>
