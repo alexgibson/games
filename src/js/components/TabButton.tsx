@@ -3,23 +3,23 @@ import React from "react";
 type TabButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
   id: string;
   children: React.ReactNode;
-  onSelect: () => void;
-  isSelected: boolean;
+  handleOnClick: () => void;
+  isActive: boolean;
 };
 
 const TabButton: React.FC<TabButtonProps> = ({
   id,
   children,
-  onSelect,
-  isSelected,
+  handleOnClick,
+  isActive,
 }) => {
   return (
     <li>
       <button
         type="button"
         id={id}
-        className={isSelected ? "button-default active" : "button-default"}
-        onClick={onSelect}
+        className={isActive ? "button-default active" : "button-default"}
+        onClick={handleOnClick}
         aria-controls="tab-content"
       >
         {children}
