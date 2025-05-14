@@ -30,10 +30,7 @@ const App: React.FC = () => {
         ))}
       </menu>
 
-      <SearchBar
-        value={gamesCtx.searchQuery}
-        ariaControls={`${gamesCtx.activeTabButton}-Table`}
-      />
+      <SearchBar />
 
       <div
         role="tabpanel"
