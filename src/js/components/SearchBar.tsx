@@ -3,15 +3,9 @@ import { useContext } from "react";
 import { gameFieldNames } from "../utils";
 import { GamesContext } from "../store/GamesContextProvider";
 
-type SearchBarProps = Omit<
-  React.HTMLAttributes<HTMLFormElement>,
-  "onChange"
-> & {
-  value: string;
-  ariaControls: string;
-};
+type SearchBarProps = Omit<React.HTMLAttributes<HTMLFormElement>, "onChange">;
 
-const SearchBar: React.FC<SearchBarProps> = ({ value, ariaControls }) => {
+const SearchBar: React.FC<SearchBarProps> = () => {
   const gamesCtx = useContext(GamesContext);
 
   return (
@@ -33,16 +27,16 @@ const SearchBar: React.FC<SearchBarProps> = ({ value, ariaControls }) => {
         id="search"
         type="search"
         name="search"
-        value={value}
+        value={gamesCtx.searchQuery}
         onChange={(e) => gamesCtx.handleUpdateSearchQuery(e.target.value)}
         placeholder="Search term"
-        aria-controls={ariaControls}
+        aria-controls={`${gamesCtx.activeTabButton}-Table`}
       />
       <button
         className="button-default"
         name="clear"
         type="button"
-        disabled={value ? false : true}
+        disabled={gamesCtx.searchQuery ? false : true}
         onClick={() => gamesCtx.handleUpdateSearchQuery("")}
       >
         Clear
