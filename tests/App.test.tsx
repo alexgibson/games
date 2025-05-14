@@ -198,7 +198,7 @@ describe("App component", () => {
 
   it("should show modal dialog when about button is clicked", async () => {
     const aboutButton = screen.getByRole("button", {
-      name: /About this page/i,
+      name: /About this app/i,
     });
     const dialog = screen.getByTestId("modal");
 
