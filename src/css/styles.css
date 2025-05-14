@@ -184,10 +184,12 @@ table caption {
   text-align: left;
 }
 
-thead {
-  position: sticky;
-  top: 0;
-  z-index: 2;
+@media (prefers-reduced-motion: no-preference) {
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
 }
 
 thead th {
