@@ -32,14 +32,6 @@ const App: React.FC = () => {
 
       <SearchBar
         value={gamesCtx.searchQuery}
-        onSearchSubmit={(e) => e.preventDefault()}
-        onSearchValueChange={(e) =>
-          gamesCtx.handleUpdateSearchQuery(e.target.value)
-        }
-        onSearchFieldChange={(e) =>
-          gamesCtx.handleUpdateSearchFieldOption(e.target.value)
-        }
-        onSearchClear={() => gamesCtx.handleUpdateSearchQuery("")}
         ariaControls={`${gamesCtx.activeTabButton}-Table`}
       />
 

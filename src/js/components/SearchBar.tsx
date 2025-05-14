@@ -1,30 +1,27 @@
 import React from "react";
+import { useContext } from "react";
 import { gameFieldNames } from "../utils";
+import { GamesContext } from "../store/GamesContextProvider";
 
 type SearchBarProps = Omit<
   React.HTMLAttributes<HTMLFormElement>,
   "onChange"
 > & {
   value: string;
-  onSearchSubmit: React.FormEventHandler<HTMLFormElement>;
-  onSearchValueChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onSearchFieldChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  onSearchClear: () => void;
   ariaControls: string;
 };
 
-const SearchBar: React.FC<SearchBarProps> = ({
-  value,
-  onSearchSubmit,
-  onSearchValueChange,
-  onSearchFieldChange,
-  onSearchClear,
-  ariaControls,
-}) => {
+const SearchBar: React.FC<SearchBarProps> = ({ value, ariaControls }) => {
+  const gamesCtx = useContext(GamesContext);
+
   return (
-    <form className="search-form" onSubmit={onSearchSubmit}>
+    <form className="search-form" onSubmit={(e) => e.preventDefault()}>
       <label htmlFor="field">Table Column</label>
-      <select id="field" onChange={onSearchFieldChange} aria-controls="search">
+      <select
+        id="field"
+        onChange={(e) => gamesCtx.handleUpdateSearchFieldOption(e.target.value)}
+        aria-controls="search"
+      >
         {gameFieldNames.map((field) => (
           <option key={field} value={field}>
             {field}
@@ -37,7 +34,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
         type="search"
         name="search"
         value={value}
-        onChange={onSearchValueChange}
+        onChange={(e) => gamesCtx.handleUpdateSearchQuery(e.target.value)}
         placeholder="Search term"
         aria-controls={ariaControls}
       />
@@ -46,7 +43,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
         name="clear"
         type="button"
         disabled={value ? false : true}
-        onClick={onSearchClear}
+        onClick={() => gamesCtx.handleUpdateSearchQuery("")}
       >
         Clear
       </button>
