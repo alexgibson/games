@@ -11,10 +11,6 @@ const App: React.FC = () => {
   const gamesCtx = useContext(GamesContext);
   const dialog = useRef<ModalHandle>(null);
 
-  const handleOpenModal = () => {
-    dialog.current.open();
-  };
-
   return (
     <>
       <menu role="tablist" aria-label="Game Status">
@@ -22,8 +18,8 @@ const App: React.FC = () => {
           <TabButton
             key={status}
             id={`${status}-TabButton`}
-            isSelected={gamesCtx.activeTabButton === status}
-            onSelect={() => gamesCtx.handleUpdateActiveTabButton(status)}
+            isActive={gamesCtx.activeTabButton === status}
+            handleOnClick={() => gamesCtx.handleUpdateActiveTabButton(status)}
           >
             {status}
           </TabButton>
@@ -43,7 +39,7 @@ const App: React.FC = () => {
       <footer>
         <button
           className="button-default"
-          onClick={handleOpenModal}
+          onClick={() => dialog.current.open()}
           aria-controls="modal"
         >
           About this page
