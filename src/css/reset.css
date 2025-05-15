@@ -78,8 +78,3 @@ embed {
 [hidden] {
   display: none;
 }
-
-* {
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
