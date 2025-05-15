@@ -286,9 +286,12 @@ tfoot tr {
   background-color: var(--color-body-background);
 }
 
+tfoot {
+  font-size: inherit;
+}
+
 tfoot td {
   border: none;
-  font-size: var(--font-size-table);
   text-align: right;
 }
 
