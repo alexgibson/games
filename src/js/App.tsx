@@ -1,15 +1,14 @@
 import React from "react";
-import Modal, { ModalHandle } from "./components/Modal.tsx";
+import Modal from "./components/Modal.tsx";
 import SearchBar from "./components/SearchBar.tsx";
 import TabButton from "./components/TabButton";
 import Table from "./components/Table";
 import { gameStatus } from "./utils.ts";
-import { useRef, useContext } from "react";
+import { useContext } from "react";
 import { GamesContext } from "./store/GamesContextProvider";
 
 const App: React.FC = () => {
   const gamesCtx = useContext(GamesContext);
-  const dialog = useRef<ModalHandle>(null);
 
   return (
     <>
@@ -39,15 +38,15 @@ const App: React.FC = () => {
       <footer>
         <button
           className="button-default"
-          onClick={() => dialog.current.open()}
+          onClick={() => gamesCtx.handleUpdateModalVisibility(true)}
           aria-controls="modal"
         >
           About this app
         </button>
       </footer>
 
-      <Modal id="modal" ref={dialog}>
-        <h2 tabIndex={0}>About</h2>
+      <Modal id="modal">
+        <h2 tabIndex={0}>About this app</h2>
         <p>
           Video games I’m playing, soon to play, wish to play, or have beaten.
         </p>

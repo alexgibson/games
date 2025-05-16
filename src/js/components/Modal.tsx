@@ -1,10 +1,7 @@
 import React from "react";
-import { forwardRef, useImperativeHandle, useRef } from "react";
+import { useRef, useEffect, useContext } from "react";
 import { createPortal } from "react-dom";
-
-export type ModalHandle = {
-  open: () => void;
-};
+import { GamesContext } from "../store/GamesContextProvider";
 
 type ModalProps = React.HTMLAttributes<HTMLDialogElement>;
 
@@ -12,27 +9,46 @@ type ModalProps = React.HTMLAttributes<HTMLDialogElement>;
  * Use forwardRef here for Jest / JSDOM as they don't
  * yet support passing ref directly as props.
  */
-const Modal = forwardRef<ModalHandle, ModalProps>(
-  ({ children, ...rest }, ref) => {
-    const dialog = useRef<HTMLDialogElement>(null);
+const Modal: React.FC<ModalProps> = ({ children, ...rest }) => {
+  const gamesCtx = useContext(GamesContext);
+  const dialog = useRef<HTMLDialogElement>(null);
 
-    useImperativeHandle(ref, () => ({
-      open() {
-        dialog.current.showModal();
-      },
-    }));
+  useEffect(() => {
+    if (gamesCtx.isModalOpen) {
+      dialog.current.showModal();
+    } else {
+      dialog.current.close();
+    }
+  }, [gamesCtx.isModalOpen]);
 
-    return createPortal(
-      <dialog className="modal" ref={dialog} {...rest} data-testid="modal">
-        {children}
-        <form method="dialog">
-          <button className="button-default">Close</button>
-        </form>
-      </dialog>,
-      document.getElementById("modal")!,
-    );
-  },
-);
+  function handleModalClose() {
+    gamesCtx.handleUpdateModalVisibility(false);
+  }
+
+  return createPortal(
+    <dialog
+      className="modal"
+      ref={dialog}
+      {...rest}
+      data-testid="modal"
+      onClose={handleModalClose}
+    >
+      {children}
+      <form method="dialog">
+        <button
+          className="button-default"
+          onClick={(e) => {
+            e.preventDefault();
+            handleModalClose();
+          }}
+        >
+          Close
+        </button>
+      </form>
+    </dialog>,
+    document.getElementById("modal")!,
+  );
+};
 
 Modal.displayName = "Modal";
 

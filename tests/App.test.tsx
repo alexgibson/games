@@ -11,11 +11,15 @@ describe("App component", () => {
 
   beforeAll(() => {
     /**
-     * Polyfill for showModal() since <dialog> is not yet
-     * natively supported by JSDOM.
+     * Polyfill for showModal() and close() since <dialog>
+     * is not yet natively supported by JSDOM.
      */
     HTMLDialogElement.prototype.showModal = function () {
       this.setAttribute("open", "true");
+    };
+
+    HTMLDialogElement.prototype.close = function () {
+      this.removeAttribute("open");
     };
   });
 

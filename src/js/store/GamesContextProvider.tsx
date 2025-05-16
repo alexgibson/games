@@ -12,49 +12,56 @@ import {
 // Initial state for when the app loads.
 const INITIAL_STATE = {
   activeTabButton: "Playing" as Status,
-  searchQuery: "",
+  isModalOpen: false,
   searchField: "Title" as FieldName,
-  sortField: "Title" as FieldName,
+  searchQuery: "",
   sortAscending: true,
+  sortField: "Title" as FieldName,
 };
 
 type GamesAction =
+  | { type: "SORT_TABLE"; payload: { field: FieldName } }
   | { type: "UPDATE_ACTIVE_TAB_BUTTON"; payload: Status }
+  | { type: "UPDATE_MODAL_VISIBILITY"; payload: boolean }
   | { type: "UPDATE_SEARCH_FIELD_OPTION"; payload: FieldName }
-  | { type: "UPDATE_SEARCH_QUERY"; payload: string }
-  | { type: "SORT_TABLE"; payload: { field: FieldName } };
+  | { type: "UPDATE_SEARCH_QUERY"; payload: string };
 
 type GamesState = {
-  games: Game[];
   activeTabButton: Status;
-  searchQuery: string;
+  games: Game[];
+  isModalOpen: boolean;
   searchField: FieldName;
-  sortField: FieldName;
+  searchQuery: string;
   sortAscending: boolean;
+  sortField: FieldName;
 };
 
 interface GamesContextType {
+  activeTabButton: Status;
   games: Game[];
   gamesInLibrary: number;
-  activeTabButton: Status;
-  searchQuery: string;
-  searchField: FieldName;
-  sortField: FieldName;
-  sortAscending: boolean;
   handleSortGames: (value: FieldName) => void;
-  handleUpdateSearchQuery: (value: string) => void;
-  handleUpdateSearchFieldOption: (value: string) => void;
   handleUpdateActiveTabButton: (value: string) => void;
+  handleUpdateModalVisibility: (value: boolean) => void;
+  handleUpdateSearchFieldOption: (value: string) => void;
+  handleUpdateSearchQuery: (value: string) => void;
+  isModalOpen: boolean;
+  searchField: FieldName;
+  searchQuery: string;
+  sortAscending: boolean;
+  sortField: FieldName;
 }
 
 export const GamesContext = React.createContext<GamesContextType>({
+  ...INITIAL_STATE,
   games: [],
   gamesInLibrary: 0,
-  ...INITIAL_STATE,
   handleSortGames: () => {},
-  handleUpdateSearchQuery: () => {},
-  handleUpdateSearchFieldOption: () => {},
   handleUpdateActiveTabButton: () => {},
+  handleUpdateModalVisibility: () => {},
+  handleUpdateSearchFieldOption: () => {},
+  handleUpdateSearchQuery: () => {},
+  isModalOpen: false,
 });
 
 type GamesContextProviderProps = {
@@ -88,6 +95,21 @@ export default function GamesContextProvider({
     action: GamesAction,
   ): GamesState {
     switch (action.type) {
+      // Sort <table> by selected column.
+      // Ascending or descending derived from previous state.
+      case "SORT_TABLE": {
+        const isSameField = state.sortField === action.payload.field;
+        const newAscending = isSameField ? !state.sortAscending : true;
+        const newState = {
+          ...state,
+          sortField: action.payload.field,
+          sortAscending: newAscending,
+        };
+        return {
+          ...newState,
+          games: deriveGamesFromState(newState),
+        };
+      }
       // Update <table> based on the active menu button.
       case "UPDATE_ACTIVE_TAB_BUTTON":
         return {
@@ -98,6 +120,12 @@ export default function GamesContextProvider({
             activeTabButton: action.payload,
           }),
         };
+      case "UPDATE_MODAL_VISIBILITY": {
+        return {
+          ...state,
+          isModalOpen: action.payload,
+        };
+      }
       // Update <table> column for search query to apply to.
       case "UPDATE_SEARCH_FIELD_OPTION":
         return {
@@ -118,21 +146,6 @@ export default function GamesContextProvider({
             searchQuery: action.payload,
           }),
         };
-      // Sort <table> by selected column.
-      // Ascending or descending derived from previous state.
-      case "SORT_TABLE": {
-        const isSameField = state.sortField === action.payload.field;
-        const newAscending = isSameField ? !state.sortAscending : true;
-        const newState = {
-          ...state,
-          sortField: action.payload.field,
-          sortAscending: newAscending,
-        };
-        return {
-          ...newState,
-          games: deriveGamesFromState(newState),
-        };
-      }
       default:
         return state;
     }
@@ -182,15 +195,23 @@ export default function GamesContextProvider({
     }
   };
 
+  const handleUpdateModalVisibility = (value: boolean) => {
+    dispatchTableStateAction({
+      type: "UPDATE_MODAL_VISIBILITY",
+      payload: value,
+    });
+  };
+
   return (
     <GamesContext.Provider
       value={{
         ...tableState,
         gamesInLibrary,
         handleSortGames,
-        handleUpdateSearchQuery,
-        handleUpdateSearchFieldOption,
         handleUpdateActiveTabButton,
+        handleUpdateModalVisibility,
+        handleUpdateSearchFieldOption,
+        handleUpdateSearchQuery,
       }}
     >
       {children}
