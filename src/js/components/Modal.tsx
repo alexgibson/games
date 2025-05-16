@@ -33,18 +33,22 @@ const Modal: React.FC<ModalProps> = ({ children, ...rest }) => {
       data-testid="modal"
       onClose={handleModalClose}
     >
-      {children}
-      <form method="dialog">
-        <button
-          className="button-default"
-          onClick={(e) => {
-            e.preventDefault();
-            handleModalClose();
-          }}
-        >
-          Close
-        </button>
-      </form>
+      {gamesCtx.isModalOpen && (
+        <>
+          {children}
+          <form method="dialog">
+            <button
+              className="button-default"
+              onClick={(e) => {
+                e.preventDefault();
+                handleModalClose();
+              }}
+            >
+              Close
+            </button>
+          </form>
+        </>
+      )}
     </dialog>,
     document.getElementById("modal")!,
   );
