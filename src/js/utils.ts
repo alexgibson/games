@@ -149,7 +149,7 @@ export const gameFieldKeys: GameFieldMap = {
 };
 
 /**
- * Helper function that returns a field name's
+ * Helper that returns a field name's
  * corresponding JSON key.
  * @param id valid field name.
  * @returns valid JSON field key.
@@ -159,4 +159,32 @@ export const getGameFieldKey = (id: FieldName): FieldKey | null => {
     return gameFieldKeys[id];
   }
   return null;
+};
+
+/**
+ * Wrapper for saving data to localStorage.
+ * Some browsers can block or restrict access
+ * in private browsing modes.
+ * @param id identifier for data.
+ * @param value stringified data to store.
+ */
+export const setLocalStorageItem = (id: string, value: string) => {
+  try {
+    window.localStorage.setItem(id, value);
+  } catch {
+    // do nothing.
+  }
+};
+
+/**
+ * Wrapper for reading data from localStorage.
+ * @param id identifier for data.
+ * @returns stringified data.
+ */
+export const getLocalStorageItem = (id: string) => {
+  try {
+    return window.localStorage.getItem(id);
+  } catch {
+    return null;
+  }
 };
