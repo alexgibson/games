@@ -2,16 +2,21 @@ import React from "react";
 import { useReducer } from "react";
 import Games from "../games.ts";
 import {
-  sortByKey,
   filterByKey,
-  isValidGameStatus,
-  isValidGameField,
   getGameFieldKey,
+  getLocalStorageItem,
+  isValidGameField,
+  isValidGameStatus,
+  setLocalStorageItem,
+  sortByKey,
 } from "../utils.ts";
+
+const LOCAL_STORAGE_ID = "active-tab";
+const initialActiveTab = getLocalStorageItem(LOCAL_STORAGE_ID) as Status;
 
 // Initial state for when the app loads.
 const INITIAL_STATE = {
-  activeTabButton: "Playing" as Status,
+  activeTabButton: initialActiveTab || ("Playing" as Status),
   isModalOpen: false,
   searchField: "Title" as FieldName,
   searchQuery: "",
@@ -165,6 +170,8 @@ export default function GamesContextProvider({
         type: "UPDATE_ACTIVE_TAB_BUTTON",
         payload: value,
       });
+
+      setLocalStorageItem(LOCAL_STORAGE_ID, value);
     }
   };
 
