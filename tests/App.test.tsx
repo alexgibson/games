@@ -206,7 +206,9 @@ describe("App component", () => {
     });
     const dialog = screen.getByTestId("modal");
 
-    expect(within(dialog).getByText(/Games in library: 5/i)).not.toBeVisible();
+    expect(
+      within(dialog).queryByText(/Games in library: 5/i),
+    ).not.toBeInTheDocument();
 
     // Open about modal
     await user.click(aboutButton);
