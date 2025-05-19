@@ -47,12 +47,9 @@ describe("App component", () => {
     // "Playing" tab displayed by default.
     const playingButton = screen.getByRole("button", { name: /playing/i });
     expect(playingButton).toHaveClass("active");
-    expect(
-      screen.queryByRole("table", { name: /playing/i }),
-    ).toBeInTheDocument();
 
     expect(
-      screen.queryByRole("cell", { name: /Total games: 2/i }),
+      screen.queryByRole("table", { name: /Playing \(2 games\)/i }),
     ).toBeInTheDocument();
 
     // Switch to "Beat" tab.
@@ -61,15 +58,14 @@ describe("App component", () => {
 
     expect(playingButton).not.toHaveClass("active");
     expect(
-      screen.queryByRole("table", { name: /playing/i }),
+      screen.queryByRole("table", { name: /Playing \(2 games\)/i }),
     ).not.toBeInTheDocument();
 
     expect(
-      screen.queryByRole("cell", { name: /Total games: 3/i }),
+      screen.getByRole("table", { name: /Beat \(3 games\)/i }),
     ).toBeInTheDocument();
 
     expect(beatButton).toHaveClass("active");
-    expect(screen.queryByRole("table", { name: /beat/i })).toBeInTheDocument();
   });
 
   it("should filter games by title as expected", async () => {
@@ -82,7 +78,7 @@ describe("App component", () => {
     expect(screen.queryByText("Title E")).toBeInTheDocument();
 
     expect(
-      screen.queryByRole("cell", { name: /Total games: 3/i }),
+      screen.queryByRole("table", { name: /Beat \(3 games\)/i }),
     ).toBeInTheDocument();
 
     // Search for "Title D".
@@ -96,7 +92,7 @@ describe("App component", () => {
     expect(screen.queryByText("Title E")).not.toBeInTheDocument();
 
     expect(
-      screen.queryByRole("cell", { name: /Total games: 1/i }),
+      screen.queryByRole("table", { name: /Beat \(1 game\)/i }),
     ).toBeInTheDocument();
 
     // Click "Clear" button.
@@ -108,7 +104,7 @@ describe("App component", () => {
     expect(screen.queryByText("Title E")).toBeInTheDocument();
 
     expect(
-      screen.queryByRole("cell", { name: /Total games: 3/i }),
+      screen.queryByRole("table", { name: /Beat \(3 games\)/i }),
     ).toBeInTheDocument();
   });
 
@@ -124,7 +120,7 @@ describe("App component", () => {
     expect(physical.length).toBe(2);
 
     expect(
-      screen.queryByRole("cell", { name: /Total games: 3/i }),
+      screen.queryByRole("table", { name: /Beat \(3 games\)/i }),
     ).toBeInTheDocument();
 
     // Select table column "Medium"
@@ -146,7 +142,7 @@ describe("App component", () => {
     expect(physical.length).toBe(0);
 
     expect(
-      screen.queryByRole("cell", { name: /Total games: 1/i }),
+      screen.queryByRole("table", { name: /Beat \(1 game\)/i }),
     ).toBeInTheDocument();
   });
 

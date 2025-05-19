@@ -14,7 +14,10 @@ const Table: React.FC<TableProps> = () => {
   return (
     <>
       <table id={`${gamesCtx.activeTabButton}-Table`} aria-live="polite">
-        <caption>{gamesCtx.activeTabButton}</caption>
+        <caption>
+          {gamesCtx.activeTabButton} ({gamesCtx.games.length}{" "}
+          {gamesCtx.games.length === 1 ? "game" : "games"})
+        </caption>
         <thead>
           <tr>
             {gameFieldNames.map((field) => (
@@ -35,11 +38,6 @@ const Table: React.FC<TableProps> = () => {
             <TableRow key={props.title} {...props} />
           ))}
         </tbody>
-        <tfoot>
-          <tr>
-            <td colSpan={6}>Total games: {gamesCtx.games.length}</td>
-          </tr>
-        </tfoot>
       </table>
     </>
   );

@@ -172,7 +172,7 @@ table {
   border-collapse: collapse;
   color: var(--color-body);
   font-size: var(--font-size-table);
-  margin: 0 auto;
+  margin: var(--margin-md) auto 0;
   width: 100%;
   z-index: 1;
 }
