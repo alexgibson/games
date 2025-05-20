@@ -50,7 +50,7 @@ const App: React.FC = () => {
         <p>
           Video games I’m playing, soon to play, wish to play, or have beaten.
         </p>
-        <p>Total games in library: {gamesCtx.gamesInLibrary}.</p>
+        <p>Total games in library: {gamesCtx.gamesInLibrary}</p>
         <ul>
           <li>
             Author: <a href="https://alxgbsn.co.uk">Alex Gibson</a>

@@ -28,7 +28,7 @@
   @media (min-width: 769px) {
     --font-size-main-heading: 2rem;
     --font-size-menu: 1rem;
-    --font-size-sub-heading: 1.4rem;
+    --font-size-sub-heading: 1.3rem;
     --font-size-table: 1rem;
     --margin-lg: 60px;
     --margin-sm: 12px;
@@ -183,6 +183,7 @@ table {
 table caption {
   color: var(--color-body);
   font-size: var(--font-size-sub-heading);
+  font-weight: bold;
   margin: var(--margin-sm) 0;
   text-align: left;
 }
