@@ -83,7 +83,7 @@ describe("App component", () => {
 
     // Search for "Title D".
     const searchInput = screen.getByRole("searchbox", {
-      name: /search/i,
+      name: /filter/i,
     });
     await user.type(searchInput, "Title D{enter}");
 
@@ -131,7 +131,7 @@ describe("App component", () => {
 
     // Search for "Digital".
     const searchInput = screen.getByRole("searchbox", {
-      name: /search/i,
+      name: /filter/i,
     });
     await user.type(searchInput, "Digital{enter}");
 
