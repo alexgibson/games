@@ -167,6 +167,10 @@ menu .button-default.active:hover {
 
 /** <table> **/
 
+.table-wrapper {
+  overflow-x: auto;
+}
+
 table {
   background-color: var(--color-table-background);
   border-collapse: collapse;
@@ -174,7 +178,6 @@ table {
   font-size: var(--font-size-table);
   margin: var(--margin-md) auto 0;
   width: 100%;
-  z-index: 1;
 }
 
 table caption {
@@ -182,14 +185,6 @@ table caption {
   font-size: var(--font-size-sub-heading);
   margin: var(--margin-sm) 0;
   text-align: left;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  thead {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-  }
 }
 
 thead th {

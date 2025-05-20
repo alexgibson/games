@@ -12,7 +12,7 @@ const Table: React.FC<TableProps> = () => {
   const order = gamesCtx.sortAscending ? "ascending" : "descending";
 
   return (
-    <>
+    <div className="table-wrapper">
       <table id={`${gamesCtx.activeTabButton}-Table`} aria-live="polite">
         <caption>
           {gamesCtx.activeTabButton} ({gamesCtx.games.length}{" "}
@@ -39,7 +39,7 @@ const Table: React.FC<TableProps> = () => {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 
