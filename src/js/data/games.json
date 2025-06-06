@@ -833,8 +833,8 @@
     "developer": "FromSoftware",
     "releaseDate": "February 25 2022",
     "medium": "Digital",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 10
   },
   {
     "title": "Elden Ring: Shadow of the Erdtree",
@@ -860,7 +860,7 @@
     "developer": "CD Projekt Red",
     "releaseDate": "June 05 2025",
     "medium": "Digital",
-    "status": "Wishlist",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -977,7 +977,7 @@
     "developer": "Capcom",
     "releaseDate": "June 05 2025",
     "medium": "Digital",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1049,7 +1049,7 @@
     "developer": "Nintendo",
     "releaseDate": "June 05 2025",
     "medium": "Digital",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1085,7 +1085,7 @@
     "developer": "Nintendo",
     "releaseDate": "June 05 2025",
     "medium": "Digital",
-    "status": "Wishlist",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -1094,7 +1094,7 @@
     "developer": "Nintendo",
     "releaseDate": "June 05 2025",
     "medium": "Digital",
-    "status": "Wishlist",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -1139,7 +1139,7 @@
     "developer": "Shin'en",
     "releaseDate": "July 5 2025",
     "medium": "Digital",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   }
 ]
