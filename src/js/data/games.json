@@ -859,8 +859,8 @@
     "platform": "Nintendo Switch 2",
     "developer": "CD Projekt Red",
     "releaseDate": "June 05 2025",
-    "medium": "Digital",
-    "status": "Backlog",
+    "medium": "Physical",
+    "status": "Playing",
     "score": null
   },
   {
@@ -977,8 +977,8 @@
     "developer": "Capcom",
     "releaseDate": "June 05 2025",
     "medium": "Digital",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "Horizon Forbidden West: Complete Edition",
@@ -1050,7 +1050,7 @@
     "releaseDate": "June 05 2025",
     "medium": "Digital",
     "status": "Playing",
-    "score": null
+    "score": 9
   },
   {
     "title": "Donkey Kong Bananza",
@@ -1058,7 +1058,7 @@
     "developer": "Nintendo",
     "releaseDate": "July 17 2025",
     "medium": "Physical",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1077,24 +1077,6 @@
     "releaseDate": "December 31 2025",
     "medium": "Physical",
     "status": "Wishlist",
-    "score": null
-  },
-  {
-    "title": "The Legend of Zelda: Breath of the Wild - Nintendo Switch 2 Edition",
-    "platform": "Nintendo Switch 2",
-    "developer": "Nintendo",
-    "releaseDate": "June 05 2025",
-    "medium": "Digital",
-    "status": "Backlog",
-    "score": null
-  },
-  {
-    "title": "The Legend of Zelda: Tears of the Kingdom - Nintendo Switch 2 Edition",
-    "platform": "Nintendo Switch 2",
-    "developer": "Nintendo",
-    "releaseDate": "June 05 2025",
-    "medium": "Digital",
-    "status": "Backlog",
     "score": null
   },
   {
@@ -1139,7 +1121,16 @@
     "developer": "Shin'en",
     "releaseDate": "July 5 2025",
     "medium": "Digital",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 7
+  },
+  {
+    "title": "Nintendo Switch 2 Welcome Tour",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "July 5 2025",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 7
   }
 ]
