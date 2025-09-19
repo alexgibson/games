@@ -860,8 +860,8 @@
     "developer": "CD Projekt Red",
     "releaseDate": "June 05 2025",
     "medium": "Physical",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "God of War",
@@ -901,10 +901,10 @@
   },
   {
     "title": "Final Fantasy VII Remake Intergrade",
-    "platform": "Steam",
+    "platform": "Nintendo Switch 2",
     "developer": "Square Enix",
-    "releaseDate": "June 17 2022",
-    "medium": "Digital",
+    "releaseDate": "January 23 2026",
+    "medium": "Game Key Card",
     "status": "Wishlist",
     "score": null
   },
@@ -919,10 +919,10 @@
   },
   {
     "title": "Persona 3 Reload",
-    "platform": "Steam",
+    "platform": "Nintendo Switch 2",
     "developer": "Atlus",
-    "releaseDate": "February 02 2024",
-    "medium": "Digital",
+    "releaseDate": "October 23 2025",
+    "medium": "Game Key Card",
     "status": "Wishlist",
     "score": null
   },
@@ -976,7 +976,7 @@
     "platform": "Nintendo Switch 2",
     "developer": "Capcom",
     "releaseDate": "June 05 2025",
-    "medium": "Digital",
+    "medium": "Game Key Card",
     "status": "Beat",
     "score": 8
   },
@@ -1035,10 +1035,10 @@
     "score": null
   },
   {
-    "title": "Metroid Prime 4: Beyond - Nintendo Switch 2 Edition",
+    "title": "Metroid Prime 4: Beyond",
     "platform": "Nintendo Switch 2",
     "developer": "Nintendo / Retro Studios",
-    "releaseDate": "December 31 2025",
+    "releaseDate": "December 04 2025",
     "medium": "Physical",
     "status": "Wishlist",
     "score": null
@@ -1049,8 +1049,8 @@
     "developer": "Nintendo",
     "releaseDate": "June 05 2025",
     "medium": "Digital",
-    "status": "Playing",
-    "score": 9
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "Donkey Kong Bananza",
@@ -1058,14 +1058,14 @@
     "developer": "Nintendo",
     "releaseDate": "July 17 2025",
     "medium": "Physical",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 9
   },
   {
     "title": "Hyrule Warriors: Age of Imprisonment",
     "platform": "Nintendo Switch 2",
     "developer": "Nintendo",
-    "releaseDate": "December 31 2025",
+    "releaseDate": "November 6 2025",
     "medium": "Physical",
     "status": "Wishlist",
     "score": null
@@ -1074,18 +1074,18 @@
     "title": "Kirby Air Riders",
     "platform": "Nintendo Switch 2",
     "developer": "Nintendo",
-    "releaseDate": "December 31 2025",
+    "releaseDate": "November 11 2025",
     "medium": "Physical",
     "status": "Wishlist",
     "score": null
   },
   {
-    "title": "Kirby and the Forgotten Land - Nintendo Switch 2 Edition + Star-Crossed World",
+    "title": "Kirby and the Forgotten Land + Star-Crossed World",
     "platform": "Nintendo Switch 2",
     "developer": "Nintendo",
     "releaseDate": "August 28 2025",
     "medium": "Digital",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1132,5 +1132,32 @@
     "medium": "Digital",
     "status": "Beat",
     "score": 7
+  },
+  {
+    "title": "Hollow Knight: Silksong",
+    "platform": "Nintendo Switch 2",
+    "developer": "Team Cherry",
+    "releaseDate": "September 4 2025",
+    "medium": "Digital",
+    "status": "Playing",
+    "score": null
+  },
+  {
+    "title": "Star Wars Outlaws Gold Edition",
+    "platform": "Nintendo Switch 2",
+    "developer": "Ubisoft",
+    "releaseDate": "September 4 2025",
+    "medium": "Game Key Card",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Dragon Quest VII Reimagined",
+    "platform": "Nintendo Switch 2",
+    "developer": "Square Enix",
+    "releaseDate": "February 03 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
   }
 ]

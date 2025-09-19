@@ -8,7 +8,7 @@ declare global {
     | "Backlog"
     | "Wishlist"
     | "Paused";
-  type Medium = "Physical | Digital";
+  type Medium = "Physical | Digital" | "Game Key Card";
   type FieldName =
     | "Title"
     | "Platform"
