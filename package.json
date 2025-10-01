@@ -40,7 +40,7 @@
     "@types/jest": "^30.0.0",
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
-    "del-cli": "^6.0.0",
+    "del-cli": "^7.0.0",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
