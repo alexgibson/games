@@ -6,7 +6,7 @@
     "releaseDate": "February 8 2023",
     "medium": "Physical",
     "status": "Beat",
-    "score": 10
+    "score": 9
   },
   {
     "title": "NieR Automata",
@@ -51,7 +51,7 @@
     "releaseDate": "May 9 2024",
     "medium": "Digital",
     "status": "Beat",
-    "score": 9
+    "score": 10
   },
   {
     "title": "Astral Chain",
@@ -231,7 +231,7 @@
     "releaseDate": "July 19 2022",
     "status": "Beat",
     "medium": "Digital",
-    "score": 9
+    "score": 10
   },
   {
     "title": "Super Mario 3D All-Stars",
@@ -1139,8 +1139,8 @@
     "developer": "Team Cherry",
     "releaseDate": "September 4 2025",
     "medium": "Digital",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 9
   },
   {
     "title": "Star Wars Outlaws Gold Edition",
@@ -1158,6 +1158,24 @@
     "releaseDate": "February 03 2026",
     "medium": "Game Key Card",
     "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Super Mario Galaxy 2",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "October 02 2025",
+    "medium": "Digital",
+    "status": "Beat",
+    "score": 9
+  },
+  {
+    "title": "Hades II",
+    "platform": "Nintendo Switch 2",
+    "developer": "Supergiant Games",
+    "releaseDate": "September 25 2025",
+    "medium": "Digital",
+    "status": "Backlog",
     "score": null
   }
 ]
