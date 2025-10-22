@@ -1085,8 +1085,8 @@
     "developer": "Nintendo",
     "releaseDate": "August 28 2025",
     "medium": "Digital",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 9
   },
   {
     "title": "The Duskbloods",
@@ -1175,7 +1175,16 @@
     "developer": "Supergiant Games",
     "releaseDate": "September 25 2025",
     "medium": "Digital",
-    "status": "Backlog",
+    "status": "Playing",
+    "score": null
+  },
+  {
+    "title": "Donkey Kong Bananza + DK Island & Emerald Rush",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "September 12 2025",
+    "medium": "Digital",
+    "status": "Playing",
     "score": null
   }
 ]
