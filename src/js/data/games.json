@@ -1067,7 +1067,7 @@
     "developer": "Nintendo",
     "releaseDate": "November 6 2025",
     "medium": "Physical",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1175,8 +1175,8 @@
     "developer": "Supergiant Games",
     "releaseDate": "September 25 2025",
     "medium": "Digital",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "Donkey Kong Bananza + DK Island & Emerald Rush",
@@ -1185,6 +1185,24 @@
     "releaseDate": "September 12 2025",
     "medium": "Digital",
     "status": "Playing",
+    "score": null
+  },
+  {
+    "title": "Dragon Quest I & II HD-2D Remake",
+    "platform": "Nintendo Switch 2",
+    "developer": "Square Enix",
+    "releaseDate": "October 30 2025",
+    "medium": "Game Key Card",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "The Touryst Deluxe",
+    "platform": "Nintendo Switch 2",
+    "developer": "Shin’en Multimedia",
+    "releaseDate": "September 25 2025",
+    "medium": "Digital",
+    "status": "Backlog",
     "score": null
   }
 ]
