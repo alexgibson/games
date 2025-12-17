@@ -1040,7 +1040,7 @@
     "developer": "Nintendo / Retro Studios",
     "releaseDate": "December 04 2025",
     "medium": "Physical",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1067,8 +1067,8 @@
     "developer": "Nintendo",
     "releaseDate": "November 6 2025",
     "medium": "Physical",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "Kirby Air Riders",
@@ -1112,7 +1112,7 @@
     "developer": "Sandfall Interactive",
     "releaseDate": "April 25 2025",
     "medium": "Digital",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1177,15 +1177,6 @@
     "medium": "Digital",
     "status": "Beat",
     "score": 8
-  },
-  {
-    "title": "Donkey Kong Bananza + DK Island & Emerald Rush",
-    "platform": "Nintendo Switch 2",
-    "developer": "Nintendo",
-    "releaseDate": "September 12 2025",
-    "medium": "Digital",
-    "status": "Playing",
-    "score": null
   },
   {
     "title": "Dragon Quest I & II HD-2D Remake",
