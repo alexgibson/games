@@ -1040,8 +1040,8 @@
     "developer": "Nintendo / Retro Studios",
     "releaseDate": "December 04 2025",
     "medium": "Physical",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 9
   },
   {
     "title": "Mario Kart World",
@@ -1076,7 +1076,7 @@
     "developer": "Nintendo",
     "releaseDate": "November 11 2025",
     "medium": "Physical",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1112,8 +1112,8 @@
     "developer": "Sandfall Interactive",
     "releaseDate": "April 25 2025",
     "medium": "Digital",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 9
   },
   {
     "title": "Fast Fusion",
@@ -1193,7 +1193,7 @@
     "developer": "Shin’en Multimedia",
     "releaseDate": "September 25 2025",
     "medium": "Digital",
-    "status": "Backlog",
+    "status": "Playing",
     "score": null
   }
 ]
