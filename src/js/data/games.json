@@ -87,7 +87,7 @@
     "releaseDate": "February 23 2022",
     "medium": "Digital",
     "status": "Beat",
-    "score": 9
+    "score": 10
   },
   {
     "title": "Ghost of Tsushima: Director's Cut",
@@ -141,7 +141,7 @@
     "releaseDate": "March 25 2021",
     "medium": "Physical",
     "status": "Beat",
-    "score": 9
+    "score": 10
   },
   {
     "title": "Monster Hunter Rise: Sunbreak",
@@ -150,7 +150,7 @@
     "releaseDate": "June 30 2022",
     "medium": "Digital",
     "status": "Beat",
-    "score": 9
+    "score": 10
   },
   {
     "title": "Neva",
@@ -905,7 +905,7 @@
     "developer": "Square Enix",
     "releaseDate": "January 23 2026",
     "medium": "Game Key Card",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1076,8 +1076,8 @@
     "developer": "Nintendo",
     "releaseDate": "November 11 2025",
     "medium": "Physical",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 7
   },
   {
     "title": "Kirby and the Forgotten Land + Star-Crossed World",
@@ -1112,7 +1112,7 @@
     "developer": "Sandfall Interactive",
     "releaseDate": "April 25 2025",
     "medium": "Digital",
-    "status": "Playing",
+    "status": "Beat",
     "score": 9
   },
   {
