@@ -792,15 +792,6 @@
     "score": 7
   },
   {
-    "title": "Fantasian Neo Dimension",
-    "platform": "Nintendo Switch",
-    "developer": "Mistwalker",
-    "releaseDate": "December 05 2024",
-    "medium": "Physical",
-    "status": "Backlog",
-    "score": null
-  },
-  {
     "title": "Split Fiction",
     "platform": "Steam",
     "developer": "Hazelight Studios",
@@ -810,21 +801,12 @@
     "score": 8
   },
   {
-    "title": "Tactics Ogre: Reborn",
-    "platform": "Nintendo Switch",
-    "developer": "Square Enix",
-    "releaseDate": "November 11 2022",
-    "medium": "Physical",
-    "status": "Backlog",
-    "score": null
-  },
-  {
     "title": "Xenoblade Chronicles X: Definitive Edition",
     "platform": "Nintendo Switch",
     "developer": "Nintendo / Monolith Software",
     "releaseDate": "March 30 2025",
     "medium": "Physical",
-    "status": "Backlog",
+    "status": "Wishlist",
     "score": null
   },
   {
@@ -851,7 +833,7 @@
     "developer": "Larian Studios",
     "releaseDate": "August 03 2022",
     "medium": "Digital",
-    "status": "Backlog",
+    "status": "Wishlist",
     "score": null
   },
   {
@@ -862,15 +844,6 @@
     "medium": "Physical",
     "status": "Beat",
     "score": 8
-  },
-  {
-    "title": "God of War",
-    "platform": "Steam",
-    "developer": "Sony / Santa Monica Studio",
-    "releaseDate": "January 14 2022",
-    "medium": "Digital",
-    "status": "Backlog",
-    "score": null
   },
   {
     "title": "Marvel's Spider-Man: Miles Morales",
@@ -887,7 +860,7 @@
     "developer": "CD Projekt Red",
     "releaseDate": "May 18 2015",
     "medium": "Digital",
-    "status": "Backlog",
+    "status": "Wishlist",
     "score": null
   },
   {
@@ -896,7 +869,7 @@
     "developer": "Rockstar",
     "releaseDate": "December 05 2019",
     "medium": "Digital",
-    "status": "Backlog",
+    "status": "Wishlist",
     "score": null
   },
   {
@@ -910,10 +883,10 @@
   },
   {
     "title": "Final Fantasy VII Rebirth",
-    "platform": "Steam",
+    "platform": "Nintendo Switch 2",
     "developer": "Square Enix",
-    "releaseDate": "January 23 2025",
-    "medium": "Digital",
+    "releaseDate": "June 03 2026",
+    "medium": "Game Key Card",
     "status": "Wishlist",
     "score": null
   },
@@ -936,42 +909,6 @@
     "score": null
   },
   {
-    "title": "Marvel's Spider-Man Remastered",
-    "platform": "Steam",
-    "developer": "Sony / Insomniac Games",
-    "releaseDate": "August 12 2022",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
-  },
-  {
-    "title": "God of War Ragnarok",
-    "platform": "Steam",
-    "developer": "Sony / Santa Monica Studio",
-    "releaseDate": "September 19 2024",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
-  },
-  {
-    "title": "NieR Replicant",
-    "platform": "Steam",
-    "developer": "Square Enix",
-    "releaseDate": "April 23 2021",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
-  },
-  {
-    "title": "Marvel's Spider-Man 2",
-    "platform": "Steam",
-    "developer": "Sony / Insomniac Games",
-    "releaseDate": "January 30 2025",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
-  },
-  {
     "title": "Street Fighter 6: Year 1-2 Fighters Edition",
     "platform": "Nintendo Switch 2",
     "developer": "Capcom",
@@ -979,24 +916,6 @@
     "medium": "Game Key Card",
     "status": "Beat",
     "score": 8
-  },
-  {
-    "title": "Horizon Forbidden West: Complete Edition",
-    "platform": "Steam",
-    "developer": "Sony / Guerilla",
-    "releaseDate": "March 21 2024",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
-  },
-  {
-    "title": "Horizon Zero Dawn: Remastered",
-    "platform": "Steam",
-    "developer": "Sony / Guerilla",
-    "releaseDate": "October 31 2024",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
   },
   {
     "title": "The Last of Us Part II Remastered",
@@ -1157,7 +1076,7 @@
     "developer": "Square Enix",
     "releaseDate": "February 03 2026",
     "medium": "Game Key Card",
-    "status": "Wishlist",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -1194,6 +1113,96 @@
     "releaseDate": "September 25 2025",
     "medium": "Digital",
     "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Fantasian Neo Dimension",
+    "platform": "Nintendo Switch",
+    "developer": "Mistwalker",
+    "releaseDate": "December 05 2024",
+    "medium": "Physical",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Tactics Ogre: Reborn",
+    "platform": "Nintendo Switch",
+    "developer": "Square Enix",
+    "releaseDate": "November 11 2022",
+    "medium": "Physical",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Indiana Jones and the Great Circle",
+    "platform": "Nintendo Switch 2",
+    "developer": "Bethesda",
+    "releaseDate": "May 12 2026",
+    "medium": "Physical",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "The Adventures of Elliot: The Millennium Tales",
+    "platform": "Nintendo Switch 2",
+    "developer": "Square Enix",
+    "releaseDate": "June 18 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Pragmata",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "April 24 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Resident Evil Requiem",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "February 27 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Resident Evil Village Gold Edition",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "February 27 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Resident Evil 7 biohazard Gold Edition",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "February 27 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Octopath Traveler 0",
+    "platform": "Nintendo Switch 2",
+    "developer": "Square Enix",
+    "releaseDate": "December 04 2025",
+    "medium": "Game Key Card",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Orbitals",
+    "platform": "Nintendo Switch 2",
+    "developer": "Kepler Interactive",
+    "releaseDate": "August 01 2026",
+    "medium": "Digital",
+    "status": "Wishlist",
     "score": null
   }
 ]
