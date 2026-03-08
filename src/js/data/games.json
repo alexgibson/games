@@ -802,11 +802,11 @@
   },
   {
     "title": "Xenoblade Chronicles X: Definitive Edition",
-    "platform": "Nintendo Switch",
+    "platform": "Nintendo Switch 2",
     "developer": "Nintendo / Monolith Software",
-    "releaseDate": "March 30 2025",
+    "releaseDate": "February 19 2026",
     "medium": "Physical",
-    "status": "Wishlist",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -851,7 +851,7 @@
     "developer": "Sony / Insomniac Games",
     "releaseDate": "November 18 2022",
     "medium": "Digital",
-    "status": "Backlog",
+    "status": "Wishlist",
     "score": null
   },
   {
@@ -878,8 +878,8 @@
     "developer": "Square Enix",
     "releaseDate": "January 22 2026",
     "medium": "Game Key Card",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 10
   },
   {
     "title": "Final Fantasy VII Rebirth",
@@ -1018,11 +1018,11 @@
   },
   {
     "title": "Blue Prince",
-    "platform": "Steam",
+    "platform": "Nintendo Switch 2",
     "developer": "Dogubomb",
-    "releaseDate": "April 10 2025",
+    "releaseDate": "March 03 2026",
     "medium": "Digital",
-    "status": "Wishlist",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -1166,7 +1166,7 @@
     "developer": "Capcom",
     "releaseDate": "February 27 2026",
     "medium": "Game Key Card",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1175,17 +1175,17 @@
     "developer": "Capcom",
     "releaseDate": "February 27 2026",
     "medium": "Game Key Card",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
-    "title": "Resident Evil 7 biohazard Gold Edition",
+    "title": "Resident Evil 7 Biohazard Gold Edition",
     "platform": "Nintendo Switch 2",
     "developer": "Capcom",
     "releaseDate": "February 27 2026",
     "medium": "Game Key Card",
-    "status": "Wishlist",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "Octopath Traveler 0",
