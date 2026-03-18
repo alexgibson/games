@@ -945,15 +945,6 @@
     "score": null
   },
   {
-    "title": "Yakuza: Like a Dragon",
-    "platform": "Steam",
-    "developer": "Ryu Ga Gotoku Studio",
-    "releaseDate": "November 10 2020",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
-  },
-  {
     "title": "Metroid Prime 4: Beyond",
     "platform": "Nintendo Switch 2",
     "developer": "Nintendo / Retro Studios",
@@ -1022,7 +1013,7 @@
     "developer": "Dogubomb",
     "releaseDate": "March 03 2026",
     "medium": "Digital",
-    "status": "Backlog",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1175,8 +1166,8 @@
     "developer": "Capcom",
     "releaseDate": "February 27 2026",
     "medium": "Game Key Card",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "Resident Evil 7 Biohazard Gold Edition",
