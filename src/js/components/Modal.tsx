@@ -1,23 +1,20 @@
 import React from "react";
-import { useRef, useEffect, useContext } from "react";
+import { useRef, useEffect, useState, use } from "react";
 import { createPortal } from "react-dom";
 import { GamesContext } from "../store/GamesContextProvider";
 
 type ModalProps = React.HTMLAttributes<HTMLDialogElement>;
 
-/**
- * Use forwardRef here for Jest / JSDOM as they don't
- * yet support passing ref directly as props.
- */
 const Modal: React.FC<ModalProps> = ({ children, ...rest }) => {
-  const gamesCtx = useContext(GamesContext);
-  const dialog = useRef<HTMLDialogElement>(null);
+  const gamesCtx = use(GamesContext);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [portalRoot] = useState(() => document.getElementById("modal")!);
 
   useEffect(() => {
     if (gamesCtx.isModalOpen) {
-      dialog.current.showModal();
+      dialogRef.current?.showModal();
     } else {
-      dialog.current.close();
+      dialogRef.current?.close();
     }
   }, [gamesCtx.isModalOpen]);
 
@@ -28,7 +25,7 @@ const Modal: React.FC<ModalProps> = ({ children, ...rest }) => {
   return createPortal(
     <dialog
       className="modal"
-      ref={dialog}
+      ref={dialogRef}
       {...rest}
       data-testid="modal"
       onClose={handleModalClose}
@@ -50,7 +47,7 @@ const Modal: React.FC<ModalProps> = ({ children, ...rest }) => {
         </>
       )}
     </dialog>,
-    document.getElementById("modal")!,
+    portalRoot,
   );
 };
 

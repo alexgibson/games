@@ -164,7 +164,7 @@ export default function GamesContextProvider({
     },
   );
 
-  const handleUpdateActiveTabButton = (value: Status) => {
+  const handleUpdateActiveTabButton = (value: string) => {
     if (isValidGameStatus(value)) {
       dispatchTableStateAction({
         type: "UPDATE_ACTIVE_TAB_BUTTON",
@@ -175,7 +175,7 @@ export default function GamesContextProvider({
     }
   };
 
-  const handleUpdateSearchFieldOption = (value: FieldName) => {
+  const handleUpdateSearchFieldOption = (value: string) => {
     if (isValidGameField(value)) {
       dispatchTableStateAction({
         type: "UPDATE_SEARCH_FIELD_OPTION",
@@ -210,7 +210,7 @@ export default function GamesContextProvider({
   };
 
   return (
-    <GamesContext.Provider
+    <GamesContext
       value={{
         ...tableState,
         gamesInLibrary,
@@ -222,6 +222,6 @@ export default function GamesContextProvider({
       }}
     >
       {children}
-    </GamesContext.Provider>
+    </GamesContext>
   );
 }

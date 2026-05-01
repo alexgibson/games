@@ -2,13 +2,13 @@ import React from "react";
 import TableRow from "./TableRow";
 import TableHeading from "./TableHeading";
 import { gameFieldNames } from "../utils";
-import { useContext } from "react";
+import { use } from "react";
 import { GamesContext } from "../store/GamesContextProvider";
 
 type TableProps = React.HTMLAttributes<HTMLTableElement>;
 
 const Table: React.FC<TableProps> = () => {
-  const gamesCtx = useContext(GamesContext);
+  const gamesCtx = use(GamesContext);
   const order = gamesCtx.sortAscending ? "ascending" : "descending";
 
   return (
