@@ -1,12 +1,12 @@
 import React from "react";
-import { useContext } from "react";
+import { use } from "react";
 import { gameFieldNames } from "../utils";
 import { GamesContext } from "../store/GamesContextProvider";
 
 type SearchBarProps = Omit<React.HTMLAttributes<HTMLFormElement>, "onChange">;
 
 const SearchBar: React.FC<SearchBarProps> = () => {
-  const gamesCtx = useContext(GamesContext);
+  const gamesCtx = use(GamesContext);
 
   return (
     <form className="search-form" onSubmit={(e) => e.preventDefault()}>

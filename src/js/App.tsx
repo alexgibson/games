@@ -4,11 +4,11 @@ import SearchBar from "./components/SearchBar.tsx";
 import TabButton from "./components/TabButton";
 import Table from "./components/Table";
 import { gameStatus } from "./utils.ts";
-import { useContext } from "react";
+import { use } from "react";
 import { GamesContext } from "./store/GamesContextProvider";
 
 const App: React.FC = () => {
-  const gamesCtx = useContext(GamesContext);
+  const gamesCtx = use(GamesContext);
 
   return (
     <>

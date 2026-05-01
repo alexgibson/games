@@ -154,11 +154,8 @@ export const gameFieldKeys: GameFieldMap = {
  * @param id valid field name.
  * @returns valid JSON field key.
  */
-export const getGameFieldKey = (id: FieldName): FieldKey | null => {
-  if (Object.prototype.hasOwnProperty.call(gameFieldKeys, id)) {
-    return gameFieldKeys[id];
-  }
-  return null;
+export const getGameFieldKey = (id: FieldName): FieldKey => {
+  return gameFieldKeys[id];
 };
 
 /**
