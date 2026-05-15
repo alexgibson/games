@@ -1130,7 +1130,7 @@
     "developer": "Bethesda",
     "releaseDate": "May 12 2026",
     "medium": "Physical",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1148,8 +1148,8 @@
     "developer": "Capcom",
     "releaseDate": "April 24 2026",
     "medium": "Game Key Card",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "Resident Evil Requiem",
