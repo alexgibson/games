@@ -819,11 +819,11 @@
     "score": 10
   },
   {
-    "title": "Elden Ring: Shadow of the Erdtree",
-    "platform": "Steam",
+    "title": "Elden Ring: Tarnished Edition",
+    "platform": "Nintendo Switch 2",
     "developer": "FromSoftware",
-    "releaseDate": "June 20 2024",
-    "medium": "Digital",
+    "releaseDate": "Dec 25 2026",
+    "medium": "Game Key Card",
     "status": "Backlog",
     "score": null
   },
@@ -844,24 +844,6 @@
     "medium": "Physical",
     "status": "Beat",
     "score": 8
-  },
-  {
-    "title": "Marvel's Spider-Man: Miles Morales",
-    "platform": "Steam",
-    "developer": "Sony / Insomniac Games",
-    "releaseDate": "November 18 2022",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
-  },
-  {
-    "title": "The Witcher 3: Wild Hunt",
-    "platform": "Steam",
-    "developer": "CD Projekt Red",
-    "releaseDate": "May 18 2015",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
   },
   {
     "title": "Red Dead Redemption II",
@@ -887,7 +869,7 @@
     "developer": "Square Enix",
     "releaseDate": "June 03 2026",
     "medium": "Game Key Card",
-    "status": "Wishlist",
+    "status": "Playing",
     "score": null
   },
   {
@@ -916,33 +898,6 @@
     "medium": "Game Key Card",
     "status": "Beat",
     "score": 8
-  },
-  {
-    "title": "The Last of Us Part II Remastered",
-    "platform": "Steam",
-    "developer": "Sony / Naughty Dog",
-    "releaseDate": "April 03 2025",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
-  },
-  {
-    "title": "Visions of Mana",
-    "platform": "Steam",
-    "developer": "Square Enix",
-    "releaseDate": "August 29 2024",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
-  },
-  {
-    "title": "Hi-Fi Rush",
-    "platform": "Steam",
-    "developer": "Tango Gameworks",
-    "releaseDate": "January 25 2023",
-    "medium": "Digital",
-    "status": "Wishlist",
-    "score": null
   },
   {
     "title": "Metroid Prime 4: Beyond",
@@ -1098,21 +1053,12 @@
     "score": null
   },
   {
-    "title": "The Touryst Deluxe",
-    "platform": "Nintendo Switch 2",
-    "developer": "Shin’en Multimedia",
-    "releaseDate": "September 25 2025",
-    "medium": "Digital",
-    "status": "Backlog",
-    "score": null
-  },
-  {
     "title": "Fantasian Neo Dimension",
     "platform": "Nintendo Switch",
     "developer": "Mistwalker",
     "releaseDate": "December 05 2024",
     "medium": "Physical",
-    "status": "Wishlist",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -1121,7 +1067,7 @@
     "developer": "Square Enix",
     "releaseDate": "November 11 2022",
     "medium": "Physical",
-    "status": "Wishlist",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -1130,8 +1076,8 @@
     "developer": "Bethesda",
     "releaseDate": "May 12 2026",
     "medium": "Physical",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "The Adventures of Elliot: The Millennium Tales",
@@ -1139,7 +1085,7 @@
     "developer": "Square Enix",
     "releaseDate": "June 18 2026",
     "medium": "Game Key Card",
-    "status": "Wishlist",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -1202,8 +1148,8 @@
     "developer": "Nintendo",
     "releaseDate": "May 25 2026",
     "medium": "Physical",
-    "status": "Wishlist",
-    "score": null
+    "status": "Beat",
+    "score": 7
   },
   {
     "title": "Minishoot' Adventures",
@@ -1213,5 +1159,104 @@
     "medium": "Digital",
     "status": "Beat",
     "score": 8
+  },
+  {
+    "title": "Mina the Hollower",
+    "platform": "Nintendo Switch 2",
+    "developer": "Yacht Club Games",
+    "releaseDate": "May 25 2026",
+    "medium": "Digital",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Star Fox",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "June 25 2026",
+    "medium": "Physical",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "The Legend of Zelda: Ocarina of Time",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "Dec 25 2026",
+    "medium": "Physical",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Dragon's Dogma 2: Dark Arisen",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "Oct 09 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Lords of the Fallen II",
+    "platform": "Nintendo Switch 2",
+    "developer": "CI Games",
+    "releaseDate": "Dec 25 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Final Fantasy Resonance",
+    "platform": "Nintendo Switch 2",
+    "developer": "Square Enix",
+    "releaseDate": "Oct 22 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Onimusha: Way of the Sword",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "Sept 25 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Lies of P: Complete Edition",
+    "platform": "Nintendo Switch 2",
+    "developer": "Neowiz",
+    "releaseDate": "Aug 05 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Kena: Bridge of Spirits",
+    "platform": "Nintendo Switch 2",
+    "developer": "Ember Lab",
+    "releaseDate": "Mar 26 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Devil May Cry 5 Devil Hunter Edition",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "June 23 2026",
+    "medium": "Digital",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Final Fantasy VII Revalation",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "Dec 25 2027",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
   }
 ]
