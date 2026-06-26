@@ -44,25 +44,25 @@ describe("App component", () => {
   });
 
   it("displays active tab content as expected", async () => {
-    // "Playing" tab displayed by default.
-    const playingButton = screen.getByRole("button", { name: /playing/i });
-    expect(playingButton).toHaveClass("active");
+    // "Backlog" tab displayed by default.
+    const backlogButton = screen.getByRole("button", { name: /backlog/i });
+    expect(backlogButton).toHaveClass("active");
 
     expect(
-      screen.queryByRole("table", { name: /Playing \(2 games\)/i }),
+      screen.queryByRole("table", { name: /Games: 1/i }),
     ).toBeInTheDocument();
 
     // Switch to "Beat" tab.
     const beatButton = screen.getByRole("button", { name: /beat/i });
     await user.click(beatButton);
 
-    expect(playingButton).not.toHaveClass("active");
+    expect(backlogButton).not.toHaveClass("active");
     expect(
-      screen.queryByRole("table", { name: /Playing \(2 games\)/i }),
+      screen.queryByRole("table", { name: /Games: 1/i }),
     ).not.toBeInTheDocument();
 
     expect(
-      screen.getByRole("table", { name: /Beat \(3 games\)/i }),
+      screen.getByRole("table", { name: /Games: 3/i }),
     ).toBeInTheDocument();
 
     expect(beatButton).toHaveClass("active");
@@ -78,12 +78,12 @@ describe("App component", () => {
     expect(screen.queryByText("Title E")).toBeInTheDocument();
 
     expect(
-      screen.queryByRole("table", { name: /Beat \(3 games\)/i }),
+      screen.queryByRole("table", { name: /Games: 3/i }),
     ).toBeInTheDocument();
 
     // Search for "Title D".
     const searchInput = screen.getByRole("searchbox", {
-      name: /filter/i,
+      name: /search/i,
     });
     await user.type(searchInput, "Title D{enter}");
 
@@ -92,7 +92,7 @@ describe("App component", () => {
     expect(screen.queryByText("Title E")).not.toBeInTheDocument();
 
     expect(
-      screen.queryByRole("table", { name: /Beat \(1 game\)/i }),
+      screen.queryByRole("table", { name: /Games: 1/i }),
     ).toBeInTheDocument();
 
     // Click "Clear" button.
@@ -104,7 +104,7 @@ describe("App component", () => {
     expect(screen.queryByText("Title E")).toBeInTheDocument();
 
     expect(
-      screen.queryByRole("table", { name: /Beat \(3 games\)/i }),
+      screen.queryByRole("table", { name: /Games: 3/i }),
     ).toBeInTheDocument();
   });
 
@@ -120,7 +120,7 @@ describe("App component", () => {
     expect(physical.length).toBe(2);
 
     expect(
-      screen.queryByRole("table", { name: /Beat \(3 games\)/i }),
+      screen.queryByRole("table", { name: /Games: 3/i }),
     ).toBeInTheDocument();
 
     // Select table column "Medium"
@@ -131,7 +131,7 @@ describe("App component", () => {
 
     // Search for "Digital".
     const searchInput = screen.getByRole("searchbox", {
-      name: /filter/i,
+      name: /search/i,
     });
     await user.type(searchInput, "Digital{enter}");
 
@@ -142,7 +142,7 @@ describe("App component", () => {
     expect(physical.length).toBe(0);
 
     expect(
-      screen.queryByRole("table", { name: /Beat \(1 game\)/i }),
+      screen.queryByRole("table", { name: /Games: 1/i }),
     ).toBeInTheDocument();
   });
 
@@ -198,17 +198,17 @@ describe("App component", () => {
 
   it("should show modal dialog when about button is clicked", async () => {
     const aboutButton = screen.getByRole("button", {
-      name: /About this app/i,
+      name: /About/i,
     });
     const dialog = screen.getByTestId("modal");
 
     expect(
-      within(dialog).queryByText(/Games in library: 5/i),
+      within(dialog).queryByText(/Total games: 5/i),
     ).not.toBeInTheDocument();
 
     // Open about modal
     await user.click(aboutButton);
 
-    expect(within(dialog).getByText(/Games in library: 5/i)).toBeVisible();
+    expect(within(dialog).getByText(/Total games: 6/i)).toBeVisible();
   });
 });

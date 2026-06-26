@@ -92,8 +92,8 @@ export function formatShortDate(date: Date, locale: string = "en-GB"): string {
  * Array of valid game status values.
  */
 export const gameStatus: Status[] = [
-  "Playing",
   "Backlog",
+  "Playing",
   "Wishlist",
   "Beat",
   "Paused",
@@ -156,32 +156,4 @@ export const gameFieldKeys: GameFieldMap = {
  */
 export const getGameFieldKey = (id: FieldName): FieldKey => {
   return gameFieldKeys[id];
-};
-
-/**
- * Wrapper for saving data to localStorage.
- * Some browsers can block or restrict access
- * in private browsing modes.
- * @param id identifier for data.
- * @param value stringified data to store.
- */
-export const setLocalStorageItem = (id: string, value: string) => {
-  try {
-    window.localStorage.setItem(id, value);
-  } catch {
-    // do nothing.
-  }
-};
-
-/**
- * Wrapper for reading data from localStorage.
- * @param id identifier for data.
- * @returns stringified data.
- */
-export const getLocalStorageItem = (id: string) => {
-  try {
-    return window.localStorage.getItem(id);
-  } catch {
-    return null;
-  }
 };

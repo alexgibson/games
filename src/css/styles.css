@@ -1,26 +1,23 @@
 :root {
-  --color-body-background: #1c1b22;
+  --border-radius: 6px;
+  --color-body-background: #1c1c1c;
   --color-body: #e0e0e0;
-  --color-highlight-blue: #0056b3;
-  --color-highlight-gray: #4a4a4a;
-  --color-highlight-green: #2e7d32;
-  --color-highlight-orange: #c05600;
-  --color-highlight-purple: #5e2e91;
-  --color-table-background: #1e1e1e;
+  --color-form-border: #999;
+  --color-highlight-default: #4a4a4a;
+  --color-highlight-selected: #0056b3;
   --color-table-cell-alt: #2c2c2c;
   --color-table-cell-border: #444;
   --color-table-cell-highlight: #3a3a3a;
-  --color-form-border: #999;
   --content-max-width: 1400px;
   --font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-size-main-heading: 1.6rem;
   --font-size-menu: 0.9rem;
-  --font-size-sub-heading: 1.2rem;
   --font-size-table: 0.9rem;
   --margin-lg: 48px;
   --margin-md: 30px;
   --margin-sm: 10px;
   --margin-xs: 4px;
+  --padding-lg: 12px;
   --padding-md: 10px;
   --padding-sm: 8px;
   --table-border-width: 1px;
@@ -28,7 +25,6 @@
   @media (min-width: 769px) {
     --font-size-main-heading: 2rem;
     --font-size-menu: 1rem;
-    --font-size-sub-heading: 1.3rem;
     --font-size-table: 1rem;
     --margin-lg: 60px;
     --margin-sm: 12px;
@@ -94,14 +90,10 @@ a:focus {
   transition: all 0.1s ease-in-out;
 }
 
-.button-default:disabled {
-  cursor: default;
-}
-
-.button-default:not(:disabled):hover,
-.button-default:not(:disabled):active,
-.button-default:not(:disabled):focus {
-  background: var(--color-highlight-gray);
+.button-default:hover,
+.button-default:active,
+.button-default:focus {
+  background: var(--color-highlight-default);
   cursor: pointer;
 }
 
@@ -126,38 +118,12 @@ menu .button-default {
   margin: 0 calc(var(--margin-sm) / 2);
 }
 
+menu .button-default.active {
+  background-color: var(--color-highlight-selected);
+}
+
 menu .button-default.active:hover {
   cursor: default;
-}
-
-#Playing-TabButton:hover,
-#Playing-TabButton:focus,
-#Playing-TabButton.active {
-  background-color: var(--color-highlight-green);
-}
-
-#Backlog-TabButton:hover,
-#Backlog-TabButton:focus,
-#Backlog-TabButton.active {
-  background-color: var(--color-highlight-orange);
-}
-
-#Wishlist-TabButton:hover,
-#Wishlist-TabButton:focus,
-#Wishlist-TabButton.active {
-  background-color: var(--color-highlight-purple);
-}
-
-#Beat-TabButton:hover,
-#Beat-TabButton:focus,
-#Beat-TabButton.active {
-  background-color: var(--color-highlight-blue);
-}
-
-#Paused-TabButton:hover,
-#Paused-TabButton:focus,
-#Paused-TabButton.active {
-  background-color: var(--color-highlight-gray);
 }
 
 #tab-content {
@@ -182,15 +148,15 @@ table {
 
 table caption {
   color: var(--color-body);
-  font-size: var(--font-size-sub-heading);
-  font-weight: bold;
+  font-size: var(--font-size-table);
+  font-weight: normal;
   margin: var(--margin-sm) 0;
   text-align: left;
 }
 
 thead th {
   color: var(--color-body);
-  padding: var(--padding-sm);
+  padding: var(--padding-lg);
   text-align: left;
 }
 
@@ -228,29 +194,9 @@ thead th.active-descending .button-table-column:after {
   content: "▼";
 }
 
-#Playing-Table thead th {
-  background-color: var(--color-highlight-green);
-  border: var(--table-border-width) solid var(--color-highlight-green);
-}
-
-#Backlog-Table thead th {
-  background-color: var(--color-highlight-orange);
-  border: var(--table-border-width) solid var(--color-highlight-orange);
-}
-
-#Wishlist-Table thead th {
-  background-color: var(--color-highlight-purple);
-  border: var(--table-border-width) solid var(--color-highlight-purple);
-}
-
-#Beat-Table thead th {
-  background-color: var(--color-highlight-blue);
-  border: var(--table-border-width) solid var(--color-highlight-blue);
-}
-
-#Paused-Table thead th {
-  background-color: var(--color-highlight-gray);
-  border: var(--table-border-width) solid var(--color-highlight-gray);
+thead th {
+  background-color: var(--color-highlight-selected);
+  border: var(--table-border-width) solid var(--color-highlight-selected);
 }
 
 tbody tr {
@@ -261,12 +207,12 @@ tbody tr {
 tbody th {
   color: var(--color-body);
   font-weight: normal;
-  padding: var(--padding-sm);
+  padding: var(--padding-lg);
 }
 
 td {
   border: var(--table-border-width) solid var(--color-table-cell-border);
-  padding: var(--padding-sm);
+  padding: var(--padding-lg);
 }
 
 tr:nth-child(even) {

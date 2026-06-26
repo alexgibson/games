@@ -10,14 +10,14 @@ const SearchBar: React.FC<SearchBarProps> = () => {
 
   return (
     <form className="search-form" onSubmit={(e) => e.preventDefault()}>
-      <label htmlFor="search">Filter</label>
+      <label htmlFor="search">Search</label>
       <input
         id="search"
         type="search"
         name="search"
         value={gamesCtx.searchQuery}
         onChange={(e) => gamesCtx.handleUpdateSearchQuery(e.target.value)}
-        placeholder="Filter"
+        placeholder="Search"
         aria-controls={`${gamesCtx.activeTabButton}-Table`}
       />
       <label htmlFor="field">Table Column</label>
@@ -28,7 +28,7 @@ const SearchBar: React.FC<SearchBarProps> = () => {
       >
         {gameFieldNames.map((field) => (
           <option key={field} value={field}>
-            by {field}
+            {field}
           </option>
         ))}
       </select>

@@ -9,20 +9,23 @@ describe("sortByKey()", () => {
     expect(resultTitleAsc[2].title).toEqual("Title C");
     expect(resultTitleAsc[3].title).toEqual("Title D");
     expect(resultTitleAsc[4].title).toEqual("Title E");
+    expect(resultTitleAsc[5].title).toEqual("Title F");
 
     const resultTitleDesc = sortByKey(Games, "title", false);
-    expect(resultTitleDesc[0].title).toEqual("Title E");
-    expect(resultTitleDesc[1].title).toEqual("Title D");
-    expect(resultTitleDesc[2].title).toEqual("Title C");
-    expect(resultTitleDesc[3].title).toEqual("Title B");
-    expect(resultTitleDesc[4].title).toEqual("Title A");
+    expect(resultTitleDesc[0].title).toEqual("Title F");
+    expect(resultTitleDesc[1].title).toEqual("Title E");
+    expect(resultTitleDesc[2].title).toEqual("Title D");
+    expect(resultTitleDesc[3].title).toEqual("Title C");
+    expect(resultTitleDesc[4].title).toEqual("Title B");
+    expect(resultTitleDesc[5].title).toEqual("Title A");
 
     const resultScoreAsc = sortByKey(Games, "score", true);
-    expect(resultScoreAsc[0].score).toEqual(6);
-    expect(resultScoreAsc[1].score).toEqual(7);
-    expect(resultScoreAsc[2].score).toEqual(8);
-    expect(resultScoreAsc[3].score).toEqual(9);
-    expect(resultScoreAsc[4].score).toEqual(10);
+    expect(resultScoreAsc[0].score).toEqual(5);
+    expect(resultScoreAsc[1].score).toEqual(6);
+    expect(resultScoreAsc[2].score).toEqual(7);
+    expect(resultScoreAsc[3].score).toEqual(8);
+    expect(resultScoreAsc[4].score).toEqual(9);
+    expect(resultScoreAsc[5].score).toEqual(10);
 
     const resultScoreDesc = sortByKey(Games, "score", false);
     expect(resultScoreDesc[0].score).toEqual(10);
@@ -30,6 +33,7 @@ describe("sortByKey()", () => {
     expect(resultScoreDesc[2].score).toEqual(8);
     expect(resultScoreDesc[3].score).toEqual(7);
     expect(resultScoreDesc[4].score).toEqual(6);
+    expect(resultScoreDesc[5].score).toEqual(5);
 
     const resultReleaseDateAsc = sortByKey(Games, "releaseDate", true);
     expect(formatShortDate(resultReleaseDateAsc[0].releaseDate)).toEqual(
@@ -47,21 +51,27 @@ describe("sortByKey()", () => {
     expect(formatShortDate(resultReleaseDateAsc[4].releaseDate)).toEqual(
       "12 May 2023",
     );
+    expect(formatShortDate(resultReleaseDateAsc[5].releaseDate)).toEqual(
+      "01 March 2026",
+    );
 
     const resultReleaseDateDesc = sortByKey(Games, "releaseDate", false);
     expect(formatShortDate(resultReleaseDateDesc[0].releaseDate)).toEqual(
-      "12 May 2023",
+      "01 March 2026",
     );
     expect(formatShortDate(resultReleaseDateDesc[1].releaseDate)).toEqual(
-      "08 February 2023",
+      "12 May 2023",
     );
     expect(formatShortDate(resultReleaseDateDesc[2].releaseDate)).toEqual(
-      "20 March 2020",
+      "08 February 2023",
     );
     expect(formatShortDate(resultReleaseDateDesc[3].releaseDate)).toEqual(
-      "03 March 2017",
+      "20 March 2020",
     );
     expect(formatShortDate(resultReleaseDateDesc[4].releaseDate)).toEqual(
+      "03 March 2017",
+    );
+    expect(formatShortDate(resultReleaseDateDesc[5].releaseDate)).toEqual(
       "23 February 2017",
     );
   });

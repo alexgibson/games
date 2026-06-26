@@ -14,10 +14,7 @@ const Table: React.FC<TableProps> = () => {
   return (
     <div className="table-wrapper">
       <table id={`${gamesCtx.activeTabButton}-Table`} aria-live="polite">
-        <caption>
-          {gamesCtx.activeTabButton} ({gamesCtx.games.length}{" "}
-          {gamesCtx.games.length === 1 ? "game" : "games"})
-        </caption>
+        <caption>Games: {gamesCtx.games.length}</caption>
         <thead>
           <tr>
             {gameFieldNames.map((field) => (

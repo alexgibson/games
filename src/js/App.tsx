@@ -41,16 +41,17 @@ const App: React.FC = () => {
           onClick={() => gamesCtx.handleUpdateModalVisibility(true)}
           aria-controls="modal"
         >
-          About this app
+          About
         </button>
       </footer>
 
       <Modal id="modal">
-        <h2 tabIndex={0}>About this app</h2>
+        <h2 tabIndex={0}>About</h2>
         <p>
-          Video games I’m playing, soon to play, wish to play, or have beaten.
+          Games that I'm either actively playing, are in my backlog, on my
+          wishlist, or have beaten.
         </p>
-        <p>Total games in library: {gamesCtx.gamesInLibrary}</p>
+        <p>Total games: {gamesCtx.gamesInLibrary}</p>
         <ul>
           <li>
             Author: <a href="https://alxgbsn.co.uk">Alex Gibson</a>
