@@ -101,7 +101,7 @@ a:focus {
 
 menu {
   font-size: var(--font-size-menu);
-  margin: 0 auto 20px;
+  margin: 0 auto var(--margin-lg);
   max-width: var(--content-max-width);
   padding: 0;
   text-align: center;
@@ -131,6 +131,86 @@ menu .button-default.active:hover {
   max-width: var(--content-max-width);
 }
 
+/** <form> **/
+
+.table-header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--margin-sm);
+  justify-content: space-between;
+  margin: 0 auto var(--margin-sm);
+  max-width: var(--content-max-width);
+}
+
+.game-count {
+  font-size: var(--font-size-table);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.search-bar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--margin-sm);
+  justify-content: flex-end;
+}
+
+.search-toggle {
+  align-items: center;
+  display: none;
+  flex: none;
+  justify-content: center;
+}
+
+@media (min-width: 769px) {
+  .search-toggle {
+    display: inline-flex;
+  }
+}
+
+.search-form {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--margin-sm);
+  justify-content: center;
+}
+
+.search-form label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.search-form input[type="search"],
+.search-form select {
+  appearance: none;
+  background: transparent;
+  border-radius: 6px;
+  border: 1px solid var(--color-form-border);
+  color: var(--color-body);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  max-width: 150px;
+  padding: 6px 12px;
+}
+
+.search-form input[type="search"]::-webkit-search-cancel-button,
+.search-form input[type="search"]::-webkit-search-decoration {
+  appearance: none;
+  display: none;
+}
+
+.search-form input[type="search"]::placeholder {
+  color: var(--color-form-border);
+  opacity: 1;
+}
+
 /** <table> **/
 
 .table-wrapper {
@@ -142,16 +222,8 @@ table {
   border-collapse: collapse;
   color: var(--color-body);
   font-size: var(--font-size-table);
-  margin: var(--margin-md) auto 0;
+  margin: 0 auto;
   width: 100%;
-}
-
-table caption {
-  color: var(--color-body);
-  font-size: var(--font-size-table);
-  font-weight: normal;
-  margin: var(--margin-sm) 0;
-  text-align: left;
 }
 
 thead th {
@@ -235,52 +307,6 @@ tfoot {
 tfoot td {
   border: none;
   text-align: right;
-}
-
-/** <form> **/
-
-.search-form {
-  margin: 0 auto;
-  max-width: var(--content-max-width);
-  padding: var(--margin-xs) 0;
-  text-align: center;
-}
-
-@media (min-width: 769px) {
-  .search-form {
-    text-align: right;
-  }
-}
-
-.search-form label {
-  visibility: hidden;
-  display: inline-block;
-  width: 0;
-}
-
-.search-form input[type="search"],
-.search-form select {
-  appearance: none;
-  background: transparent;
-  border-radius: 6px;
-  border: 1px solid var(--color-form-border);
-  color: var(--color-body);
-  font-family: var(--font-family);
-  font-size: 1rem;
-  margin-right: var(--margin-sm);
-  max-width: 150px;
-  padding: 6px 12px;
-}
-
-.search-form input[type="search"]::-webkit-search-cancel-button,
-.search-form input[type="search"]::-webkit-search-decoration {
-  appearance: none;
-  display: none;
-}
-
-.search-form input[type="search"]::placeholder {
-  color: var(--color-form-border);
-  opacity: 1;
 }
 
 /** <footer> **/

@@ -9,6 +9,15 @@ import { GamesContext } from "./store/GamesContextProvider";
 
 const App: React.FC = () => {
   const gamesCtx = use(GamesContext);
+  const [isSearchOpen, setIsSearchOpen] = React.useState(false);
+
+  const handleToggleSearch = () => {
+    // Clear any active query when hiding so the search stops filtering.
+    if (isSearchOpen) {
+      gamesCtx.handleUpdateSearchQuery("");
+    }
+    setIsSearchOpen((open) => !open);
+  };
 
   return (
     <>
@@ -25,7 +34,37 @@ const App: React.FC = () => {
         ))}
       </menu>
 
-      <SearchBar />
+      <div className="table-header">
+        <p className="game-count" aria-live="polite">
+          Games: {gamesCtx.games.length}
+        </p>
+        <div className="search-bar">
+          {isSearchOpen && <SearchBar />}
+          <button
+            className="button-default search-toggle"
+            type="button"
+            aria-expanded={isSearchOpen}
+            aria-controls="search-form"
+            aria-label={isSearchOpen ? "Hide search" : "Show search"}
+            onClick={handleToggleSearch}
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
+        </div>
+      </div>
 
       <div
         role="tabpanel"

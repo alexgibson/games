@@ -9,12 +9,17 @@ const SearchBar: React.FC<SearchBarProps> = () => {
   const gamesCtx = use(GamesContext);
 
   return (
-    <form className="search-form" onSubmit={(e) => e.preventDefault()}>
+    <form
+      id="search-form"
+      className="search-form"
+      onSubmit={(e) => e.preventDefault()}
+    >
       <label htmlFor="search">Search</label>
       <input
         id="search"
         type="search"
         name="search"
+        autoFocus
         value={gamesCtx.searchQuery}
         onChange={(e) => gamesCtx.handleUpdateSearchQuery(e.target.value)}
         placeholder="Search"

@@ -48,22 +48,16 @@ describe("App component", () => {
     const backlogButton = screen.getByRole("button", { name: /backlog/i });
     expect(backlogButton).toHaveClass("active");
 
-    expect(
-      screen.queryByRole("table", { name: /Games: 1/i }),
-    ).toBeInTheDocument();
+    expect(screen.queryByText(/Games: 1/i)).toBeInTheDocument();
 
     // Switch to "Beat" tab.
     const beatButton = screen.getByRole("button", { name: /beat/i });
     await user.click(beatButton);
 
     expect(backlogButton).not.toHaveClass("active");
-    expect(
-      screen.queryByRole("table", { name: /Games: 1/i }),
-    ).not.toBeInTheDocument();
+    expect(screen.queryByText(/Games: 1/i)).not.toBeInTheDocument();
 
-    expect(
-      screen.getByRole("table", { name: /Games: 3/i }),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Games: 3/i)).toBeInTheDocument();
 
     expect(beatButton).toHaveClass("active");
   });
@@ -77,9 +71,10 @@ describe("App component", () => {
     expect(screen.queryByText("Title D")).toBeInTheDocument();
     expect(screen.queryByText("Title E")).toBeInTheDocument();
 
-    expect(
-      screen.queryByRole("table", { name: /Games: 3/i }),
-    ).toBeInTheDocument();
+    expect(screen.queryByText(/Games: 3/i)).toBeInTheDocument();
+
+    // Reveal the search form.
+    await user.click(screen.getByRole("button", { name: /show search/i }));
 
     // Search for "Title D".
     const searchInput = screen.getByRole("searchbox", {
@@ -91,9 +86,7 @@ describe("App component", () => {
     expect(screen.queryByText("Title D")).toBeInTheDocument();
     expect(screen.queryByText("Title E")).not.toBeInTheDocument();
 
-    expect(
-      screen.queryByRole("table", { name: /Games: 1/i }),
-    ).toBeInTheDocument();
+    expect(screen.queryByText(/Games: 1/i)).toBeInTheDocument();
 
     // Click "Clear" button.
     const clearButton = screen.getByRole("button", { name: /clear/i });
@@ -103,9 +96,7 @@ describe("App component", () => {
     expect(screen.queryByText("Title D")).toBeInTheDocument();
     expect(screen.queryByText("Title E")).toBeInTheDocument();
 
-    expect(
-      screen.queryByRole("table", { name: /Games: 3/i }),
-    ).toBeInTheDocument();
+    expect(screen.queryByText(/Games: 3/i)).toBeInTheDocument();
   });
 
   it("should filter games by medium as expected", async () => {
@@ -119,9 +110,10 @@ describe("App component", () => {
     let physical = screen.queryAllByText(/Physical/i);
     expect(physical.length).toBe(2);
 
-    expect(
-      screen.queryByRole("table", { name: /Games: 3/i }),
-    ).toBeInTheDocument();
+    expect(screen.queryByText(/Games: 3/i)).toBeInTheDocument();
+
+    // Reveal the search form.
+    await user.click(screen.getByRole("button", { name: /show search/i }));
 
     // Select table column "Medium"
     const selectInput = screen.getByRole("combobox", {
@@ -141,9 +133,7 @@ describe("App component", () => {
     physical = screen.queryAllByText(/Physical/i);
     expect(physical.length).toBe(0);
 
-    expect(
-      screen.queryByRole("table", { name: /Games: 1/i }),
-    ).toBeInTheDocument();
+    expect(screen.queryByText(/Games: 1/i)).toBeInTheDocument();
   });
 
   it("should sort by table column (ascending)", async () => {
