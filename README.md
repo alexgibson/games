@@ -20,4 +20,5 @@ https://alexgibson.github.io/games/
 
 ## Deploy
 
-`npm run deploy`
+Deployment is automated via a GitHub Action on every push to the `main` branch (see
+[.github/workflows/deploy.yml](.github/workflows/deploy.yml)).
