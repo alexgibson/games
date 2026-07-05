@@ -8,10 +8,18 @@ type TableHeadingProps = React.HTMLAttributes<HTMLTableCellElement> & {
 const TableHeading: React.FC<TableHeadingProps> = ({
   id,
   handleButtonClick,
+  className,
   ...props
 }) => {
+  const colClass = `col-${id.toLowerCase().replace(/\s+/g, "-")}`;
+
   return (
-    <th key={id} scope="col" className={`col-${id}`} {...props}>
+    <th
+      key={id}
+      scope="col"
+      className={`${colClass}${className ? ` ${className}` : ""}`}
+      {...props}
+    >
       <button
         className="button-table-column"
         type="button"

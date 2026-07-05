@@ -309,6 +309,30 @@ tfoot td {
   text-align: right;
 }
 
+.col-developer,
+.col-medium,
+.col-score {
+  display: none;
+}
+
+#Beat-Table {
+  .col-score {
+    display: table-cell;
+  }
+
+  .col-release-date {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .col-developer,
+  .col-release-date,
+  .col-medium {
+    display: table-cell;
+  }
+}
+
 /** <footer> **/
 
 footer {
