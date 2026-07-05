@@ -151,23 +151,23 @@ menu .button-default.active:hover {
 
 .search-bar {
   align-items: center;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: var(--margin-sm);
   justify-content: flex-end;
 }
 
-.search-toggle {
-  align-items: center;
-  display: none;
-  flex: none;
-  justify-content: center;
+@media (min-width: 769px) {
+  .search-bar {
+    display: flex;
+  }
 }
 
-@media (min-width: 769px) {
-  .search-toggle {
-    display: inline-flex;
-  }
+.search-toggle {
+  align-items: center;
+  display: inline-flex;
+  flex: none;
+  justify-content: center;
 }
 
 .search-form {
