@@ -31,7 +31,7 @@
     "url": "https://github.com/alexgibson/games/issues/issues"
   },
   "devDependencies": {
-    "@eslint-react/eslint-plugin": "^5.10.0",
+    "@eslint-react/eslint-plugin": "^5.18.0",
     "@eslint/js": "^10.0.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
@@ -40,17 +40,17 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "del-cli": "^7.0.0",
-    "eslint": "^10.6.0",
+    "eslint": "^10.8.0",
     "eslint-config-prettier": "^10.1.8",
-    "globals": "^17.7.0",
+    "globals": "^17.8.0",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "parcel": "^2.16.4",
-    "prettier": "^3.9.4",
-    "ts-jest": "^29.4.11",
+    "prettier": "^3.9.6",
+    "ts-jest": "^29.4.12",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.62.1"
+    "typescript-eslint": "^8.65.0"
   },
   "dependencies": {
     "react": "^19.2.8",
