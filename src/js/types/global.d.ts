@@ -2,7 +2,7 @@ declare global {
   type Platform = "Nintendo Switch" | "Steam";
   type OneToTen = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | null;
   type Status = "Beat" | "Playing" | "Paused" | "Backlog" | "Wishlist";
-  type Medium = "Physical | Digital" | "Game Key Card";
+  type Medium = "Physical" | "Digital" | "Game Key Card";
   type FieldName =
     "Title" | "Platform" | "Developer" | "Release Date" | "Medium" | "Score";
   interface Game {
