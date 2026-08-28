@@ -819,15 +819,6 @@
     "score": 10
   },
   {
-    "title": "Elden Ring: Tarnished Edition",
-    "platform": "Nintendo Switch 2",
-    "developer": "FromSoftware",
-    "releaseDate": "Dec 25 2026",
-    "medium": "Game Key Card",
-    "status": "Backlog",
-    "score": null
-  },
-  {
     "title": "Baldur's Gate 3",
     "platform": "Steam",
     "developer": "Larian Studios",
@@ -869,8 +860,8 @@
     "developer": "Square Enix",
     "releaseDate": "June 03 2026",
     "medium": "Game Key Card",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "Persona 3 Reload",
@@ -1175,7 +1166,7 @@
     "developer": "Nintendo",
     "releaseDate": "June 25 2026",
     "medium": "Physical",
-    "status": "Backlog",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1256,6 +1247,24 @@
     "developer": "Capcom",
     "releaseDate": "Dec 25 2027",
     "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Elden Ring: Tarnished Edition",
+    "platform": "Nintendo Switch 2",
+    "developer": "FromSoftware",
+    "releaseDate": "Aug 28 2026",
+    "medium": "Game Key Card",
+    "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Big Walk",
+    "platform": "Nintendo Switch 2",
+    "developer": "Panic",
+    "releaseDate": "Aug 04 2026",
+    "medium": "Digital",
     "status": "Wishlist",
     "score": null
   }
