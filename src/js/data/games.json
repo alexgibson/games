@@ -1129,8 +1129,8 @@
     "platform": "Nintendo Switch 2",
     "developer": "Kepler Interactive",
     "releaseDate": "August 01 2026",
-    "medium": "Digital",
-    "status": "Backlog",
+    "medium": "Physical",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1157,7 +1157,7 @@
     "developer": "Yacht Club Games",
     "releaseDate": "May 25 2026",
     "medium": "Digital",
-    "status": "Backlog",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1166,8 +1166,8 @@
     "developer": "Nintendo",
     "releaseDate": "June 25 2026",
     "medium": "Physical",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "The Legend of Zelda: Ocarina of Time",
@@ -1175,7 +1175,7 @@
     "developer": "Nintendo",
     "releaseDate": "Dec 25 2026",
     "medium": "Physical",
-    "status": "Wishlist",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -1266,6 +1266,24 @@
     "releaseDate": "Aug 04 2026",
     "medium": "Digital",
     "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Monster Hunter Wilds",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "Dec 04 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Metroid Ravenous",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo / MercurySteam",
+    "releaseDate": "Jan 28 2027",
+    "medium": "Physical",
+    "status": "Backlog",
     "score": null
   }
 ]
