@@ -1173,7 +1173,7 @@
     "title": "The Legend of Zelda: Ocarina of Time",
     "platform": "Nintendo Switch 2",
     "developer": "Nintendo",
-    "releaseDate": "Dec 25 2026",
+    "releaseDate": "Nov 05 2026",
     "medium": "Physical",
     "status": "Backlog",
     "score": null
@@ -1284,6 +1284,15 @@
     "releaseDate": "Jan 28 2027",
     "medium": "Physical",
     "status": "Backlog",
+    "score": null
+  },
+  {
+    "title": "Kirby and the World Beyond",
+    "platform": "Nintendo Switch 2",
+    "developer": "Nintendo",
+    "releaseDate": "Dec 31 2027",
+    "medium": "Physical",
+    "status": "Wishlist",
     "score": null
   }
 ]
