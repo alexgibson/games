@@ -1130,8 +1130,8 @@
     "developer": "Kepler Interactive",
     "releaseDate": "August 01 2026",
     "medium": "Physical",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 9
   },
   {
     "title": "Yoshi and the Mysterious Book",
@@ -1157,8 +1157,8 @@
     "developer": "Yacht Club Games",
     "releaseDate": "May 25 2026",
     "medium": "Digital",
-    "status": "Playing",
-    "score": null
+    "status": "Beat",
+    "score": 8
   },
   {
     "title": "Star Fox",
@@ -1184,7 +1184,7 @@
     "developer": "Capcom",
     "releaseDate": "Oct 09 2026",
     "medium": "Game Key Card",
-    "status": "Wishlist",
+    "status": "Backlog",
     "score": null
   },
   {
@@ -1211,7 +1211,7 @@
     "developer": "Capcom",
     "releaseDate": "Sept 25 2026",
     "medium": "Game Key Card",
-    "status": "Backlog",
+    "status": "Playing",
     "score": null
   },
   {
@@ -1292,6 +1292,33 @@
     "developer": "Nintendo",
     "releaseDate": "Dec 31 2027",
     "medium": "Physical",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Resident Evil 2 Deluxe Edition",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "Oct 16 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Resident Evil 3",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "Oct 16 2026",
+    "medium": "Game Key Card",
+    "status": "Wishlist",
+    "score": null
+  },
+  {
+    "title": "Resident Evil 4 Gold Edition",
+    "platform": "Nintendo Switch 2",
+    "developer": "Capcom",
+    "releaseDate": "Oct 16 2026",
+    "medium": "Game Key Card",
     "status": "Wishlist",
     "score": null
   }
